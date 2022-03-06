@@ -1,0 +1,3728 @@
+{
+    "last-modified-date": {
+        "value": 1628615226465
+    },
+    "group": [
+        {
+            "last-modified-date": {
+                "value": 1628615226465
+            },
+            "external-ids": {
+                "external-id": [
+                    {
+                        "external-id-type": "doi",
+                        "external-id-value": "10.1007/978-3-030-85082-1_24",
+                        "external-id-normalized": {
+                            "value": "10.1007/978-3-030-85082-1_24",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": {
+                            "value": "https://doi.org/10.1007/978-3-030-85082-1_24"
+                        },
+                        "external-id-relationship": "self"
+                    }
+                ]
+            },
+            "work-summary": [
+                {
+                    "put-code": 98303296,
+                    "created-date": {
+                        "value": 1628615226465
+                    },
+                    "last-modified-date": {
+                        "value": 1628615226465
+                    },
+                    "source": {
+                        "source-orcid": null,
+                        "source-client-id": {
+                            "uri": "https://orcid.org/client/0000-0001-9884-1913",
+                            "path": "0000-0001-9884-1913",
+                            "host": "orcid.org"
+                        },
+                        "source-name": {
+                            "value": "Crossref"
+                        },
+                        "assertion-origin-orcid": null,
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": null
+                    },
+                    "title": {
+                        "title": {
+                            "value": "Multi-dimensional Ranking via Majorization"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1007/978-3-030-85082-1_24",
+                                "external-id-normalized": {
+                                    "value": "10.1007/978-3-030-85082-1_24",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": {
+                                    "value": "https://doi.org/10.1007/978-3-030-85082-1_24"
+                                },
+                                "external-id-relationship": "self"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "value": "https://doi.org/10.1007/978-3-030-85082-1_24"
+                    },
+                    "type": "book-chapter",
+                    "publication-date": {
+                        "year": {
+                            "value": "2021"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": null,
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/98303296",
+                    "display-index": "0"
+                }
+            ]
+        },
+        {
+            "last-modified-date": {
+                "value": 1618785845624
+            },
+            "external-ids": {
+                "external-id": [
+                    {
+                        "external-id-type": "eid",
+                        "external-id-value": "2-s2.0-85102392880",
+                        "external-id-normalized": {
+                            "value": "2-s2.0-85102392880",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    },
+                    {
+                        "external-id-type": "doi",
+                        "external-id-value": "10.1145/3437120.3437317",
+                        "external-id-normalized": {
+                            "value": "10.1145/3437120.3437317",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    }
+                ]
+            },
+            "work-summary": [
+                {
+                    "put-code": 92387261,
+                    "created-date": {
+                        "value": 1618785845624
+                    },
+                    "last-modified-date": {
+                        "value": 1618785845624
+                    },
+                    "source": {
+                        "source-orcid": null,
+                        "source-client-id": {
+                            "uri": "https://orcid.org/client/0000-0002-5982-8983",
+                            "path": "0000-0002-5982-8983",
+                            "host": "orcid.org"
+                        },
+                        "source-name": {
+                            "value": "Scopus - Elsevier"
+                        },
+                        "assertion-origin-orcid": {
+                            "uri": "https://orcid.org/0000-0002-3352-0868",
+                            "path": "0000-0002-3352-0868",
+                            "host": "orcid.org"
+                        },
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": {
+                            "value": "Antonis Sidiropoulos"
+                        }
+                    },
+                    "title": {
+                        "title": {
+                            "value": "Quantifying the Difficulty of Academic Course Modules"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1145/3437120.3437317",
+                                "external-id-normalized": {
+                                    "value": "10.1145/3437120.3437317",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            },
+                            {
+                                "external-id-type": "eid",
+                                "external-id-value": "2-s2.0-85102392880",
+                                "external-id-normalized": {
+                                    "value": "2-s2.0-85102392880",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "value": "http://www.scopus.com/inward/record.url?eid=2-s2.0-85102392880&partnerID=MN8TOARS"
+                    },
+                    "type": "conference-paper",
+                    "publication-date": {
+                        "year": {
+                            "value": "2020"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": {
+                        "value": "ACM International Conference Proceeding Series"
+                    },
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/92387261",
+                    "display-index": "0"
+                }
+            ]
+        },
+        {
+            "last-modified-date": {
+                "value": 1618785845442
+            },
+            "external-ids": {
+                "external-id": [
+                    {
+                        "external-id-type": "doi",
+                        "external-id-value": "10.1007/978-3-030-55814-7_30",
+                        "external-id-normalized": {
+                            "value": "10.1007/978-3-030-55814-7_30",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": {
+                            "value": "https://doi.org/10.1007/978-3-030-55814-7_30"
+                        },
+                        "external-id-relationship": "self"
+                    },
+                    {
+                        "external-id-type": "eid",
+                        "external-id-value": "2-s2.0-85090098251",
+                        "external-id-normalized": {
+                            "value": "2-s2.0-85090098251",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    }
+                ]
+            },
+            "work-summary": [
+                {
+                    "put-code": 78964199,
+                    "created-date": {
+                        "value": 1597706684003
+                    },
+                    "last-modified-date": {
+                        "value": 1616667742794
+                    },
+                    "source": {
+                        "source-orcid": null,
+                        "source-client-id": {
+                            "uri": "https://orcid.org/client/0000-0001-9884-1913",
+                            "path": "0000-0001-9884-1913",
+                            "host": "orcid.org"
+                        },
+                        "source-name": {
+                            "value": "Crossref"
+                        },
+                        "assertion-origin-orcid": null,
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": null
+                    },
+                    "title": {
+                        "title": {
+                            "value": "Skyline-Based University Rankings"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1007/978-3-030-55814-7_30",
+                                "external-id-normalized": {
+                                    "value": "10.1007/978-3-030-55814-7_30",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": {
+                                    "value": "https://doi.org/10.1007/978-3-030-55814-7_30"
+                                },
+                                "external-id-relationship": "self"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "value": "https://doi.org/10.1007/978-3-030-55814-7_30"
+                    },
+                    "type": "book-chapter",
+                    "publication-date": {
+                        "year": {
+                            "value": "2020"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": null,
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/78964199",
+                    "display-index": "0"
+                },
+                {
+                    "put-code": 92387260,
+                    "created-date": {
+                        "value": 1618785845442
+                    },
+                    "last-modified-date": {
+                        "value": 1618785845442
+                    },
+                    "source": {
+                        "source-orcid": null,
+                        "source-client-id": {
+                            "uri": "https://orcid.org/client/0000-0002-5982-8983",
+                            "path": "0000-0002-5982-8983",
+                            "host": "orcid.org"
+                        },
+                        "source-name": {
+                            "value": "Scopus - Elsevier"
+                        },
+                        "assertion-origin-orcid": {
+                            "uri": "https://orcid.org/0000-0002-3352-0868",
+                            "path": "0000-0002-3352-0868",
+                            "host": "orcid.org"
+                        },
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": {
+                            "value": "Antonis Sidiropoulos"
+                        }
+                    },
+                    "title": {
+                        "title": {
+                            "value": "Skyline-Based University Rankings"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1007/978-3-030-55814-7_30",
+                                "external-id-normalized": {
+                                    "value": "10.1007/978-3-030-55814-7_30",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            },
+                            {
+                                "external-id-type": "eid",
+                                "external-id-value": "2-s2.0-85090098251",
+                                "external-id-normalized": {
+                                    "value": "2-s2.0-85090098251",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            },
+                            {
+                                "external-id-type": "issn",
+                                "external-id-value": "18650937 18650929",
+                                "external-id-normalized": {
+                                    "value": "1865-0937",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "part-of"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "value": "http://www.scopus.com/inward/record.url?eid=2-s2.0-85090098251&partnerID=MN8TOARS"
+                    },
+                    "type": "book",
+                    "publication-date": {
+                        "year": {
+                            "value": "2020"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": {
+                        "value": "Communications in Computer and Information Science"
+                    },
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/92387260",
+                    "display-index": "0"
+                }
+            ]
+        },
+        {
+            "last-modified-date": {
+                "value": 1576763735304
+            },
+            "external-ids": {
+                "external-id": [
+                    {
+                        "external-id-type": "doi",
+                        "external-id-value": "10.1007/s11192-018-2731-9",
+                        "external-id-normalized": {
+                            "value": "10.1007/s11192-018-2731-9",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": {
+                            "value": "https://doi.org/10.1007/s11192-018-2731-9"
+                        },
+                        "external-id-relationship": "self"
+                    },
+                    {
+                        "external-id-type": "eid",
+                        "external-id-value": "2-s2.0-85045479196",
+                        "external-id-normalized": {
+                            "value": "2-s2.0-85045479196",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    }
+                ]
+            },
+            "work-summary": [
+                {
+                    "put-code": 43675145,
+                    "created-date": {
+                        "value": 1523877264098
+                    },
+                    "last-modified-date": {
+                        "value": 1531144025420
+                    },
+                    "source": {
+                        "source-orcid": null,
+                        "source-client-id": {
+                            "uri": "https://orcid.org/client/0000-0001-9884-1913",
+                            "path": "0000-0001-9884-1913",
+                            "host": "orcid.org"
+                        },
+                        "source-name": {
+                            "value": "Crossref"
+                        },
+                        "assertion-origin-orcid": null,
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": null
+                    },
+                    "title": {
+                        "title": {
+                            "value": "Rainbow ranking: an adaptable, multidimensional ranking method for publication sets"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1007/s11192-018-2731-9",
+                                "external-id-normalized": {
+                                    "value": "10.1007/s11192-018-2731-9",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": {
+                                    "value": "https://doi.org/10.1007/s11192-018-2731-9"
+                                },
+                                "external-id-relationship": "self"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "value": "https://doi.org/10.1007/s11192-018-2731-9"
+                    },
+                    "type": "journal-article",
+                    "publication-date": {
+                        "year": {
+                            "value": "2018"
+                        },
+                        "month": {
+                            "value": "07"
+                        },
+                        "day": {
+                            "value": "16"
+                        }
+                    },
+                    "journal-title": {
+                        "value": "Scientometrics"
+                    },
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/43675145",
+                    "display-index": "0"
+                },
+                {
+                    "put-code": 66290661,
+                    "created-date": {
+                        "value": 1576763735304
+                    },
+                    "last-modified-date": {
+                        "value": 1576763735304
+                    },
+                    "source": {
+                        "source-orcid": null,
+                        "source-client-id": {
+                            "uri": "https://orcid.org/client/0000-0002-5982-8983",
+                            "path": "0000-0002-5982-8983",
+                            "host": "orcid.org"
+                        },
+                        "source-name": {
+                            "value": "Scopus - Elsevier"
+                        },
+                        "assertion-origin-orcid": {
+                            "uri": "https://orcid.org/0000-0002-3352-0868",
+                            "path": "0000-0002-3352-0868",
+                            "host": "orcid.org"
+                        },
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": {
+                            "value": "Antonis Sidiropoulos"
+                        }
+                    },
+                    "title": {
+                        "title": {
+                            "value": "Rainbow ranking: an adaptable, multidimensional ranking method for publication sets"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1007/s11192-018-2731-9",
+                                "external-id-normalized": {
+                                    "value": "10.1007/s11192-018-2731-9",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            },
+                            {
+                                "external-id-type": "eid",
+                                "external-id-value": "2-s2.0-85045479196",
+                                "external-id-normalized": {
+                                    "value": "2-s2.0-85045479196",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "value": "http://www.scopus.com/inward/record.url?eid=2-s2.0-85045479196&partnerID=MN8TOARS"
+                    },
+                    "type": "journal-article",
+                    "publication-date": {
+                        "year": {
+                            "value": "2018"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": {
+                        "value": "Scientometrics"
+                    },
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/66290661",
+                    "display-index": "0"
+                }
+            ]
+        },
+        {
+            "last-modified-date": {
+                "value": 1576763735300
+            },
+            "external-ids": {
+                "external-id": [
+                    {
+                        "external-id-type": "eid",
+                        "external-id-value": "2-s2.0-85052022933",
+                        "external-id-normalized": {
+                            "value": "2-s2.0-85052022933",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    },
+                    {
+                        "external-id-type": "doi",
+                        "external-id-value": "10.1145/3216122.3229862",
+                        "external-id-normalized": {
+                            "value": "10.1145/3216122.3229862",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    }
+                ]
+            },
+            "work-summary": [
+                {
+                    "put-code": 66290659,
+                    "created-date": {
+                        "value": 1576763735300
+                    },
+                    "last-modified-date": {
+                        "value": 1576763735300
+                    },
+                    "source": {
+                        "source-orcid": null,
+                        "source-client-id": {
+                            "uri": "https://orcid.org/client/0000-0002-5982-8983",
+                            "path": "0000-0002-5982-8983",
+                            "host": "orcid.org"
+                        },
+                        "source-name": {
+                            "value": "Scopus - Elsevier"
+                        },
+                        "assertion-origin-orcid": {
+                            "uri": "https://orcid.org/0000-0002-3352-0868",
+                            "path": "0000-0002-3352-0868",
+                            "host": "orcid.org"
+                        },
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": {
+                            "value": "Antonis Sidiropoulos"
+                        }
+                    },
+                    "title": {
+                        "title": {
+                            "value": "The science of science and a multilayer network approach to scientists’ ranking"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1145/3216122.3229862",
+                                "external-id-normalized": {
+                                    "value": "10.1145/3216122.3229862",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            },
+                            {
+                                "external-id-type": "eid",
+                                "external-id-value": "2-s2.0-85052022933",
+                                "external-id-normalized": {
+                                    "value": "2-s2.0-85052022933",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "value": "http://www.scopus.com/inward/record.url?eid=2-s2.0-85052022933&partnerID=MN8TOARS"
+                    },
+                    "type": "conference-paper",
+                    "publication-date": {
+                        "year": {
+                            "value": "2018"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": {
+                        "value": "ACM International Conference Proceeding Series"
+                    },
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/66290659",
+                    "display-index": "0"
+                }
+            ]
+        },
+        {
+            "last-modified-date": {
+                "value": 1576763735298
+            },
+            "external-ids": {
+                "external-id": [
+                    {
+                        "external-id-type": "eid",
+                        "external-id-value": "2-s2.0-85036661100",
+                        "external-id-normalized": {
+                            "value": "2-s2.0-85036661100",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    }
+                ]
+            },
+            "work-summary": [
+                {
+                    "put-code": 66290658,
+                    "created-date": {
+                        "value": 1576763735298
+                    },
+                    "last-modified-date": {
+                        "value": 1576763735298
+                    },
+                    "source": {
+                        "source-orcid": null,
+                        "source-client-id": {
+                            "uri": "https://orcid.org/client/0000-0002-5982-8983",
+                            "path": "0000-0002-5982-8983",
+                            "host": "orcid.org"
+                        },
+                        "source-name": {
+                            "value": "Scopus - Elsevier"
+                        },
+                        "assertion-origin-orcid": {
+                            "uri": "https://orcid.org/0000-0002-3352-0868",
+                            "path": "0000-0002-3352-0868",
+                            "host": "orcid.org"
+                        },
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": {
+                            "value": "Antonis Sidiropoulos"
+                        }
+                    },
+                    "title": {
+                        "title": {
+                            "value": "A Rainbow at the skyline after the storm of indicators for Ranking scientists"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "eid",
+                                "external-id-value": "2-s2.0-85036661100",
+                                "external-id-normalized": {
+                                    "value": "2-s2.0-85036661100",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "value": "http://www.scopus.com/inward/record.url?eid=2-s2.0-85036661100&partnerID=MN8TOARS"
+                    },
+                    "type": "conference-paper",
+                    "publication-date": {
+                        "year": {
+                            "value": "2017"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": {
+                        "value": "ISSI 2017 - 16th International Conference on Scientometrics and Informetrics, Conference Proceedings"
+                    },
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/66290658",
+                    "display-index": "0"
+                }
+            ]
+        },
+        {
+            "last-modified-date": {
+                "value": 1576763735302
+            },
+            "external-ids": {
+                "external-id": [
+                    {
+                        "external-id-type": "doi",
+                        "external-id-value": "10.1145/3139367.3139385",
+                        "external-id-normalized": {
+                            "value": "10.1145/3139367.3139385",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": {
+                            "value": "https://doi.org/10.1145/3139367.3139385"
+                        },
+                        "external-id-relationship": "self"
+                    },
+                    {
+                        "external-id-type": "eid",
+                        "external-id-value": "2-s2.0-85038928977",
+                        "external-id-normalized": {
+                            "value": "2-s2.0-85038928977",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    }
+                ]
+            },
+            "work-summary": [
+                {
+                    "put-code": 46888376,
+                    "created-date": {
+                        "value": 1532630100902
+                    },
+                    "last-modified-date": {
+                        "value": 1532630100902
+                    },
+                    "source": {
+                        "source-orcid": null,
+                        "source-client-id": {
+                            "uri": "https://orcid.org/client/APP-RV0SFUQGEW1MFUH8",
+                            "path": "APP-RV0SFUQGEW1MFUH8",
+                            "host": "orcid.org"
+                        },
+                        "source-name": {
+                            "value": "Dimensions"
+                        },
+                        "assertion-origin-orcid": null,
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": null
+                    },
+                    "title": {
+                        "title": {
+                            "value": "The Rainbow over the Greek Departments of Computer Science/Engineering"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1145/3139367.3139385",
+                                "external-id-normalized": {
+                                    "value": "10.1145/3139367.3139385",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": {
+                                    "value": "https://doi.org/10.1145/3139367.3139385"
+                                },
+                                "external-id-relationship": "self"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "value": "https://app.dimensions.ai/details/publication/pub.1099591191"
+                    },
+                    "type": "book-chapter",
+                    "publication-date": {
+                        "year": {
+                            "value": "2017"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": null,
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/46888376",
+                    "display-index": "0"
+                },
+                {
+                    "put-code": 66290660,
+                    "created-date": {
+                        "value": 1576763735302
+                    },
+                    "last-modified-date": {
+                        "value": 1576763735302
+                    },
+                    "source": {
+                        "source-orcid": null,
+                        "source-client-id": {
+                            "uri": "https://orcid.org/client/0000-0002-5982-8983",
+                            "path": "0000-0002-5982-8983",
+                            "host": "orcid.org"
+                        },
+                        "source-name": {
+                            "value": "Scopus - Elsevier"
+                        },
+                        "assertion-origin-orcid": {
+                            "uri": "https://orcid.org/0000-0002-3352-0868",
+                            "path": "0000-0002-3352-0868",
+                            "host": "orcid.org"
+                        },
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": {
+                            "value": "Antonis Sidiropoulos"
+                        }
+                    },
+                    "title": {
+                        "title": {
+                            "value": "The rainbow over the Greek departments of computer science/engineering: A bibliometric study"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1145/3139367.3139385",
+                                "external-id-normalized": {
+                                    "value": "10.1145/3139367.3139385",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            },
+                            {
+                                "external-id-type": "eid",
+                                "external-id-value": "2-s2.0-85038928977",
+                                "external-id-normalized": {
+                                    "value": "2-s2.0-85038928977",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "value": "http://www.scopus.com/inward/record.url?eid=2-s2.0-85038928977&partnerID=MN8TOARS"
+                    },
+                    "type": "conference-paper",
+                    "publication-date": {
+                        "year": {
+                            "value": "2017"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": {
+                        "value": "ACM International Conference Proceeding Series"
+                    },
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/66290660",
+                    "display-index": "0"
+                }
+            ]
+        },
+        {
+            "last-modified-date": {
+                "value": 1488452204064
+            },
+            "external-ids": {
+                "external-id": [
+                    {
+                        "external-id-type": "doi",
+                        "external-id-value": "10.1007/s11192-017-2285-2",
+                        "external-id-normalized": {
+                            "value": "10.1007/s11192-017-2285-2",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    },
+                    {
+                        "external-id-type": "eid",
+                        "external-id-value": "2-s2.0-85013113105",
+                        "external-id-normalized": {
+                            "value": "2-s2.0-85013113105",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    }
+                ]
+            },
+            "work-summary": [
+                {
+                    "put-code": 30795157,
+                    "created-date": {
+                        "value": 1488452204064
+                    },
+                    "last-modified-date": {
+                        "value": 1488452204064
+                    },
+                    "source": {
+                        "source-orcid": null,
+                        "source-client-id": {
+                            "uri": "https://orcid.org/client/0000-0002-5982-8983",
+                            "path": "0000-0002-5982-8983",
+                            "host": "orcid.org"
+                        },
+                        "source-name": {
+                            "value": "Scopus - Elsevier"
+                        },
+                        "assertion-origin-orcid": {
+                            "uri": "https://orcid.org/0000-0002-3352-0868",
+                            "path": "0000-0002-3352-0868",
+                            "host": "orcid.org"
+                        },
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": {
+                            "value": "Antonis Sidiropoulos"
+                        }
+                    },
+                    "title": {
+                        "title": {
+                            "value": "The fractal dimension of a citation curve: quantifying an individual’s scientific output using the geometry of the entire curve"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1007/s11192-017-2285-2",
+                                "external-id-normalized": {
+                                    "value": "10.1007/s11192-017-2285-2",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            },
+                            {
+                                "external-id-type": "eid",
+                                "external-id-value": "2-s2.0-85013113105",
+                                "external-id-normalized": {
+                                    "value": "2-s2.0-85013113105",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "value": "http://www.scopus.com/inward/record.url?eid=2-s2.0-85013113105&partnerID=MN8TOARS"
+                    },
+                    "type": "journal-article",
+                    "publication-date": {
+                        "year": {
+                            "value": "2017"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": {
+                        "value": "Scientometrics"
+                    },
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/30795157",
+                    "display-index": "0"
+                }
+            ]
+        },
+        {
+            "last-modified-date": {
+                "value": 1488452204065
+            },
+            "external-ids": {
+                "external-id": [
+                    {
+                        "external-id-type": "doi",
+                        "external-id-value": "10.1145/2938503.2938523",
+                        "external-id-normalized": {
+                            "value": "10.1145/2938503.2938523",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    },
+                    {
+                        "external-id-type": "eid",
+                        "external-id-value": "2-s2.0-84989244223",
+                        "external-id-normalized": {
+                            "value": "2-s2.0-84989244223",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    }
+                ]
+            },
+            "work-summary": [
+                {
+                    "put-code": 30795158,
+                    "created-date": {
+                        "value": 1488452204065
+                    },
+                    "last-modified-date": {
+                        "value": 1488452204065
+                    },
+                    "source": {
+                        "source-orcid": null,
+                        "source-client-id": {
+                            "uri": "https://orcid.org/client/0000-0002-5982-8983",
+                            "path": "0000-0002-5982-8983",
+                            "host": "orcid.org"
+                        },
+                        "source-name": {
+                            "value": "Scopus - Elsevier"
+                        },
+                        "assertion-origin-orcid": {
+                            "uri": "https://orcid.org/0000-0002-3352-0868",
+                            "path": "0000-0002-3352-0868",
+                            "host": "orcid.org"
+                        },
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": {
+                            "value": "Antonis Sidiropoulos"
+                        }
+                    },
+                    "title": {
+                        "title": {
+                            "value": "A scientist's impact over time: The predictive power of clustering with peers"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1145/2938503.2938523",
+                                "external-id-normalized": {
+                                    "value": "10.1145/2938503.2938523",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            },
+                            {
+                                "external-id-type": "eid",
+                                "external-id-value": "2-s2.0-84989244223",
+                                "external-id-normalized": {
+                                    "value": "2-s2.0-84989244223",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "value": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84989244223&partnerID=MN8TOARS"
+                    },
+                    "type": "conference-paper",
+                    "publication-date": {
+                        "year": {
+                            "value": "2016"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": {
+                        "value": "ACM International Conference Proceeding Series"
+                    },
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/30795158",
+                    "display-index": "0"
+                }
+            ]
+        },
+        {
+            "last-modified-date": {
+                "value": 1488452204063
+            },
+            "external-ids": {
+                "external-id": [
+                    {
+                        "external-id-type": "eid",
+                        "external-id-value": "2-s2.0-84973863264",
+                        "external-id-normalized": {
+                            "value": "2-s2.0-84973863264",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    },
+                    {
+                        "external-id-type": "doi",
+                        "external-id-value": "10.1016/j.joi.2016.04.009",
+                        "external-id-normalized": {
+                            "value": "10.1016/j.joi.2016.04.009",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    }
+                ]
+            },
+            "work-summary": [
+                {
+                    "put-code": 30795156,
+                    "created-date": {
+                        "value": 1488452204063
+                    },
+                    "last-modified-date": {
+                        "value": 1488452204063
+                    },
+                    "source": {
+                        "source-orcid": null,
+                        "source-client-id": {
+                            "uri": "https://orcid.org/client/0000-0002-5982-8983",
+                            "path": "0000-0002-5982-8983",
+                            "host": "orcid.org"
+                        },
+                        "source-name": {
+                            "value": "Scopus - Elsevier"
+                        },
+                        "assertion-origin-orcid": {
+                            "uri": "https://orcid.org/0000-0002-3352-0868",
+                            "path": "0000-0002-3352-0868",
+                            "host": "orcid.org"
+                        },
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": {
+                            "value": "Antonis Sidiropoulos"
+                        }
+                    },
+                    "title": {
+                        "title": {
+                            "value": "Gazing at the skyline for star scientists"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1016/j.joi.2016.04.009",
+                                "external-id-normalized": {
+                                    "value": "10.1016/j.joi.2016.04.009",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            },
+                            {
+                                "external-id-type": "eid",
+                                "external-id-value": "2-s2.0-84973863264",
+                                "external-id-normalized": {
+                                    "value": "2-s2.0-84973863264",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "value": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84973863264&partnerID=MN8TOARS"
+                    },
+                    "type": "journal-article",
+                    "publication-date": {
+                        "year": {
+                            "value": "2016"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": {
+                        "value": "Journal of Informetrics"
+                    },
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/30795156",
+                    "display-index": "0"
+                }
+            ]
+        },
+        {
+            "last-modified-date": {
+                "value": 1488452204053
+            },
+            "external-ids": {
+                "external-id": [
+                    {
+                        "external-id-type": "eid",
+                        "external-id-value": "2-s2.0-84962494294",
+                        "external-id-normalized": {
+                            "value": "2-s2.0-84962494294",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    },
+                    {
+                        "external-id-type": "doi",
+                        "external-id-value": "10.1145/2801948.2801972",
+                        "external-id-normalized": {
+                            "value": "10.1145/2801948.2801972",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    }
+                ]
+            },
+            "work-summary": [
+                {
+                    "put-code": 30795153,
+                    "created-date": {
+                        "value": 1488452204053
+                    },
+                    "last-modified-date": {
+                        "value": 1488452204053
+                    },
+                    "source": {
+                        "source-orcid": null,
+                        "source-client-id": {
+                            "uri": "https://orcid.org/client/0000-0002-5982-8983",
+                            "path": "0000-0002-5982-8983",
+                            "host": "orcid.org"
+                        },
+                        "source-name": {
+                            "value": "Scopus - Elsevier"
+                        },
+                        "assertion-origin-orcid": {
+                            "uri": "https://orcid.org/0000-0002-3352-0868",
+                            "path": "0000-0002-3352-0868",
+                            "host": "orcid.org"
+                        },
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": {
+                            "value": "Antonis Sidiropoulos"
+                        }
+                    },
+                    "title": {
+                        "title": {
+                            "value": "Bibliometric indices for the assessment of the citation curve tail"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1145/2801948.2801972",
+                                "external-id-normalized": {
+                                    "value": "10.1145/2801948.2801972",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            },
+                            {
+                                "external-id-type": "eid",
+                                "external-id-value": "2-s2.0-84962494294",
+                                "external-id-normalized": {
+                                    "value": "2-s2.0-84962494294",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "value": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84962494294&partnerID=MN8TOARS"
+                    },
+                    "type": "conference-paper",
+                    "publication-date": {
+                        "year": {
+                            "value": "2015"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": {
+                        "value": "ACM International Conference Proceeding Series"
+                    },
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/30795153",
+                    "display-index": "0"
+                }
+            ]
+        },
+        {
+            "last-modified-date": {
+                "value": 1576763735151
+            },
+            "external-ids": {
+                "external-id": [
+                    {
+                        "external-id-type": "doi",
+                        "external-id-value": "10.1007/s11192-014-1515-0",
+                        "external-id-normalized": {
+                            "value": "10.1007/s11192-014-1515-0",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    },
+                    {
+                        "external-id-type": "eid",
+                        "external-id-value": "2-s2.0-84919884011",
+                        "external-id-normalized": {
+                            "value": "2-s2.0-84919884011",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    }
+                ]
+            },
+            "work-summary": [
+                {
+                    "put-code": 30795155,
+                    "created-date": {
+                        "value": 1488452204056
+                    },
+                    "last-modified-date": {
+                        "value": 1576763735151
+                    },
+                    "source": {
+                        "source-orcid": null,
+                        "source-client-id": {
+                            "uri": "https://orcid.org/client/0000-0002-5982-8983",
+                            "path": "0000-0002-5982-8983",
+                            "host": "orcid.org"
+                        },
+                        "source-name": {
+                            "value": "Scopus - Elsevier"
+                        },
+                        "assertion-origin-orcid": {
+                            "uri": "https://orcid.org/0000-0002-3352-0868",
+                            "path": "0000-0002-3352-0868",
+                            "host": "orcid.org"
+                        },
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": {
+                            "value": "Antonis Sidiropoulos"
+                        }
+                    },
+                    "title": {
+                        "title": {
+                            "value": "Ranking and identifying influential scientists versus mass producers by the Perfectionism Index"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1007/s11192-014-1515-0",
+                                "external-id-normalized": {
+                                    "value": "10.1007/s11192-014-1515-0",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            },
+                            {
+                                "external-id-type": "eid",
+                                "external-id-value": "2-s2.0-84919884011",
+                                "external-id-normalized": {
+                                    "value": "2-s2.0-84919884011",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "value": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84919884011&partnerID=MN8TOARS"
+                    },
+                    "type": "journal-article",
+                    "publication-date": {
+                        "year": {
+                            "value": "2015"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": {
+                        "value": "Scientometrics"
+                    },
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/30795155",
+                    "display-index": "0"
+                }
+            ]
+        },
+        {
+            "last-modified-date": {
+                "value": 1488452203209
+            },
+            "external-ids": {
+                "external-id": [
+                    {
+                        "external-id-type": "doi",
+                        "external-id-value": "10.1145/1734222.1734226",
+                        "external-id-normalized": {
+                            "value": "10.1145/1734222.1734226",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    },
+                    {
+                        "external-id-type": "eid",
+                        "external-id-value": "2-s2.0-77952087450",
+                        "external-id-normalized": {
+                            "value": "2-s2.0-77952087450",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    }
+                ]
+            },
+            "work-summary": [
+                {
+                    "put-code": 10253926,
+                    "created-date": {
+                        "value": 1381394386840
+                    },
+                    "last-modified-date": {
+                        "value": 1488452178860
+                    },
+                    "source": {
+                        "source-orcid": null,
+                        "source-client-id": {
+                            "uri": "https://orcid.org/client/0000-0003-1377-5676",
+                            "path": "0000-0003-1377-5676",
+                            "host": "orcid.org"
+                        },
+                        "source-name": {
+                            "value": "ResearcherID"
+                        },
+                        "assertion-origin-orcid": {
+                            "uri": "https://orcid.org/0000-0002-3352-0868",
+                            "path": "0000-0002-3352-0868",
+                            "host": "orcid.org"
+                        },
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": {
+                            "value": "Antonis Sidiropoulos"
+                        }
+                    },
+                    "title": {
+                        "title": {
+                            "value": "CDNsim: A Simulation Tool for Content Distribution Networks"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1145/1734222.1734226",
+                                "external-id-normalized": {
+                                    "value": "10.1145/1734222.1734226",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            }
+                        ]
+                    },
+                    "url": null,
+                    "type": "journal-article",
+                    "publication-date": {
+                        "year": {
+                            "value": "2010"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": {
+                        "value": "Acm Transactions on Modeling and Computer Simulation"
+                    },
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/10253926",
+                    "display-index": "0"
+                },
+                {
+                    "put-code": 12974183,
+                    "created-date": {
+                        "value": 1403448064133
+                    },
+                    "last-modified-date": {
+                        "value": 1488452203209
+                    },
+                    "source": {
+                        "source-orcid": null,
+                        "source-client-id": {
+                            "uri": "https://orcid.org/client/0000-0002-5982-8983",
+                            "path": "0000-0002-5982-8983",
+                            "host": "orcid.org"
+                        },
+                        "source-name": {
+                            "value": "Scopus - Elsevier"
+                        },
+                        "assertion-origin-orcid": {
+                            "uri": "https://orcid.org/0000-0002-3352-0868",
+                            "path": "0000-0002-3352-0868",
+                            "host": "orcid.org"
+                        },
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": {
+                            "value": "Antonis Sidiropoulos"
+                        }
+                    },
+                    "title": {
+                        "title": {
+                            "value": "CDNsim: A simulation tool for content distribution networks"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1145/1734222.1734226",
+                                "external-id-normalized": {
+                                    "value": "10.1145/1734222.1734226",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            },
+                            {
+                                "external-id-type": "eid",
+                                "external-id-value": "2-s2.0-77952087450",
+                                "external-id-normalized": {
+                                    "value": "2-s2.0-77952087450",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "value": "http://www.scopus.com/inward/record.url?eid=2-s2.0-77952087450&partnerID=MN8TOARS"
+                    },
+                    "type": "journal-article",
+                    "publication-date": {
+                        "year": {
+                            "value": "2010"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": {
+                        "value": "ACM Transactions on Modeling and Computer Simulation"
+                    },
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/12974183",
+                    "display-index": "0"
+                }
+            ]
+        },
+        {
+            "last-modified-date": {
+                "value": 1532630112626
+            },
+            "external-ids": {
+                "external-id": [
+                    {
+                        "external-id-type": "doi",
+                        "external-id-value": "10.1109/TKDE.2008.92",
+                        "external-id-normalized": {
+                            "value": "10.1109/tkde.2008.92",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    },
+                    {
+                        "external-id-type": "eid",
+                        "external-id-value": "2-s2.0-57149119518",
+                        "external-id-normalized": {
+                            "value": "2-s2.0-57149119518",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    }
+                ]
+            },
+            "work-summary": [
+                {
+                    "put-code": 10253912,
+                    "created-date": {
+                        "value": 1381393888068
+                    },
+                    "last-modified-date": {
+                        "value": 1488452178860
+                    },
+                    "source": {
+                        "source-orcid": null,
+                        "source-client-id": {
+                            "uri": "https://orcid.org/client/0000-0003-1377-5676",
+                            "path": "0000-0003-1377-5676",
+                            "host": "orcid.org"
+                        },
+                        "source-name": {
+                            "value": "ResearcherID"
+                        },
+                        "assertion-origin-orcid": {
+                            "uri": "https://orcid.org/0000-0002-3352-0868",
+                            "path": "0000-0002-3352-0868",
+                            "host": "orcid.org"
+                        },
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": {
+                            "value": "Antonis Sidiropoulos"
+                        }
+                    },
+                    "title": {
+                        "title": {
+                            "value": "CDNs Content Outsourcing via Generalized Communities"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1109/TKDE.2008.92",
+                                "external-id-normalized": {
+                                    "value": "10.1109/tkde.2008.92",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            }
+                        ]
+                    },
+                    "url": null,
+                    "type": "journal-article",
+                    "publication-date": {
+                        "year": {
+                            "value": "2009"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": {
+                        "value": "Ieee Transactions on Knowledge and Data Engineering"
+                    },
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/10253912",
+                    "display-index": "0"
+                },
+                {
+                    "put-code": 12974184,
+                    "created-date": {
+                        "value": 1403448064139
+                    },
+                    "last-modified-date": {
+                        "value": 1488452203209
+                    },
+                    "source": {
+                        "source-orcid": null,
+                        "source-client-id": {
+                            "uri": "https://orcid.org/client/0000-0002-5982-8983",
+                            "path": "0000-0002-5982-8983",
+                            "host": "orcid.org"
+                        },
+                        "source-name": {
+                            "value": "Scopus - Elsevier"
+                        },
+                        "assertion-origin-orcid": {
+                            "uri": "https://orcid.org/0000-0002-3352-0868",
+                            "path": "0000-0002-3352-0868",
+                            "host": "orcid.org"
+                        },
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": {
+                            "value": "Antonis Sidiropoulos"
+                        }
+                    },
+                    "title": {
+                        "title": {
+                            "value": "CDNs content outsourcing via generalized communities"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1109/TKDE.2008.92",
+                                "external-id-normalized": {
+                                    "value": "10.1109/tkde.2008.92",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            },
+                            {
+                                "external-id-type": "eid",
+                                "external-id-value": "2-s2.0-57149119518",
+                                "external-id-normalized": {
+                                    "value": "2-s2.0-57149119518",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "value": "http://www.scopus.com/inward/record.url?eid=2-s2.0-57149119518&partnerID=MN8TOARS"
+                    },
+                    "type": "journal-article",
+                    "publication-date": {
+                        "year": {
+                            "value": "2009"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": {
+                        "value": "IEEE Transactions on Knowledge and Data Engineering"
+                    },
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/12974184",
+                    "display-index": "0"
+                },
+                {
+                    "put-code": 46888377,
+                    "created-date": {
+                        "value": 1532630112626
+                    },
+                    "last-modified-date": {
+                        "value": 1532630112626
+                    },
+                    "source": {
+                        "source-orcid": null,
+                        "source-client-id": {
+                            "uri": "https://orcid.org/client/APP-RV0SFUQGEW1MFUH8",
+                            "path": "APP-RV0SFUQGEW1MFUH8",
+                            "host": "orcid.org"
+                        },
+                        "source-name": {
+                            "value": "Dimensions"
+                        },
+                        "assertion-origin-orcid": null,
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": null
+                    },
+                    "title": {
+                        "title": {
+                            "value": "CDNs Content Outsourcing via Generalized Communities"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1109/tkde.2008.92",
+                                "external-id-normalized": {
+                                    "value": "10.1109/tkde.2008.92",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": {
+                                    "value": "https://doi.org/10.1109/tkde.2008.92"
+                                },
+                                "external-id-relationship": "self"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "value": "https://app.dimensions.ai/details/publication/pub.1061661968"
+                    },
+                    "type": "journal-article",
+                    "publication-date": {
+                        "year": {
+                            "value": "2009"
+                        },
+                        "month": {
+                            "value": "01"
+                        },
+                        "day": null
+                    },
+                    "journal-title": {
+                        "value": "IEEE Transactions on Knowledge and Data Engineering"
+                    },
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/46888377",
+                    "display-index": "0"
+                }
+            ]
+        },
+        {
+            "last-modified-date": {
+                "value": 1488452203209
+            },
+            "external-ids": {
+                "external-id": [
+                    {
+                        "external-id-type": "doi",
+                        "external-id-value": "10.1007/s11280-007-0027-8",
+                        "external-id-normalized": {
+                            "value": "10.1007/s11280-007-0027-8",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    },
+                    {
+                        "external-id-type": "eid",
+                        "external-id-value": "2-s2.0-38349105017",
+                        "external-id-normalized": {
+                            "value": "2-s2.0-38349105017",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    }
+                ]
+            },
+            "work-summary": [
+                {
+                    "put-code": 10253929,
+                    "created-date": {
+                        "value": 1381394386861
+                    },
+                    "last-modified-date": {
+                        "value": 1488452178860
+                    },
+                    "source": {
+                        "source-orcid": null,
+                        "source-client-id": {
+                            "uri": "https://orcid.org/client/0000-0003-1377-5676",
+                            "path": "0000-0003-1377-5676",
+                            "host": "orcid.org"
+                        },
+                        "source-name": {
+                            "value": "ResearcherID"
+                        },
+                        "assertion-origin-orcid": {
+                            "uri": "https://orcid.org/0000-0002-3352-0868",
+                            "path": "0000-0002-3352-0868",
+                            "host": "orcid.org"
+                        },
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": {
+                            "value": "Antonis Sidiropoulos"
+                        }
+                    },
+                    "title": {
+                        "title": {
+                            "value": "Prefetching in content distribution networks via web communities identification and outsourcing"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1007/s11280-007-0027-8",
+                                "external-id-normalized": {
+                                    "value": "10.1007/s11280-007-0027-8",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            }
+                        ]
+                    },
+                    "url": null,
+                    "type": "journal-article",
+                    "publication-date": {
+                        "year": {
+                            "value": "2008"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": {
+                        "value": "WORLD WIDE WEB-INTERNET AND WEB INFORMATION SYSTEMS"
+                    },
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/10253929",
+                    "display-index": "0"
+                },
+                {
+                    "put-code": 12974185,
+                    "created-date": {
+                        "value": 1403448064143
+                    },
+                    "last-modified-date": {
+                        "value": 1488452203209
+                    },
+                    "source": {
+                        "source-orcid": null,
+                        "source-client-id": {
+                            "uri": "https://orcid.org/client/0000-0002-5982-8983",
+                            "path": "0000-0002-5982-8983",
+                            "host": "orcid.org"
+                        },
+                        "source-name": {
+                            "value": "Scopus - Elsevier"
+                        },
+                        "assertion-origin-orcid": {
+                            "uri": "https://orcid.org/0000-0002-3352-0868",
+                            "path": "0000-0002-3352-0868",
+                            "host": "orcid.org"
+                        },
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": {
+                            "value": "Antonis Sidiropoulos"
+                        }
+                    },
+                    "title": {
+                        "title": {
+                            "value": "Prefetching in content distribution networks via Web communities identification and outsourcing"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1007/s11280-007-0027-8",
+                                "external-id-normalized": {
+                                    "value": "10.1007/s11280-007-0027-8",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            },
+                            {
+                                "external-id-type": "eid",
+                                "external-id-value": "2-s2.0-38349105017",
+                                "external-id-normalized": {
+                                    "value": "2-s2.0-38349105017",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "value": "http://www.scopus.com/inward/record.url?eid=2-s2.0-38349105017&partnerID=MN8TOARS"
+                    },
+                    "type": "journal-article",
+                    "publication-date": {
+                        "year": {
+                            "value": "2008"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": {
+                        "value": "World Wide Web"
+                    },
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/12974185",
+                    "display-index": "0"
+                }
+            ]
+        },
+        {
+            "last-modified-date": {
+                "value": 1488452203209
+            },
+            "external-ids": {
+                "external-id": [
+                    {
+                        "external-id-type": "eid",
+                        "external-id-value": "2-s2.0-84884654128",
+                        "external-id-normalized": {
+                            "value": "2-s2.0-84884654128",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    }
+                ]
+            },
+            "work-summary": [
+                {
+                    "put-code": 12974186,
+                    "created-date": {
+                        "value": 1403448064147
+                    },
+                    "last-modified-date": {
+                        "value": 1488452203209
+                    },
+                    "source": {
+                        "source-orcid": null,
+                        "source-client-id": {
+                            "uri": "https://orcid.org/client/0000-0002-5982-8983",
+                            "path": "0000-0002-5982-8983",
+                            "host": "orcid.org"
+                        },
+                        "source-name": {
+                            "value": "Scopus - Elsevier"
+                        },
+                        "assertion-origin-orcid": {
+                            "uri": "https://orcid.org/0000-0002-3352-0868",
+                            "path": "0000-0002-3352-0868",
+                            "host": "orcid.org"
+                        },
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": {
+                            "value": "Antonis Sidiropoulos"
+                        }
+                    },
+                    "title": {
+                        "title": {
+                            "value": "Age decaying H-index for social networks of citati"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "eid",
+                                "external-id-value": "2-s2.0-84884654128",
+                                "external-id-normalized": {
+                                    "value": "2-s2.0-84884654128",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "value": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84884654128&partnerID=MN8TOARS"
+                    },
+                    "type": "conference-paper",
+                    "publication-date": {
+                        "year": {
+                            "value": "2007"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": {
+                        "value": "CEUR Workshop Proceedings"
+                    },
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/12974186",
+                    "display-index": "0"
+                }
+            ]
+        },
+        {
+            "last-modified-date": {
+                "value": 1577443654069
+            },
+            "external-ids": {
+                "external-id": [
+                    {
+                        "external-id-type": "doi",
+                        "external-id-value": "10.1007/s11192-007-1722-z|ISSN 0138-9130",
+                        "external-id-normalized": {
+                            "value": "10.1007/s11192-007-1722-z|issn",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    },
+                    {
+                        "external-id-type": "doi",
+                        "external-id-value": "10.1007/s11192-007-1722-z",
+                        "external-id-normalized": {
+                            "value": "10.1007/s11192-007-1722-z",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    },
+                    {
+                        "external-id-type": "eid",
+                        "external-id-value": "2-s2.0-34547355970",
+                        "external-id-normalized": {
+                            "value": "2-s2.0-34547355970",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    }
+                ]
+            },
+            "work-summary": [
+                {
+                    "put-code": 10253930,
+                    "created-date": {
+                        "value": 1381394386867
+                    },
+                    "last-modified-date": {
+                        "value": 1488452178860
+                    },
+                    "source": {
+                        "source-orcid": null,
+                        "source-client-id": {
+                            "uri": "https://orcid.org/client/0000-0003-1377-5676",
+                            "path": "0000-0003-1377-5676",
+                            "host": "orcid.org"
+                        },
+                        "source-name": {
+                            "value": "ResearcherID"
+                        },
+                        "assertion-origin-orcid": {
+                            "uri": "https://orcid.org/0000-0002-3352-0868",
+                            "path": "0000-0002-3352-0868",
+                            "host": "orcid.org"
+                        },
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": {
+                            "value": "Antonis Sidiropoulos"
+                        }
+                    },
+                    "title": {
+                        "title": {
+                            "value": "Generalized Hirsch h-index for disclosing latent facts in citation networks"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1007/s11192-007-1722-z|ISSN 0138-9130",
+                                "external-id-normalized": {
+                                    "value": "10.1007/s11192-007-1722-z|issn",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            }
+                        ]
+                    },
+                    "url": null,
+                    "type": "journal-article",
+                    "publication-date": {
+                        "year": {
+                            "value": "2007"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": {
+                        "value": "Scientometrics"
+                    },
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/10253930",
+                    "display-index": "0"
+                },
+                {
+                    "put-code": 12974187,
+                    "created-date": {
+                        "value": 1403448064151
+                    },
+                    "last-modified-date": {
+                        "value": 1488452203209
+                    },
+                    "source": {
+                        "source-orcid": null,
+                        "source-client-id": {
+                            "uri": "https://orcid.org/client/0000-0002-5982-8983",
+                            "path": "0000-0002-5982-8983",
+                            "host": "orcid.org"
+                        },
+                        "source-name": {
+                            "value": "Scopus - Elsevier"
+                        },
+                        "assertion-origin-orcid": {
+                            "uri": "https://orcid.org/0000-0002-3352-0868",
+                            "path": "0000-0002-3352-0868",
+                            "host": "orcid.org"
+                        },
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": {
+                            "value": "Antonis Sidiropoulos"
+                        }
+                    },
+                    "title": {
+                        "title": {
+                            "value": "Generalized Hirsch h-index for disclosing latent facts in citation networks"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1007/s11192-007-1722-z",
+                                "external-id-normalized": {
+                                    "value": "10.1007/s11192-007-1722-z",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            },
+                            {
+                                "external-id-type": "eid",
+                                "external-id-value": "2-s2.0-34547355970",
+                                "external-id-normalized": {
+                                    "value": "2-s2.0-34547355970",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "value": "http://www.scopus.com/inward/record.url?eid=2-s2.0-34547355970&partnerID=MN8TOARS"
+                    },
+                    "type": "journal-article",
+                    "publication-date": {
+                        "year": {
+                            "value": "2007"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": {
+                        "value": "Scientometrics"
+                    },
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/12974187",
+                    "display-index": "0"
+                },
+                {
+                    "put-code": 66541174,
+                    "created-date": {
+                        "value": 1577443654069
+                    },
+                    "last-modified-date": {
+                        "value": 1577443654069
+                    },
+                    "source": {
+                        "source-orcid": {
+                            "uri": "https://orcid.org/0000-0002-3352-0868",
+                            "path": "0000-0002-3352-0868",
+                            "host": "orcid.org"
+                        },
+                        "source-client-id": null,
+                        "source-name": {
+                            "value": "Antonis Sidiropoulos"
+                        },
+                        "assertion-origin-orcid": null,
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": null
+                    },
+                    "title": {
+                        "title": {
+                            "value": "Generalized Hirsch h-index for disclosing latent facts in citation networks"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1007/s11192-007-1722-z|ISSN 0138-9130",
+                                "external-id-normalized": {
+                                    "value": "10.1007/s11192-007-1722-z|issn",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            },
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1007/s11192-007-1722-z",
+                                "external-id-normalized": {
+                                    "value": "10.1007/s11192-007-1722-z",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            },
+                            {
+                                "external-id-type": "eid",
+                                "external-id-value": "2-s2.0-34547355970",
+                                "external-id-normalized": {
+                                    "value": "2-s2.0-34547355970",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            }
+                        ]
+                    },
+                    "url": null,
+                    "type": "journal-article",
+                    "publication-date": {
+                        "year": {
+                            "value": "2007"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": {
+                        "value": "Scientometrics"
+                    },
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/66541174",
+                    "display-index": "-1"
+                }
+            ]
+        },
+        {
+            "last-modified-date": {
+                "value": 1488452203209
+            },
+            "external-ids": {
+                "external-id": [
+                    {
+                        "external-id-type": "eid",
+                        "external-id-value": "2-s2.0-84884636594",
+                        "external-id-normalized": {
+                            "value": "2-s2.0-84884636594",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    }
+                ]
+            },
+            "work-summary": [
+                {
+                    "put-code": 12974188,
+                    "created-date": {
+                        "value": 1403448064154
+                    },
+                    "last-modified-date": {
+                        "value": 1488452203209
+                    },
+                    "source": {
+                        "source-orcid": null,
+                        "source-client-id": {
+                            "uri": "https://orcid.org/client/0000-0002-5982-8983",
+                            "path": "0000-0002-5982-8983",
+                            "host": "orcid.org"
+                        },
+                        "source-name": {
+                            "value": "Scopus - Elsevier"
+                        },
+                        "assertion-origin-orcid": {
+                            "uri": "https://orcid.org/0000-0002-3352-0868",
+                            "path": "0000-0002-3352-0868",
+                            "host": "orcid.org"
+                        },
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": {
+                            "value": "Antonis Sidiropoulos"
+                        }
+                    },
+                    "title": {
+                        "title": {
+                            "value": "Finding communities in site web-graphs and citation graphs"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "eid",
+                                "external-id-value": "2-s2.0-84884636594",
+                                "external-id-normalized": {
+                                    "value": "2-s2.0-84884636594",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "value": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84884636594&partnerID=MN8TOARS"
+                    },
+                    "type": "conference-paper",
+                    "publication-date": {
+                        "year": {
+                            "value": "2006"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": {
+                        "value": "CEUR Workshop Proceedings"
+                    },
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/12974188",
+                    "display-index": "0"
+                }
+            ]
+        },
+        {
+            "last-modified-date": {
+                "value": 1577443683881
+            },
+            "external-ids": {
+                "external-id": [
+                    {
+                        "external-id-type": "doi",
+                        "external-id-value": "10.1016/j.jss.2006.01.011|ISSN 0164-1212",
+                        "external-id-normalized": {
+                            "value": "10.1016/j.jss.2006.01.011|issn",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    },
+                    {
+                        "external-id-type": "eid",
+                        "external-id-value": "2-s2.0-33750945098",
+                        "external-id-normalized": {
+                            "value": "2-s2.0-33750945098",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    },
+                    {
+                        "external-id-type": "doi",
+                        "external-id-value": "10.1016/j.jss.2006.01.011",
+                        "external-id-normalized": {
+                            "value": "10.1016/j.jss.2006.01.011",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    }
+                ]
+            },
+            "work-summary": [
+                {
+                    "put-code": 10253932,
+                    "created-date": {
+                        "value": 1381394386880
+                    },
+                    "last-modified-date": {
+                        "value": 1488452178860
+                    },
+                    "source": {
+                        "source-orcid": null,
+                        "source-client-id": {
+                            "uri": "https://orcid.org/client/0000-0003-1377-5676",
+                            "path": "0000-0003-1377-5676",
+                            "host": "orcid.org"
+                        },
+                        "source-name": {
+                            "value": "ResearcherID"
+                        },
+                        "assertion-origin-orcid": {
+                            "uri": "https://orcid.org/0000-0002-3352-0868",
+                            "path": "0000-0002-3352-0868",
+                            "host": "orcid.org"
+                        },
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": {
+                            "value": "Antonis Sidiropoulos"
+                        }
+                    },
+                    "title": {
+                        "title": {
+                            "value": "Generalized comparison of graph-based ranking algorithms for publications and authors"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1016/j.jss.2006.01.011|ISSN 0164-1212",
+                                "external-id-normalized": {
+                                    "value": "10.1016/j.jss.2006.01.011|issn",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            }
+                        ]
+                    },
+                    "url": null,
+                    "type": "journal-article",
+                    "publication-date": {
+                        "year": {
+                            "value": "2006"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": {
+                        "value": "Journal of Systems and Software"
+                    },
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/10253932",
+                    "display-index": "0"
+                },
+                {
+                    "put-code": 12974189,
+                    "created-date": {
+                        "value": 1403448064158
+                    },
+                    "last-modified-date": {
+                        "value": 1488452203209
+                    },
+                    "source": {
+                        "source-orcid": null,
+                        "source-client-id": {
+                            "uri": "https://orcid.org/client/0000-0002-5982-8983",
+                            "path": "0000-0002-5982-8983",
+                            "host": "orcid.org"
+                        },
+                        "source-name": {
+                            "value": "Scopus - Elsevier"
+                        },
+                        "assertion-origin-orcid": {
+                            "uri": "https://orcid.org/0000-0002-3352-0868",
+                            "path": "0000-0002-3352-0868",
+                            "host": "orcid.org"
+                        },
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": {
+                            "value": "Antonis Sidiropoulos"
+                        }
+                    },
+                    "title": {
+                        "title": {
+                            "value": "Generalized comparison of graph-based ranking algorithms for publications and authors"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1016/j.jss.2006.01.011",
+                                "external-id-normalized": {
+                                    "value": "10.1016/j.jss.2006.01.011",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            },
+                            {
+                                "external-id-type": "eid",
+                                "external-id-value": "2-s2.0-33750945098",
+                                "external-id-normalized": {
+                                    "value": "2-s2.0-33750945098",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "value": "http://www.scopus.com/inward/record.url?eid=2-s2.0-33750945098&partnerID=MN8TOARS"
+                    },
+                    "type": "journal-article",
+                    "publication-date": {
+                        "year": {
+                            "value": "2006"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": {
+                        "value": "Journal of Systems and Software"
+                    },
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/12974189",
+                    "display-index": "0"
+                },
+                {
+                    "put-code": 66541333,
+                    "created-date": {
+                        "value": 1577443683881
+                    },
+                    "last-modified-date": {
+                        "value": 1577443683881
+                    },
+                    "source": {
+                        "source-orcid": {
+                            "uri": "https://orcid.org/0000-0002-3352-0868",
+                            "path": "0000-0002-3352-0868",
+                            "host": "orcid.org"
+                        },
+                        "source-client-id": null,
+                        "source-name": {
+                            "value": "Antonis Sidiropoulos"
+                        },
+                        "assertion-origin-orcid": null,
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": null
+                    },
+                    "title": {
+                        "title": {
+                            "value": "Generalized comparison of graph-based ranking algorithms for publications and authors"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1016/j.jss.2006.01.011|ISSN 0164-1212",
+                                "external-id-normalized": {
+                                    "value": "10.1016/j.jss.2006.01.011|issn",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            },
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1016/j.jss.2006.01.011",
+                                "external-id-normalized": {
+                                    "value": "10.1016/j.jss.2006.01.011",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            },
+                            {
+                                "external-id-type": "eid",
+                                "external-id-value": "2-s2.0-33750945098",
+                                "external-id-normalized": {
+                                    "value": "2-s2.0-33750945098",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            }
+                        ]
+                    },
+                    "url": null,
+                    "type": "journal-article",
+                    "publication-date": {
+                        "year": {
+                            "value": "2006"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": {
+                        "value": "Journal of Systems and Software"
+                    },
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/66541333",
+                    "display-index": "-1"
+                }
+            ]
+        },
+        {
+            "last-modified-date": {
+                "value": 1532630120784
+            },
+            "external-ids": {
+                "external-id": [
+                    {
+                        "external-id-type": "doi",
+                        "external-id-value": "10.1109/ICDEW.2006.127",
+                        "external-id-normalized": {
+                            "value": "10.1109/icdew.2006.127",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    },
+                    {
+                        "external-id-type": "eid",
+                        "external-id-value": "2-s2.0-84990889822",
+                        "external-id-normalized": {
+                            "value": "2-s2.0-84990889822",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    }
+                ]
+            },
+            "work-summary": [
+                {
+                    "put-code": 30795154,
+                    "created-date": {
+                        "value": 1488452204055
+                    },
+                    "last-modified-date": {
+                        "value": 1488452204055
+                    },
+                    "source": {
+                        "source-orcid": null,
+                        "source-client-id": {
+                            "uri": "https://orcid.org/client/0000-0002-5982-8983",
+                            "path": "0000-0002-5982-8983",
+                            "host": "orcid.org"
+                        },
+                        "source-name": {
+                            "value": "Scopus - Elsevier"
+                        },
+                        "assertion-origin-orcid": {
+                            "uri": "https://orcid.org/0000-0002-3352-0868",
+                            "path": "0000-0002-3352-0868",
+                            "host": "orcid.org"
+                        },
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": {
+                            "value": "Antonis Sidiropoulos"
+                        }
+                    },
+                    "title": {
+                        "title": {
+                            "value": "Replication based on Objects Load under a Content Distribution Network"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1109/ICDEW.2006.127",
+                                "external-id-normalized": {
+                                    "value": "10.1109/icdew.2006.127",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            },
+                            {
+                                "external-id-type": "eid",
+                                "external-id-value": "2-s2.0-84990889822",
+                                "external-id-normalized": {
+                                    "value": "2-s2.0-84990889822",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "value": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84990889822&partnerID=MN8TOARS"
+                    },
+                    "type": "conference-paper",
+                    "publication-date": {
+                        "year": {
+                            "value": "2006"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": {
+                        "value": "ICDEW 2006 - Proceedings of the 22nd International Conference on Data Engineering Workshops"
+                    },
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/30795154",
+                    "display-index": "0"
+                },
+                {
+                    "put-code": 46888379,
+                    "created-date": {
+                        "value": 1532630120784
+                    },
+                    "last-modified-date": {
+                        "value": 1532630120784
+                    },
+                    "source": {
+                        "source-orcid": null,
+                        "source-client-id": {
+                            "uri": "https://orcid.org/client/APP-RV0SFUQGEW1MFUH8",
+                            "path": "APP-RV0SFUQGEW1MFUH8",
+                            "host": "orcid.org"
+                        },
+                        "source-name": {
+                            "value": "Dimensions"
+                        },
+                        "assertion-origin-orcid": null,
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": null
+                    },
+                    "title": {
+                        "title": {
+                            "value": "Replication Based on Objects Load under a Content Distribution Network"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1109/icdew.2006.127",
+                                "external-id-normalized": {
+                                    "value": "10.1109/icdew.2006.127",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": {
+                                    "value": "https://doi.org/10.1109/icdew.2006.127"
+                                },
+                                "external-id-relationship": "self"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "value": "https://app.dimensions.ai/details/publication/pub.1093214690"
+                    },
+                    "type": "book-chapter",
+                    "publication-date": {
+                        "year": {
+                            "value": "2006"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": null,
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/46888379",
+                    "display-index": "0"
+                }
+            ]
+        },
+        {
+            "last-modified-date": {
+                "value": 1488452178860
+            },
+            "external-ids": {
+                "external-id": []
+            },
+            "work-summary": [
+                {
+                    "put-code": 10253935,
+                    "created-date": {
+                        "value": 1381394386900
+                    },
+                    "last-modified-date": {
+                        "value": 1488452178860
+                    },
+                    "source": {
+                        "source-orcid": null,
+                        "source-client-id": {
+                            "uri": "https://orcid.org/client/0000-0003-1377-5676",
+                            "path": "0000-0003-1377-5676",
+                            "host": "orcid.org"
+                        },
+                        "source-name": {
+                            "value": "ResearcherID"
+                        },
+                        "assertion-origin-orcid": {
+                            "uri": "https://orcid.org/0000-0002-3352-0868",
+                            "path": "0000-0002-3352-0868",
+                            "host": "orcid.org"
+                        },
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": {
+                            "value": "Antonis Sidiropoulos"
+                        }
+                    },
+                    "title": {
+                        "title": {
+                            "value": "A citation-based system to assist prize awarding"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": null,
+                    "url": null,
+                    "type": "journal-article",
+                    "publication-date": {
+                        "year": {
+                            "value": "2005"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": {
+                        "value": "SIGMOD RECORD"
+                    },
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/10253935",
+                    "display-index": "0"
+                }
+            ]
+        },
+        {
+            "last-modified-date": {
+                "value": 1488452203209
+            },
+            "external-ids": {
+                "external-id": [
+                    {
+                        "external-id-type": "eid",
+                        "external-id-value": "2-s2.0-31444456173",
+                        "external-id-normalized": {
+                            "value": "2-s2.0-31444456173",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    },
+                    {
+                        "external-id-type": "doi",
+                        "external-id-value": "10.1145/1107499.1107506",
+                        "external-id-normalized": {
+                            "value": "10.1145/1107499.1107506",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    }
+                ]
+            },
+            "work-summary": [
+                {
+                    "put-code": 12974191,
+                    "created-date": {
+                        "value": 1403448064166
+                    },
+                    "last-modified-date": {
+                        "value": 1488452203209
+                    },
+                    "source": {
+                        "source-orcid": null,
+                        "source-client-id": {
+                            "uri": "https://orcid.org/client/0000-0002-5982-8983",
+                            "path": "0000-0002-5982-8983",
+                            "host": "orcid.org"
+                        },
+                        "source-name": {
+                            "value": "Scopus - Elsevier"
+                        },
+                        "assertion-origin-orcid": {
+                            "uri": "https://orcid.org/0000-0002-3352-0868",
+                            "path": "0000-0002-3352-0868",
+                            "host": "orcid.org"
+                        },
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": {
+                            "value": "Antonis Sidiropoulos"
+                        }
+                    },
+                    "title": {
+                        "title": {
+                            "value": "A citation-based system to assist prize awarding"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1145/1107499.1107506",
+                                "external-id-normalized": {
+                                    "value": "10.1145/1107499.1107506",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            },
+                            {
+                                "external-id-type": "eid",
+                                "external-id-value": "2-s2.0-31444456173",
+                                "external-id-normalized": {
+                                    "value": "2-s2.0-31444456173",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "value": "http://www.scopus.com/inward/record.url?eid=2-s2.0-31444456173&partnerID=MN8TOARS"
+                    },
+                    "type": "journal-article",
+                    "publication-date": {
+                        "year": {
+                            "value": "2005"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": {
+                        "value": "SIGMOD Record"
+                    },
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/12974191",
+                    "display-index": "0"
+                }
+            ]
+        },
+        {
+            "last-modified-date": {
+                "value": 1488452178860
+            },
+            "external-ids": {
+                "external-id": []
+            },
+            "work-summary": [
+                {
+                    "put-code": 10253936,
+                    "created-date": {
+                        "value": 1381394386907
+                    },
+                    "last-modified-date": {
+                        "value": 1488452178860
+                    },
+                    "source": {
+                        "source-orcid": null,
+                        "source-client-id": {
+                            "uri": "https://orcid.org/client/0000-0003-1377-5676",
+                            "path": "0000-0003-1377-5676",
+                            "host": "orcid.org"
+                        },
+                        "source-name": {
+                            "value": "ResearcherID"
+                        },
+                        "assertion-origin-orcid": {
+                            "uri": "https://orcid.org/0000-0002-3352-0868",
+                            "path": "0000-0002-3352-0868",
+                            "host": "orcid.org"
+                        },
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": {
+                            "value": "Antonis Sidiropoulos"
+                        }
+                    },
+                    "title": {
+                        "title": {
+                            "value": "A latency-based object placement approach in content distribution networks"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "isbn",
+                                "external-id-value": "0769524710 (ISBN); 9780769524719 (ISBN)",
+                                "external-id-normalized": {
+                                    "value": "0769524710",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "part-of"
+                            }
+                        ]
+                    },
+                    "url": null,
+                    "type": "conference-paper",
+                    "publication-date": {
+                        "year": {
+                            "value": "2005"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": {
+                        "value": "Proceedings - Third Latin American Web Congress, LA-WEB 2005"
+                    },
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/10253936",
+                    "display-index": "0"
+                }
+            ]
+        },
+        {
+            "last-modified-date": {
+                "value": 1577443683796
+            },
+            "external-ids": {
+                "external-id": [
+                    {
+                        "external-id-type": "doi",
+                        "external-id-value": "10.1109/LAWEB.2005.3",
+                        "external-id-normalized": {
+                            "value": "10.1109/laweb.2005.3",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    },
+                    {
+                        "external-id-type": "eid",
+                        "external-id-value": "2-s2.0-33750079356",
+                        "external-id-normalized": {
+                            "value": "2-s2.0-33750079356",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    }
+                ]
+            },
+            "work-summary": [
+                {
+                    "put-code": 12974190,
+                    "created-date": {
+                        "value": 1403448064162
+                    },
+                    "last-modified-date": {
+                        "value": 1488452203209
+                    },
+                    "source": {
+                        "source-orcid": null,
+                        "source-client-id": {
+                            "uri": "https://orcid.org/client/0000-0002-5982-8983",
+                            "path": "0000-0002-5982-8983",
+                            "host": "orcid.org"
+                        },
+                        "source-name": {
+                            "value": "Scopus - Elsevier"
+                        },
+                        "assertion-origin-orcid": {
+                            "uri": "https://orcid.org/0000-0002-3352-0868",
+                            "path": "0000-0002-3352-0868",
+                            "host": "orcid.org"
+                        },
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": {
+                            "value": "Antonis Sidiropoulos"
+                        }
+                    },
+                    "title": {
+                        "title": {
+                            "value": "A latency-based object placement approach in content distribution networks"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1109/LAWEB.2005.3",
+                                "external-id-normalized": {
+                                    "value": "10.1109/laweb.2005.3",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            },
+                            {
+                                "external-id-type": "eid",
+                                "external-id-value": "2-s2.0-33750079356",
+                                "external-id-normalized": {
+                                    "value": "2-s2.0-33750079356",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "value": "http://www.scopus.com/inward/record.url?eid=2-s2.0-33750079356&partnerID=MN8TOARS"
+                    },
+                    "type": "conference-paper",
+                    "publication-date": {
+                        "year": {
+                            "value": "2005"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": {
+                        "value": "Proceedings - Third Latin American Web Congress, LA-WEB 2005"
+                    },
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/12974190",
+                    "display-index": "0"
+                },
+                {
+                    "put-code": 66541331,
+                    "created-date": {
+                        "value": 1577443683796
+                    },
+                    "last-modified-date": {
+                        "value": 1577443683796
+                    },
+                    "source": {
+                        "source-orcid": {
+                            "uri": "https://orcid.org/0000-0002-3352-0868",
+                            "path": "0000-0002-3352-0868",
+                            "host": "orcid.org"
+                        },
+                        "source-client-id": null,
+                        "source-name": {
+                            "value": "Antonis Sidiropoulos"
+                        },
+                        "assertion-origin-orcid": null,
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": null
+                    },
+                    "title": {
+                        "title": {
+                            "value": "A latency-based object placement approach in content distribution networks"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1109/LAWEB.2005.3",
+                                "external-id-normalized": {
+                                    "value": "10.1109/laweb.2005.3",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            },
+                            {
+                                "external-id-type": "eid",
+                                "external-id-value": "2-s2.0-33750079356",
+                                "external-id-normalized": {
+                                    "value": "2-s2.0-33750079356",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            },
+                            {
+                                "external-id-type": "isbn",
+                                "external-id-value": "0769524710 (ISBN); 9780769524719 (ISBN)",
+                                "external-id-normalized": {
+                                    "value": "0769524710",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "part-of"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "value": "http://www.scopus.com/inward/record.url?eid=2-s2.0-33750079356&partnerID=MN8TOARS"
+                    },
+                    "type": "conference-paper",
+                    "publication-date": {
+                        "year": {
+                            "value": "2005"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": {
+                        "value": "Proceedings - Third Latin American Web Congress, LA-WEB 2005"
+                    },
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/66541331",
+                    "display-index": "-1"
+                }
+            ]
+        },
+        {
+            "last-modified-date": {
+                "value": 1577443683843
+            },
+            "external-ids": {
+                "external-id": [
+                    {
+                        "external-id-type": "doi",
+                        "external-id-value": "10.1016/j.ipm.2003.09.002",
+                        "external-id-normalized": {
+                            "value": "10.1016/j.ipm.2003.09.002",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    },
+                    {
+                        "external-id-type": "doi",
+                        "external-id-value": "10.1016/j.ipm.2003.09.002|ISSN 0306-4573",
+                        "external-id-normalized": {
+                            "value": "10.1016/j.ipm.2003.09.002|issn",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    },
+                    {
+                        "external-id-type": "eid",
+                        "external-id-value": "2-s2.0-7544233199",
+                        "external-id-normalized": {
+                            "value": "2-s2.0-7544233199",
+                            "transient": true
+                        },
+                        "external-id-normalized-error": null,
+                        "external-id-url": null,
+                        "external-id-relationship": "self"
+                    }
+                ]
+            },
+            "work-summary": [
+                {
+                    "put-code": 10253938,
+                    "created-date": {
+                        "value": 1381394386922
+                    },
+                    "last-modified-date": {
+                        "value": 1488452178860
+                    },
+                    "source": {
+                        "source-orcid": null,
+                        "source-client-id": {
+                            "uri": "https://orcid.org/client/0000-0003-1377-5676",
+                            "path": "0000-0003-1377-5676",
+                            "host": "orcid.org"
+                        },
+                        "source-name": {
+                            "value": "ResearcherID"
+                        },
+                        "assertion-origin-orcid": {
+                            "uri": "https://orcid.org/0000-0002-3352-0868",
+                            "path": "0000-0002-3352-0868",
+                            "host": "orcid.org"
+                        },
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": {
+                            "value": "Antonis Sidiropoulos"
+                        }
+                    },
+                    "title": {
+                        "title": {
+                            "value": "A new perspective to automatically rank scientific conferences using digital libraries"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1016/j.ipm.2003.09.002|ISSN 0306-4573",
+                                "external-id-normalized": {
+                                    "value": "10.1016/j.ipm.2003.09.002|issn",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            }
+                        ]
+                    },
+                    "url": null,
+                    "type": "journal-article",
+                    "publication-date": {
+                        "year": {
+                            "value": "2005"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": {
+                        "value": "Information Processing & Management"
+                    },
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/10253938",
+                    "display-index": "0"
+                },
+                {
+                    "put-code": 12974192,
+                    "created-date": {
+                        "value": 1403448064169
+                    },
+                    "last-modified-date": {
+                        "value": 1488452203209
+                    },
+                    "source": {
+                        "source-orcid": null,
+                        "source-client-id": {
+                            "uri": "https://orcid.org/client/0000-0002-5982-8983",
+                            "path": "0000-0002-5982-8983",
+                            "host": "orcid.org"
+                        },
+                        "source-name": {
+                            "value": "Scopus - Elsevier"
+                        },
+                        "assertion-origin-orcid": {
+                            "uri": "https://orcid.org/0000-0002-3352-0868",
+                            "path": "0000-0002-3352-0868",
+                            "host": "orcid.org"
+                        },
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": {
+                            "value": "Antonis Sidiropoulos"
+                        }
+                    },
+                    "title": {
+                        "title": {
+                            "value": "A new perspective to automatically rank scientific conferences using digital libraries"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1016/j.ipm.2003.09.002",
+                                "external-id-normalized": {
+                                    "value": "10.1016/j.ipm.2003.09.002",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            },
+                            {
+                                "external-id-type": "eid",
+                                "external-id-value": "2-s2.0-7544233199",
+                                "external-id-normalized": {
+                                    "value": "2-s2.0-7544233199",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "value": "http://www.scopus.com/inward/record.url?eid=2-s2.0-7544233199&partnerID=MN8TOARS"
+                    },
+                    "type": "journal-article",
+                    "publication-date": {
+                        "year": {
+                            "value": "2005"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": {
+                        "value": "Information Processing and Management"
+                    },
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/12974192",
+                    "display-index": "0"
+                },
+                {
+                    "put-code": 66541332,
+                    "created-date": {
+                        "value": 1577443683843
+                    },
+                    "last-modified-date": {
+                        "value": 1577443683843
+                    },
+                    "source": {
+                        "source-orcid": {
+                            "uri": "https://orcid.org/0000-0002-3352-0868",
+                            "path": "0000-0002-3352-0868",
+                            "host": "orcid.org"
+                        },
+                        "source-client-id": null,
+                        "source-name": {
+                            "value": "Antonis Sidiropoulos"
+                        },
+                        "assertion-origin-orcid": null,
+                        "assertion-origin-client-id": null,
+                        "assertion-origin-name": null
+                    },
+                    "title": {
+                        "title": {
+                            "value": "A new perspective to automatically rank scientific conferences using digital libraries"
+                        },
+                        "subtitle": null,
+                        "translated-title": null
+                    },
+                    "external-ids": {
+                        "external-id": [
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1016/j.ipm.2003.09.002",
+                                "external-id-normalized": {
+                                    "value": "10.1016/j.ipm.2003.09.002",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            },
+                            {
+                                "external-id-type": "eid",
+                                "external-id-value": "2-s2.0-7544233199",
+                                "external-id-normalized": {
+                                    "value": "2-s2.0-7544233199",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            },
+                            {
+                                "external-id-type": "doi",
+                                "external-id-value": "10.1016/j.ipm.2003.09.002|ISSN 0306-4573",
+                                "external-id-normalized": {
+                                    "value": "10.1016/j.ipm.2003.09.002|issn",
+                                    "transient": true
+                                },
+                                "external-id-normalized-error": null,
+                                "external-id-url": null,
+                                "external-id-relationship": "self"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "value": "http://www.scopus.com/inward/record.url?eid=2-s2.0-7544233199&partnerID=MN8TOARS"
+                    },
+                    "type": "journal-article",
+                    "publication-date": {
+                        "year": {
+                            "value": "2005"
+                        },
+                        "month": null,
+                        "day": null
+                    },
+                    "journal-title": {
+                        "value": "Information Processing and Management"
+                    },
+                    "visibility": "public",
+                    "path": "/0000-0002-3352-0868/work/66541332",
+                    "display-index": "-1"
+                }
+            ]
+        }
+    ],
+    "path": "/0000-0002-3352-0868/works"
+}

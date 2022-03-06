@@ -18,7 +18,8 @@ class User(BaseModel):
     name: str
     email: str
     password: str
-    location: str
+    location: Optional[str] = None
+    institution: Optional[str] = None
 
 
 class University(BaseModel):
@@ -31,8 +32,9 @@ class University(BaseModel):
 class ShowUser(BaseModel):
     name: str
     email: str
-    location: str
+    location: Optional[str] = None
     papers: List[Paper] = []
+    university: University = None
 
     class Config():
         orm_mode = True

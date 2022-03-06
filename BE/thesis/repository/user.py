@@ -1,3 +1,4 @@
+from sqlalchemy import null
 from sqlalchemy.orm import Session
 from .. import models, schemas
 from fastapi import HTTPException, status
@@ -5,8 +6,16 @@ from ..hashing import Hash
 
 
 def create(request: schemas.User, db: Session):
+    uni = db.query(models.University).filter(
+        models.University.name == request.institution).first()
+
+    if not uni:
+        uni = None
+    else:
+        uni = uni.id
+
     new_user = models.User(
-        name=request.name, email=request.email, password=Hash.bcrypt(request.password), location=request.location)
+        name=request.name, email=request.email, password=Hash.bcrypt(request.password), location=None if not request.location else request.location, university_id=uni)
     db.add(new_user)
     db.commit()
     db.refresh(new_user)

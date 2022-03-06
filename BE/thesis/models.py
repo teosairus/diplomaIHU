@@ -24,9 +24,13 @@ class User(Base):
     name = Column(String(255))
     email = Column(String(255))
     password = Column(String(255))
-    location = Column(String(255))
+    location = Column(String(255), nullable=True)
+    university_id = Column(Integer, ForeignKey(
+        'universities.id'), nullable=True)
 
     papers = relationship('Papers', back_populates="creator")
+    university = relationship(
+        'University', back_populates="people", uselist=False)
 
 
 class University(Base):
@@ -34,3 +38,5 @@ class University(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String(255))
+
+    people = relationship("User", back_populates="university")

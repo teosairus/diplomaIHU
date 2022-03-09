@@ -15,7 +15,7 @@ def create(request: schemas.User, db: Session):
         uni = uni.id
 
     new_user = models.User(
-        name=request.name, email=request.email, password=Hash.bcrypt(request.password), location=None if not request.location else request.location, university_id=uni)
+        firstname=request.firstname, lastname=request.lastname, orc_id=request.orc_id, scopus_id=request.scopus_id, email=request.email, password=Hash.bcrypt(request.password), location=None if not request.location else request.location, university_id=uni)
     db.add(new_user)
     db.commit()
     db.refresh(new_user)

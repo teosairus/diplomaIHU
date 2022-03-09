@@ -15,7 +15,10 @@ class Paper(PaperBase):
 
 
 class User(BaseModel):
-    name: str
+    firstname: str
+    lastname: str
+    orc_id: str
+    scopus_id: str
     email: str
     password: str
     location: Optional[str] = None
@@ -30,7 +33,10 @@ class University(BaseModel):
 
 
 class ShowUser(BaseModel):
-    name: str
+    firstname: str
+    lastname: str
+    orc_id: str
+    scopus_id: str
     email: str
     location: Optional[str] = None
     papers: List[Paper] = []

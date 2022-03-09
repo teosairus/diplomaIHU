@@ -10,8 +10,11 @@ class Papers(Base):
     __tablename__ = 'papers'
 
     id = Column(Integer, primary_key=True, index=True)
-    title = Column(String(255))
-    body = Column(String(255))
+    paper_title = Column(String(255))
+    paper_type = Column(String(255))
+    doi = Column(String(255))
+    authors = Column(String(255))
+    published_date = Column(Integer)
     user_id = Column(Integer, ForeignKey('users.id'))
 
     creator = relationship("User", back_populates="papers")
@@ -21,7 +24,10 @@ class User(Base):
     __tablename__ = 'users'
 
     id = Column(Integer, primary_key=True, index=True)
-    name = Column(String(255))
+    firstname = Column(String(255))
+    lastname = Column(String(255))
+    orc_id = Column(String(255))
+    scopus_id = Column(String(255))
     email = Column(String(255))
     password = Column(String(255))
     location = Column(String(255), nullable=True)

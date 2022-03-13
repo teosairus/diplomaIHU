@@ -10,6 +10,7 @@ class Papers(Base):
     __tablename__ = 'papers'
 
     id = Column(Integer, primary_key=True, index=True)
+    source = Column(String(255))
     paper_title = Column(String(255))
     paper_type = Column(String(255))
     doi = Column(String(255))
@@ -46,3 +47,27 @@ class University(Base):
     name = Column(String(255))
 
     people = relationship("User", back_populates="university")
+
+
+class ScopusDB(Base):
+    __tablename__ = 'scopus'
+
+    id = Column(Integer, primary_key=True, index=True)
+    paper_title = Column(String(255))
+    paper_type = Column(String(255))
+    doi = Column(String(255))
+    authors = Column(String(255))
+    published_date = Column(Integer)
+    user_id = Column(Integer, ForeignKey('users.id'))
+
+
+class OrcidDB(Base):
+    __tablename__ = 'orcid'
+
+    id = Column(Integer, primary_key=True, index=True)
+    paper_title = Column(String(255))
+    paper_type = Column(String(255))
+    doi = Column(String(255))
+    authors = Column(String(255))
+    published_date = Column(Integer)
+    user_id = Column(Integer, ForeignKey('users.id'))

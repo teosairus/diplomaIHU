@@ -3,13 +3,18 @@ from pydantic import BaseModel
 
 # what API asks
 
-
-class PaperBase(BaseModel):
-    title: str
-    body: str
+# -----------------------\ BASE /------------------------------------
 
 
-class Paper(PaperBase):
+class Paper(BaseModel):
+    source: str
+    paper_title: str
+    paper_type: str
+    doi: str
+    authors: str
+    published_date: str
+    user_id: int
+
     class Config():
         orm_mode = True
 
@@ -32,6 +37,7 @@ class University(BaseModel):
         orm_mode = True
 
 
+# -----------------------\ SHOW /------------------------------------
 class ShowUser(BaseModel):
     firstname: str
     lastname: str
@@ -47,12 +53,18 @@ class ShowUser(BaseModel):
 
 
 class ShowPaper(BaseModel):
-    title: str
-    body: str
-    creator: ShowUser
+    source: str
+    paper_title: str
+    paper_type: str
+    doi: str
+    authors: str
+    published_date: str
+    creator: List[ShowUser] = []
 
     class Config():
         orm_mode = True
+
+# -----------------------\ LOGIN /------------------------------------
 
 
 class Login(BaseModel):

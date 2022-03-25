@@ -3,7 +3,7 @@ import requests
 import json
 
 # Load settings
-settings = open("./config.json")
+settings = open("./configs/config.json")
 config = json.load(settings)
 settings.close()
 
@@ -12,8 +12,8 @@ scopus_key = config["scopusKey"]
 orcid_key = config["orcidKey"]
 
 # External base urls for calls
-scopus_url = "https://api.elsevier.com/content/search/scopus"
-orcid_url = "https://pub.orcid.org/v3.0"
+scopus_url = config["scopusURL"]
+orcid_url = config["orcidURL"]
 
 
 # -----------------\ SCOPUS /---------------------------

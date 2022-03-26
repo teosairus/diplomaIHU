@@ -137,7 +137,7 @@
                 "prism:aggregationType": "Conference Proceeding",
                 "subtype": "cp",
                 "subtypeDescription": "Conference Paper",
-                "source-id": "21101072497",
+                "source-id": "11600154611",
                 "openaccess": "0",
                 "openaccessFlag": false
             },
@@ -1206,7 +1206,7 @@
                 "prism:coverDisplayDate": "December 2006",
                 "prism:doi": "10.1016/j.jss.2006.01.011",
                 "pii": "S0164121206000082",
-                "citedby-count": "50",
+                "citedby-count": "51",
                 "affiliation": [
                     {
                         "@_fa": "true",

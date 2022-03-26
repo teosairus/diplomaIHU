@@ -7,13 +7,17 @@ from pydantic import BaseModel
 
 
 class Paper(BaseModel):
-    source: str
-    paper_title: str
-    paper_type: str
-    doi: str
+    title: str
+    publicationName: str
+    description: str
+    publicationType: str
     authors: str
-    published_date: str
-    user_id: int
+    link: str
+    doi: str
+    volume: str
+    pageRange: str
+    source: str
+    publishedDate: str
 
     class Config():
         orm_mode = True
@@ -27,42 +31,27 @@ class User(BaseModel):
     email: str
     password: str
     location: Optional[str] = None
-    institution: Optional[str] = None
-
-
-class University(BaseModel):
-    name: str
 
     class Config():
         orm_mode = True
+    # institution: Optional[str] = None
+
+
+# class University(BaseModel):
+#     name: str
+
+#     class Config():
+#         orm_mode = True
 
 
 # -----------------------\ SHOW /------------------------------------
-class ShowUser(BaseModel):
-    firstname: str
-    lastname: str
-    orc_id: str
-    scopus_id: str
-    email: str
-    location: Optional[str] = None
-    papers: List[Paper] = []
-    university: University = None
-
-    class Config():
-        orm_mode = True
+class ShowUser(User):
+    userPapers: List[Paper]
 
 
-class ShowPaper(BaseModel):
-    source: str
-    paper_title: str
-    paper_type: str
-    doi: str
-    authors: str
-    published_date: str
-    creator: List[ShowUser] = []
+class ShowPaper(Paper):
+    creators: List[User]
 
-    class Config():
-        orm_mode = True
 
 # -----------------------\ LOGIN /------------------------------------
 

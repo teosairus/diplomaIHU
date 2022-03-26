@@ -8,12 +8,29 @@ def get_all(db: Session):
     return papers
 
 
-def create(request: schemas.Paper, db: Session):
+def create(request: schemas.Paper, db: Session, current_user):
+
     new_article = models.Papers(
-        title=request.title, body=request.body, user_id=1)
+        title=request.title,
+        publicationName=request.publicationName,
+        description=request.description,
+        publicationType=request.publicationType,
+        authors=request.authors,
+        link=request.link,
+        doi=request.doi,
+        volume=request.volume,
+        pageRange=request.pageRange,
+        source=request.source,
+        publishedDate=request.publishedDate,
+        creators=[current_user]
+
+    )
+
     db.add(new_article)
+    db.add
     db.commit()
     db.refresh(new_article)
+
     return new_article
 
 

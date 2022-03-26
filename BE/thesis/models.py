@@ -1,24 +1,46 @@
 
-from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy import Column, Integer, String, ForeignKey, Table
 from .database import Base
 from sqlalchemy.orm import relationship
 
 # DB items/
 
 
+# class UserPaper(Base):
+#     __tablename__ = 'user_paper'
+
+#     users_id = Column(ForeignKey('users.id'), primary_key=True)
+#     papers_id = Column(ForeignKey('papers.id'), primary_key=True)
+#     pp = relationship("User", back_populates="userPapers")
+#     creator = relationship("Papers", back_populates="creators")
+
+association_table = Table('association', Base.metadata,
+                          Column('users_id', ForeignKey(
+                              'users.id'), primary_key=True),
+                          Column('papers_id', ForeignKey(
+                              'papers.id'), primary_key=True)
+                          )
+
+
 class Papers(Base):
     __tablename__ = 'papers'
 
     id = Column(Integer, primary_key=True, index=True)
-    source = Column(String(255))
-    paper_title = Column(String(255))
-    paper_type = Column(String(255))
-    doi = Column(String(255))
+    title = Column(String(255))
+    publicationName = Column(String(255))
+    description = Column(String(255))
+    publicationType = Column(String(255))
     authors = Column(String(255))
-    published_date = Column(Integer)
-    user_id = Column(Integer, ForeignKey('users.id'))
-
-    creator = relationship("User", back_populates="papers")
+    link = Column(String(255))
+    doi = Column(String(255))
+    volume = Column(String(255))
+    pageRange = Column(String(255))
+    source = Column(String(255))
+    publishedDate = Column(Integer)
+    creators = relationship(
+        "User",
+        secondary=association_table,
+        back_populates="userPapers")
 
 
 class User(Base):
@@ -32,42 +54,54 @@ class User(Base):
     email = Column(String(255))
     password = Column(String(255))
     location = Column(String(255), nullable=True)
-    university_id = Column(Integer, ForeignKey(
-        'universities.id'), nullable=True)
+    userPapers = relationship(
+        "Papers",
+        secondary=association_table,
+        back_populates="creators")
 
-    papers = relationship('Papers', back_populates="creator")
-    university = relationship(
-        'University', back_populates="people", uselist=False)
+    # university_id = Column(Integer, ForeignKey(
+    #     'universities.id'), nullable=True)
+
+    # university = relationship(
+    #     'University', back_populates="people", uselist=False)
 
 
-class University(Base):
-    __tablename__ = 'universities'
+# class University(Base):
+#     __tablename__ = 'universities'
 
-    id = Column(Integer, primary_key=True, index=True)
-    name = Column(String(255))
+#     id = Column(Integer, primary_key=True, index=True)
+#     name = Column(String(255))
 
-    people = relationship("User", back_populates="university")
+#     people = relationship("User", back_populates="university")
 
 
 class ScopusDB(Base):
     __tablename__ = 'scopus'
 
     id = Column(Integer, primary_key=True, index=True)
-    paper_title = Column(String(255))
-    paper_type = Column(String(255))
-    doi = Column(String(255))
+    title = Column(String(255))
+    publicationName = Column(String(255))
+    description = Column(String(255))
+    publicationType = Column(String(255))
     authors = Column(String(255))
-    published_date = Column(Integer)
-    user_id = Column(Integer, ForeignKey('users.id'))
+    link = Column(String(255))
+    doi = Column(String(255))
+    volume = Column(String(255))
+    pageRange = Column(String(255))
+    publishedDate = Column(Integer)
 
 
 class OrcidDB(Base):
     __tablename__ = 'orcid'
 
     id = Column(Integer, primary_key=True, index=True)
-    paper_title = Column(String(255))
-    paper_type = Column(String(255))
-    doi = Column(String(255))
+    title = Column(String(255))
+    publicationName = Column(String(255))
+    description = Column(String(255))
+    publicationType = Column(String(255))
     authors = Column(String(255))
-    published_date = Column(Integer)
-    user_id = Column(Integer, ForeignKey('users.id'))
+    link = Column(String(255))
+    doi = Column(String(255))
+    volume = Column(String(255))
+    pageRange = Column(String(255))
+    publishedDate = Column(Integer)

@@ -45,8 +45,18 @@ class User(BaseModel):
 
 
 # -----------------------\ SHOW /------------------------------------
-class ShowUser(User):
+class ShowUser(BaseModel):
+    id: int
+    firstname: str
+    lastname: str
+    orc_id: str
+    scopus_id: str
+    email: str
+    location: Optional[str] = None
     userPapers: List[Paper]
+
+    class Config():
+        orm_mode = True
 
 
 class ShowPaper(Paper):

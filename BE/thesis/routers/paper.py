@@ -19,7 +19,6 @@ def all(db: Session = Depends(get_db), current_user: schemas.User = Depends(oaut
 
 @router.post('/', status_code=status.HTTP_201_CREATED,)
 def create(request: schemas.Paper, db: Session = Depends(get_db), current_user: schemas.User = Depends(oauth2.get_current_user)):
-
     return paper.create(request, db, current_user)
 
 

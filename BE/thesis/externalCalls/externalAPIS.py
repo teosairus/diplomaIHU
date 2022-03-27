@@ -2,9 +2,20 @@ from tkinter import E
 from tokenize import group
 import requests
 import json
+import os
+
+# get current working directory
+cwd = os.getcwd()
+
+# get files in directory
+files = os.listdir(cwd)
+
 
 # Load settings
-settings = open("./config/config.json")
+# settings = open(
+#     "config/config.json")
+settings = open(
+    f"{cwd}/thesis/externalCalls/config/config.json")
 config = json.load(settings)
 settings.close()
 
@@ -61,6 +72,7 @@ def authorsList(contributors):
 
 # -----------------\ SCOPUS /---------------------------
 def get_user_data_SCOPUS(userID):
+    print("SCOPUS API")
     currentCursor = '*'
 
     parameters = {"apikey": scopus_key,
@@ -72,35 +84,38 @@ def get_user_data_SCOPUS(userID):
         response_JSON = response.json()
         with open("Scopus.json", "w") as outfile:
             json.dump(response_JSON, outfile)
-        res = response_JSON['search-results']['entry']
-        docData = []
-        for index in range(len(res)):
-            entr = {}
+        if (response_JSON['search-results']["opensearch:totalResults"] == "0"):
+            return None
+        else:
+            res = response_JSON['search-results']['entry']
+            docData = []
+            for index in range(len(res)):
+                entr = {}
 
-            entr['title'] = res[index]["dc:title"] if "dc:title" in res[index].keys(
-            ) else None
-            entr['publicationName'] = res[index]["prism:publicationName"] if "prism:publicationName" in res[index].keys(
-            ) else None
-            entr['description'] = res[index]["subtypeDescription"] if "subtypeDescription" in res[index].keys(
-            ) else None
-            entr['publicationType'] = res[index]["prism:aggregationType"] if "prism:aggregationType" in res[index].keys(
-            ) else None
-            entr['authors'] = res[index]["dc:creator"] if "dc:creator" in res[index].keys(
-            ) else None
-            entr['link'] = res[index]["link"][2]['@href'] if res[index]["link"][2] else None
-            entr['doi'] = res[index]["prism:doi"] if "prism:doi" in res[index].keys(
-            ) else None
-            entr['volume'] = res[index]["prism:volume"] if "prism:volume" in res[index].keys(
-            ) else None
-            entr['pageRange'] = res[index]["prism:pageRange"] if "prism:pageRange" in res[index].keys(
-            ) else None
-            entr['publishedDate'] = res[index]["prism:coverDate"] if "prism:coverDate" in res[index].keys(
-            ) else None
+                entr['title'] = res[index]["dc:title"] if "dc:title" in res[index].keys(
+                ) else None
+                entr['publicationName'] = res[index]["prism:publicationName"] if "prism:publicationName" in res[index].keys(
+                ) else None
+                entr['description'] = res[index]["subtypeDescription"] if "subtypeDescription" in res[index].keys(
+                ) else None
+                entr['publicationType'] = res[index]["prism:aggregationType"] if "prism:aggregationType" in res[index].keys(
+                ) else None
+                entr['authors'] = res[index]["dc:creator"] if "dc:creator" in res[index].keys(
+                ) else None
+                entr['link'] = res[index]["link"][2]['@href'] if res[index]["link"][2] else None
+                entr['doi'] = res[index]["prism:doi"] if "prism:doi" in res[index].keys(
+                ) else None
+                entr['volume'] = res[index]["prism:volume"] if "prism:volume" in res[index].keys(
+                ) else None
+                entr['pageRange'] = res[index]["prism:pageRange"] if "prism:pageRange" in res[index].keys(
+                ) else None
+                entr['publishedDate'] = res[index]["prism:coverDate"] if "prism:coverDate" in res[index].keys(
+                ) else None
 
-            docData.append(entr)
-
-        with open("ScopusSaved.json", "w") as outfile:
-            json.dump(docData, outfile)
+                docData.append(entr)
+            return docData
+            # with open(f"{cwd}/thesis/externalCalls/ScopusSaved.json", "w") as outfile:
+            #     json.dump(docData, outfile)
     else:
         print(
             f"There's a {response.status_code} error with your request")
@@ -110,6 +125,7 @@ def get_user_data_SCOPUS(userID):
 
 
 def get_user_data_detailed_ORCID(userID, workIDs):
+    print("ORCID API")
     # Call for detailed info for each work
     res = requests.get(f"{orcid_url}/{userID}/works/{workIDs}", headers={
         "Authorization": "Bearer {}".format(orcid_key), "Accept": "application/vnd.orcid+json"})
@@ -145,9 +161,9 @@ def get_user_data_detailed_ORCID(userID, workIDs):
             entr['publishedDate'] = dateHelper(
                 data["publication-date"])
 
-            docData.append(entr)
-            with open("OrcidSaved.json", "w") as outfile:
-                json.dump(docData, outfile)
+        return docData.append(entr)
+        # with open("OrcidSaved.json", "w") as outfile:
+        #     json.dump(docData, outfile)
 
     else:
         print(
@@ -179,5 +195,5 @@ def get_user_data_ORCID(userID):
         return None
 
 
-get_user_data_SCOPUS(55918072400)
-get_user_data_ORCID("0000-0002-3352-0868")
+get_user_data_SCOPUS("tek")
+# get_user_data_ORCID("0000-0002-3352-0868")

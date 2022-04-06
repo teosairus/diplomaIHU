@@ -161,7 +161,8 @@ def get_user_data_detailed_ORCID(userID, workIDs):
             entr['publishedDate'] = dateHelper(
                 data["publication-date"])
 
-        return docData.append(entr)
+            docData.append(entr)
+        return docData
         # with open("OrcidSaved.json", "w") as outfile:
         #     json.dump(docData, outfile)
 
@@ -183,9 +184,11 @@ def get_user_data_ORCID(userID):
             tempWork.append(response_JSON['group'][index]
                             ['work-summary'][0]['put-code'])
         # convert work from list to comma separated string
+
         if (len(tempWork) > 0):
             work = ",".join(map(str, tempWork))
-            get_user_data_detailed_ORCID(userID, work)
+            return get_user_data_detailed_ORCID(userID, work)
+
         else:
             return None
 
@@ -195,5 +198,5 @@ def get_user_data_ORCID(userID):
         return None
 
 
-get_user_data_SCOPUS("tek")
+# get_user_data_SCOPUS("55918072400")
 # get_user_data_ORCID("0000-0002-3352-0868")

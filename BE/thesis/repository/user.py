@@ -39,9 +39,10 @@ def create(request: schemas.User, db: Session):
             # ORCID DB population
             if (request.orc_id):
                 temp = externalAPIS.get_user_data_ORCID(request.orc_id)
+
                 if temp:
                     for index in range(len(temp)):
-                        new_orcid = models.ScopusDB(
+                        new_orcid = models.OrcidDB(
                             title=temp[index]['title'],
                             publicationName=temp[index]['publicationName'],
                             description=temp[index]['description'],

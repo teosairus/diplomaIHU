@@ -70,6 +70,11 @@ def authorsList(contributors):
         return None
 
 
+def removeDashAndCapitalize(text):
+    text = text.title().replace("-", " ")
+    return text
+
+
 # -----------------\ SCOPUS /---------------------------
 def get_user_data_SCOPUS(userID):
     print("SCOPUS API")
@@ -147,9 +152,11 @@ def get_user_data_detailed_ORCID(userID, workIDs):
 
             entr['title'] = data["title"]["title"]["value"] if data["title"] else None
             entr['publicationName'] = data["journal-title"]["value"] if data["journal-title"] else None
-            entr['description'] = data["short-description"] if "short-description" in data.keys(
+            # entr['description'] = data["short-description"] if "short-description" in data.keys(
+            # ) else None
+            entr['description'] = removeDashAndCapitalize(data["type"]) if "type" in data.keys(
             ) else None
-            entr['publicationType'] = data["type"] if "type" in data.keys(
+            entr['publicationType'] = removeDashAndCapitalize(data["type"]) if "type" in data.keys(
             ) else None
             entr['authors'] = authorsList(data["contributors"]["contributor"])
             entr['link'] = data["url"]["value"] if data["url"] else None
@@ -162,9 +169,9 @@ def get_user_data_detailed_ORCID(userID, workIDs):
                 data["publication-date"])
 
             docData.append(entr)
-        return docData
-        # with open("OrcidSaved.json", "w") as outfile:
-        #     json.dump(docData, outfile)
+        # return docData
+        with open("OrcidSaved.json", "w") as outfile:
+            json.dump(docData, outfile)
 
     else:
         print(
@@ -199,4 +206,4 @@ def get_user_data_ORCID(userID):
 
 
 # get_user_data_SCOPUS("55918072400")
-# get_user_data_ORCID("0000-0002-3352-0868")
+get_user_data_ORCID("0000-0002-3352-0868")

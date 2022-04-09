@@ -169,9 +169,9 @@ def get_user_data_detailed_ORCID(userID, workIDs):
                 data["publication-date"])
 
             docData.append(entr)
-        # return docData
-        with open("OrcidSaved.json", "w") as outfile:
-            json.dump(docData, outfile)
+        return docData
+        # with open("OrcidSaved.json", "w") as outfile:
+        #     json.dump(docData, outfile)
 
     else:
         print(

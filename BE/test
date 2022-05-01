@@ -1,0 +1,23 @@
+"firstname": "Antonis",
+"lastname": "Sidiropoulos",
+"orc_id": "0000-0002-3352-0868",
+"scopus_id": "55918072400",
+"email": "asidirop@gmail.com",
+"password": "123123123",
+"location": "Thessaloniki"
+
+"firstname": "Stefanos",
+"lastname": "Ougiaroglou",
+"orc_id": "0000-0003-1094-2520",
+"scopus_id": "23390597600",
+"email": "sougiar@gmail.com",
+"password": "123123123",
+"location": "Athens"
+
+"firstname": "Konstantinos",
+"lastname": "Diamantaras",
+"orc_id": "0000-0003-1373-4022",
+"scopus_id": "7003525351",
+"email": "adiamant@gmail.com",
+"password": "123123123",
+"location": "Athens"

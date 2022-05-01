@@ -6,23 +6,25 @@ from sentence_transformers import SentenceTransformer, util
 from difflib import SequenceMatcher
 import distance
 import textdistance
+import copy
 
 
 # Load settings
-scopus = open(
-    "ScopusSaved.json")
+# scopus = open(
+#     "ScopusSaved.json")
 
-scopusDB = json.load(scopus)
-scopus.close()
+# scopusDB = json.load(scopus)
+# scopus.close()
 
-orcid = open(
-    "OrcidSaved.json")
+# orcid = open(
+#     "OrcidSaved.json")
 
-orcidDB = json.load(orcid)
-orcid.close()
+# orcidDB = json.load(orcid)
+# orcid.close()
 
 
 def textSimirality(title1, title2):
+
     # model = SentenceTransformer('all-MiniLM-L6-v2')
 
     # # Sentences are encoded by calling model.encode()
@@ -56,21 +58,25 @@ def titleClean(text):
 #                titleClean("I   love @!-.  BananaS  "))
 
 def checkDate(date1, date2):
-
-    # tsekaroume an diaferoun gia panw apo 2 xronia ta publications
-    if ((int(date1[0: 4]) <= int(date2[0: 4])+2) and (int(date1[0: 4]) >= int(date2[0: 4])-2)):
+    if (date1 == None or date2 == None):
         return True
     else:
-        return False
+        # tsekaroume an diaferoun gia panw apo 2 xronia ta publications
+        if ((int(date1[0: 4]) <= int(date2[0: 4])+2) and (int(date1[0: 4]) >= int(date2[0: 4])-2)):
+            return True
+        else:
+            return False
 
 
 # print(checkDate("2003", "2001"))
 
 
-def mergeFunc(mergedDB, toBeMergedDB):
+def mergeFunc(mergedDB, toBeMergedDB, source):
     newAdditionDB = []
     if len(mergedDB) == 0:
         newAdditionDB = toBeMergedDB
+        for item in newAdditionDB:
+            item['source'] = source
         return newAdditionDB
     else:
         for publication in toBeMergedDB:
@@ -89,7 +95,9 @@ def mergeFunc(mergedDB, toBeMergedDB):
                         pass
                     else:
                         # Ean den vrethei allo publication me idio onoma
-                        newAdditionDB.append(publication)
+                        temp = publication
+                        temp['source'] = source
+                        newAdditionDB.append(temp)
             # ean den exoume DOI
             else:
 
@@ -100,32 +108,60 @@ def mergeFunc(mergedDB, toBeMergedDB):
                     pass
                 else:
                     # Ean den vrethei allo publication me idio onoma
-                    newAdditionDB.append(publication)
+                    temp = publication
+                    temp['source'] = source
+                    newAdditionDB.append(temp)
 
         return newAdditionDB
+
+
+def removeDuplicatesDB(arr):
+    indecesToRemove = []
+    newArr = []
+    for index in range(len(arr)):
+
+        tempArr = copy.deepcopy(arr)
+        for index2 in range(len(tempArr)):
+            if (index != index2 and not(index in indecesToRemove)):
+                if (tempArr[index2]['doi'] == arr[index]['doi']):
+                    indecesToRemove.append(index2)
+                if ((textSimirality(titleClean(tempArr[index2]['title']), titleClean(
+                        arr[index]['title']))) and (checkDate(tempArr[index2]['publishedDate'], arr[index]['publishedDate']))):
+                    indecesToRemove.append(index2)
+    print("indecesToRemove", indecesToRemove)
+    for idx in range(len(arr)):
+        if (not(idx in indecesToRemove)):
+            newArr.append(arr[idx])
+    return newArr
 
 
 def itemsToAdd(papersList, scopusList, orcidList):
     toAdd = []
 
     if (len(scopusList) > 0):
-        merge1 = mergeFunc(papersList, scopusList)
-        if (len(merge1) > 0):
-            papersList = papersList+merge1
-            toAdd = toAdd+merge1
+        scopusRemovedDuplicates = removeDuplicatesDB(scopusList)
+        # print("Test1", len(scopusRemovedDuplicates))
+        # print("scopusList", len(scopusList))
+    merge1 = mergeFunc(papersList, scopusRemovedDuplicates, "Scopus")
+    if (len(merge1) > 0):
+        papersList = papersList+merge1
+        toAdd = toAdd+merge1
 
     if (len(orcidList) > 0):
-        merge2 = mergeFunc(papersList, orcidList)
+        orcidRemoveDuplicates = removeDuplicatesDB(orcidList)
+        # print("Test2", len(orcidRemoveDuplicates))
+        # print("orcidList", len(orcidList))
+        merge2 = mergeFunc(papersList, orcidRemoveDuplicates, "Orcid")
         if (len(merge2) > 0):
             toAdd = toAdd + merge2
 
     return toAdd
 
 
-finalDB = itemsToAdd([], scopusDB, orcidDB)
-print("Scopus Length:", len(scopusDB))
-print("Orcid Length:", len(orcidDB))
-print("Final Length:", len(finalDB))
+# finalDB = itemsToAdd([], scopusDB, orcidDB)
+# print("Scopus Length:", len(scopusDB))
+# print("Orcid Length:", len(orcidDB))
+# print("Final Length:", len(finalDB))
 
-with open("Final.json", "w") as outfile:
-    json.dump(finalDB, outfile)
+# with open("Final.json", "w") as outfile:
+#     json.dump(finalDB, outfile)

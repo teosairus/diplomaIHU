@@ -10,6 +10,7 @@ files = os.listdir(cwd)
 
 
 # Load settings
+# for local run only
 # settings = open(
 #     "config/config.json")
 settings = open(
@@ -50,11 +51,13 @@ def citationHelper(citation):
 
 
 def dateHelper(dateFetched):
-    year = dateFetched["year"]['value'] if dateFetched["year"] else "1970"
-    month = dateFetched["month"]['value'] if dateFetched["month"] else "01"
-    day = dateFetched["day"]['value'] if dateFetched["day"] else "01"
-
-    return f"{year}-{month}-{day}"
+    if (dateFetched == None):
+        return None
+    else:
+        year = dateFetched["year"]['value'] if dateFetched["year"] else "1970"
+        month = dateFetched["month"]['value'] if dateFetched["month"] else "01"
+        day = dateFetched["day"]['value'] if dateFetched["day"] else "01"
+        return f"{year}-{month}-{day}"
 
 
 def authorsList(contributors):
@@ -80,8 +83,11 @@ def get_user_data_SCOPUS(userID):
 
     parameters = {"apikey": scopus_key,
                   "query": "au-id({})".format(userID),
-                  "cursor": currentCursor,
-                  "count": 200, }
+                  #   "view": "COMPLETE",
+                  #   "cursor": currentCursor,
+                  #   "count": 15,
+
+                  }
     response = requests.get(scopus_url, params=parameters)
     if response.status_code == 200:
         response_JSON = response.json()
@@ -117,6 +123,8 @@ def get_user_data_SCOPUS(userID):
 
                 docData.append(entr)
             return docData
+            # with open("ScopusSaved.json", "w") as outfile:
+            #     json.dump(docData, outfile)
             # with open(f"{cwd}/thesis/externalCalls/ScopusSaved.json", "w") as outfile:
             #     json.dump(docData, outfile)
     else:
@@ -168,8 +176,6 @@ def get_user_data_detailed_ORCID(userID, workIDs):
 
             docData.append(entr)
         return docData
-        # with open("OrcidSaved.json", "w") as outfile:
-        #     json.dump(docData, outfile)
 
     else:
         print(
@@ -191,8 +197,27 @@ def get_user_data_ORCID(userID):
         # convert work from list to comma separated string
 
         if (len(tempWork) > 0):
-            work = ",".join(map(str, tempWork))
-            return get_user_data_detailed_ORCID(userID, work)
+
+            if (len(tempWork) > 100):
+                splitedSize = 100  # items per chart
+                tempWork_splited = [tempWork[x:x+splitedSize]
+                                    for x in range(0, len(tempWork), splitedSize)]
+                finalData = []
+                for item in tempWork_splited:
+                    workData = ",".join(map(str, item))
+                    finalData = finalData + \
+                        get_user_data_detailed_ORCID(userID, workData)
+                # with open("test.json", "w") as outfile:
+                #     json.dump(finalData, outfile)
+                return finalData
+
+            else:
+                work = ",".join(map(str, tempWork))
+
+                ela = get_user_data_detailed_ORCID(userID, work)
+                with open("OrcidSaved.json", "w") as outfile:
+                    json.dump(ela, outfile)
+                return ela
 
         else:
             return None
@@ -203,5 +228,9 @@ def get_user_data_ORCID(userID):
         return None
 
 
-# get_user_data_SCOPUS("55918072400")
-get_user_data_ORCID("0000-0002-3352-0868")
+# get_user_data_SCOPUS("55918072400") #sidirop
+# get_user_data_ORCID("0000-0002-3352-0868") #sidirop
+# get_user_data_SCOPUS("23390597600")  # ougia
+# get_user_data_ORCID("0000-0003-1094-2520")  # ougia
+# get_user_data_SCOPUS("7003525351") #diamantaras
+# get_user_data_ORCID("0000-0003-1373-4022")  # diamantaras

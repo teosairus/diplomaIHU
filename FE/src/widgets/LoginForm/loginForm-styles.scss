@@ -1,0 +1,11 @@
+.loginForm-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginForm-textfield {
+  width: 80% !important;
+  margin: 1rem 0 !important;
+}

@@ -9,6 +9,7 @@ import Slide from "@mui/material/Slide";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import LoginForm from "../LoginForm";
+import RegisterForm from "../RegisterForm";
 
 import "./loginDialog-styles.scss";
 
@@ -21,6 +22,35 @@ const LoginDialog = (props) => {
   const [tab, setTab] = React.useState(0);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [registerData, setRegisterData] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    password: "",
+    orcid: "",
+    scorusID: "",
+    location: "",
+  });
+  const [isError, setIsError] = useState({});
+
+  //   console.log("registerData", registerData);
+  //   console.log("isError", isError);
+
+  const validateRegister = () => {
+    let tempError = { ...isError };
+    for (let i = 0; i < Object.keys(registerData).length; i += 1) {
+      if (
+        (Object.keys(registerData)[i] === "firstname" ||
+          Object.keys(registerData)[i] === "lastname" ||
+          Object.keys(registerData)[i] === "email" ||
+          Object.keys(registerData)[i] === "password") &&
+        Object.values(registerData)[i].length === 0
+      ) {
+        tempError[`${Object.keys(registerData)[i]}`] = true;
+        setIsError({ ...tempError });
+      }
+    }
+  };
 
   const TabPanel = (props) => {
     const { children, value, index, ...other } = props;
@@ -76,30 +106,58 @@ const LoginDialog = (props) => {
               />
             </TabPanel>
             <TabPanel value={tab} index={1}>
-              Item Two
+              <RegisterForm
+                registerData={registerData}
+                setRegisterData={setRegisterData}
+                isError={isError}
+                setIsError={setIsError}
+              />
             </TabPanel>
           </>
         )}
       </DialogContent>
       <DialogActions>
         <Button onClick={() => setLoginOpen(false)}>Ακύρωση</Button>
-        <Button
-          disabled={
-            !isLogged && (username.length === 0 || password.length === 0)
-          }
-          onClick={() => {
-            setLoginOpen(false);
-            if (isLogged) {
-              setIsLogged(false);
-            } else {
-              setIsLogged(true);
-              setUsername("");
-              setPassword("");
+        {tab === 0 ? (
+          <Button
+            disabled={
+              !isLogged && (username.length === 0 || password.length === 0)
             }
-          }}
-        >
-          {isLogged ? "Έξοδος" : "Είσοδος"}
-        </Button>
+            onClick={() => {
+              setLoginOpen(false);
+              if (isLogged) {
+                setIsLogged(false);
+              } else {
+                setIsLogged(true);
+                setUsername("");
+                setPassword("");
+                setRegisterData({
+                  firstname: "",
+                  lastname: "",
+                  email: "",
+                  password: "",
+                  orcid: "",
+                  scorusID: "",
+                  location: "",
+                });
+              }
+            }}
+          >
+            {isLogged ? "Έξοδος" : "Είσοδος"}
+          </Button>
+        ) : (
+          <Button
+            disabled={
+              Object.values(isError).filter((item) => item === true).length > 0
+            }
+            onClick={() => {
+              //   setLoginOpen(false);
+              validateRegister();
+            }}
+          >
+            Εγγραφή
+          </Button>
+        )}
       </DialogActions>
     </Dialog>
   );

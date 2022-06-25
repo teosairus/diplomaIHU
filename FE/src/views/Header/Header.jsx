@@ -18,7 +18,7 @@ const Header = (props) => {
       </Grid>
       <Grid className="header-nav" item xs={6}>
         <Link className="header-navLink header-navItem " to="publications">
-          Δημοσιεύσεις
+          Οι Δημοσιεύσεις μου
         </Link>
         {isLogged && (
           <Link className="header-navLink header-navItem " to="account">

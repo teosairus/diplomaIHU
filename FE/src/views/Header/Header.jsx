@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Grid from "@mui/material/Grid";
-import LoginIcon from "@mui/icons-material/Login";
-import LogoutIcon from "@mui/icons-material/Logout";
+// import LoginIcon from "@mui/icons-material/Login";
+// import LogoutIcon from "@mui/icons-material/Logout";
 
 import "./header-styles.scss";
 
-const Header = (props) => {
-  const { isLogged, setLoginOpen } = props;
+const Header = () => {
+  // const { isLogged, setLoginOpen } = props;
   return (
     <header className="header-container">
       {/* <Grid container> */}
@@ -20,12 +20,12 @@ const Header = (props) => {
         <Link className="header-navLink header-navItem " to="publications">
           Οι Δημοσιεύσεις μου
         </Link>
-        {isLogged && (
-          <Link className="header-navLink header-navItem " to="account">
-            Λογαριασμός
-          </Link>
-        )}
-        <button
+
+        <Link className="header-navLink header-navItem " to="account">
+          Λογαριασμός
+        </Link>
+
+        {/* <button
           type="button"
           className="header-navLink-login header-navItem "
           onClick={() => {
@@ -45,7 +45,7 @@ const Header = (props) => {
               </span>
             </>
           )}
-        </button>
+        </button> */}
       </Grid>
       {/* </Grid> */}
     </header>

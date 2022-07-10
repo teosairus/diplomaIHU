@@ -1,6 +1,8 @@
 import React from "react";
 import Divider from "@mui/material/Divider";
+import LinkIcon from "@mui/icons-material/Link";
 import DeleteIcon from "@mui/icons-material/Delete";
+import Grid from "@mui/material/Grid";
 
 import "./publications-styles.scss";
 
@@ -17,11 +19,72 @@ const Publications = (props) => {
         {publications &&
           publications.length > 0 &&
           publications.map((item, index) => {
-            // console.log("item", item);
+            console.log("item", item);
             return (
-              <div key={item.title} className="publications-itemContainer">
-                <div className="publications-itemTitle">
-                  <span>{item.title}</span>
+              <Grid
+                container
+                key={item.title}
+                className="publications-itemContainer"
+              >
+                <Grid item xs={0.5} className="publications-itemLinkContainer">
+                  {item.link && (
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="publications-itemLink"
+                    >
+                      <LinkIcon />
+                    </a>
+                  )}
+                  {item.doi && (
+                    <a
+                      href={`https://www.doi.org/${item.doi}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="publications-itemLink"
+                    >
+                      <LinkIcon />
+                    </a>
+                  )}
+                </Grid>
+                <Grid
+                  item
+                  xs={5}
+                  className="publications-itemMainInfoContainer"
+                >
+                  <div className="publications-itemTitle">{item.title}</div>
+                  <div className="publications-itemAuthors">{item.authors}</div>
+                </Grid>
+                <Grid
+                  item
+                  xs={6}
+                  className="publications-itemPublicationContainer"
+                >
+                  <div className="publications-itemPubDate">
+                    {item.publishedDate
+                      ? `${
+                          item.publishedDate &&
+                          item.publishedDate.substring(0, 4)
+                        },`
+                      : ""}
+                  </div>
+                  <div className="publications-itemPubName">
+                    {`${item.publicationName},`}
+                  </div>
+                  <div className="publications-itemPubType">
+                    {`${item.publicationType},`}
+                  </div>
+
+                  <div className="publications-itemPubRange">
+                    {item.pageRange &&
+                      `Page Range: ${item.pageRange.replaceAll("--", "-")}`}
+                  </div>
+                  <div className="publications-itemPubVolume">
+                    {item.volume && `, Volume: ${item.volume}`}
+                  </div>
+                </Grid>
+                <Grid item xs={0.5} className="publications-deleteContainer">
                   <button
                     type="button"
                     className="publications-deleteButton"
@@ -31,72 +94,8 @@ const Publications = (props) => {
                   >
                     <DeleteIcon />
                   </button>
-                </div>
-                <div className="publications-itemAuthors">{item.authors}</div>
-
-                <div className="publications-detailsContainer">
-                  <div className="publications-detailsTitle">
-                    Publication Details:
-                  </div>
-                  <div className="publications-details">
-                    <span className="publications-detailsPubTitle">
-                      {item.publicationName}
-                    </span>
-                    <div className="publications-tiles">
-                      <div className="publications-tilesDate">
-                        <span className="publications-tilesTitle">
-                          Published Date
-                        </span>
-
-                        <span>{item.publishedDate || "-"}</span>
-                      </div>
-                      <div className="publications-tilesPubType">
-                        <span className="publications-tilesTitle">
-                          Publication Type
-                        </span>
-
-                        <span>{item.publicationType || "-"}</span>
-                      </div>
-
-                      <div className="publications-tilesPageRange">
-                        <span className="publications-tilesTitle">
-                          Page Range
-                        </span>
-
-                        <span>{item.pageRange || "-"}</span>
-                      </div>
-                      <div className="publications-tilesVolume">
-                        <span className="publications-tilesTitle">Volume</span>
-
-                        <span>{item.volume || "-"}</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="publications-actionContainer">
-                  {item.link && (
-                    <a
-                      href={item.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="publications-actionButton"
-                    >
-                      Check Publication
-                    </a>
-                  )}
-                  {item.doi && (
-                    <a
-                      href={`https://www.doi.org/${item.doi}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="publications-actionButton"
-                    >
-                      Check DOI
-                    </a>
-                  )}
-                </div>
-              </div>
+                </Grid>
+              </Grid>
             );
           })}
       </div>

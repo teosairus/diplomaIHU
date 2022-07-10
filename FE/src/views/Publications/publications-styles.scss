@@ -16,19 +16,77 @@
 }
 
 .publications-itemContainer {
-  margin: 1rem 0;
+  margin: 0.5rem 0;
   background-color: #ffffff;
   border-left: 5px solid $listItemBorder;
-  padding: 1rem;
+  // padding: 1rem;
   box-shadow: $shadow;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.publications-itemLinkContainer {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.publications-itemLink {
+  color: #000000 !important;
+  margin: 0 0.25rem;
+  display: flex;
+}
+
+.publications-itemMainInfoContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
 }
 
 .publications-itemTitle {
-  font-size: 1.2rem;
-  font-weight: bold;
+  margin: 0 0.25rem;
+}
+
+.publications-itemAuthors {
+  color: $fontColorGrey;
+  font-size: 13px;
+  margin: 0 0.25rem;
+}
+
+.publications-itemPublicationContainer {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+}
+
+.publications-itemPubName {
+  margin: 0 0.25rem;
+}
+
+.publications-itemPubType {
+  margin: 0 0.25rem;
+  color: $fontColorGrey;
+  font-size: 13px;
+  display: flex;
+  align-self: end;
+}
+
+.publications-itemPubDate {
+  margin: 0 0.25rem;
+}
+
+.publications-itemPubRange {
+  margin: 0 0.25rem;
+}
+
+.publications-itemPubVolume {
+  margin: 0 0.25rem;
+}
+
+.publications-deleteContainer {
+  display: flex;
+  justify-content: center;
 }
 
 .publications-deleteButton {
@@ -36,82 +94,4 @@
   border: none;
   color: $fontColorGrey;
   cursor: pointer;
-}
-
-.publications-itemAuthors {
-  color: $fontColorGrey;
-  font-size: 0.9rem;
-}
-
-.publications-detailsContainer {
-  margin: 1rem 0;
-}
-
-.publications-detailsTitle {
-  font-weight: bold;
-  margin: 0.2rem 0;
-}
-
-.publications-tiles {
-  display: grid;
-  grid-template-areas: "pubDate pubType pageRange volume";
-  grid-template-columns: 25% 25% 25% 25%;
-  margin: 1rem 0;
-}
-
-.publications-tilesDate {
-  grid-area: pubDate;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-right: 1px solid $borderGrey;
-}
-
-.publications-tilesPubType {
-  grid-area: pubType;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-right: 1px solid $borderGrey;
-}
-
-.publications-tilesPageRange {
-  grid-area: pageRange;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-right: 1px solid $borderGrey;
-}
-
-.publications-tilesVolume {
-  grid-area: volume;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.publications-tilesTitle {
-  font-weight: bold;
-  margin: 0 0 0.2rem 0;
-}
-
-.publications-actionContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.publications-actionButton {
-  background-color: $buttonBackground;
-  border: 1px solid $buttonBackground;
-  color: $buttonFont;
-  padding: 0.5rem;
-  text-decoration: none;
-  margin: 0 0.5rem;
-}
-
-.publications-actionButton:hover {
-  background-color: $buttonBackgroundHover;
-  border: 1px solid $buttonBackground;
-  color: $buttonFontHover;
 }

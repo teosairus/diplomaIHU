@@ -123,7 +123,7 @@ def removeDuplicatesDB(arr):
         tempArr = copy.deepcopy(arr)
         for index2 in range(len(tempArr)):
             if (index != index2 and not(index in indecesToRemove)):
-                if (tempArr[index2]['doi'] == arr[index]['doi']):
+                if ((tempArr[index2]['doi'] == arr[index]['doi']) and (arr[index]['doi'] != None)):
                     indecesToRemove.append(index2)
                 if ((textSimirality(titleClean(tempArr[index2]['title']), titleClean(
                         arr[index]['title']))) and (checkDate(tempArr[index2]['publishedDate'], arr[index]['publishedDate']))):
@@ -131,6 +131,7 @@ def removeDuplicatesDB(arr):
     print("indecesToRemove", indecesToRemove)
     for idx in range(len(arr)):
         if (not(idx in indecesToRemove)):
+
             newArr.append(arr[idx])
     return newArr
 
@@ -140,6 +141,10 @@ def itemsToAdd(papersList, scopusList, orcidList):
 
     if (len(scopusList) > 0):
         scopusRemovedDuplicates = removeDuplicatesDB(scopusList)
+        with open("ScDupli.json", "w") as outfile:
+            json.dump(scopusRemovedDuplicates, outfile)
+        with open("ScNonDupli.json", "w") as outfile:
+            json.dump(scopusList, outfile)
         # print("Test1", len(scopusRemovedDuplicates))
         # print("scopusList", len(scopusList))
     merge1 = mergeFunc(papersList, scopusRemovedDuplicates, "Scopus")
@@ -149,6 +154,10 @@ def itemsToAdd(papersList, scopusList, orcidList):
 
     if (len(orcidList) > 0):
         orcidRemoveDuplicates = removeDuplicatesDB(orcidList)
+        with open("OrDupli.json", "w") as outfile:
+            json.dump(orcidRemoveDuplicates, outfile)
+        with open("OrNonDupli.json", "w") as outfile:
+            json.dump(orcidList, outfile)
         # print("Test2", len(orcidRemoveDuplicates))
         # print("orcidList", len(orcidList))
         merge2 = mergeFunc(papersList, orcidRemoveDuplicates, "Orcid")

@@ -1,5 +1,6 @@
 from sqlalchemy import null
 from sqlalchemy.orm import Session
+import copy
 from .. import models, schemas, helpers
 from fastapi import HTTPException, status
 from ..hashing import Hash
@@ -23,8 +24,10 @@ def create(request: schemas.User, db: Session):
             if (request.scopus_id):
                 tempScopus = externalAPIS.get_user_data_SCOPUS(
                     request.scopus_id)
+
                 if tempScopus:
-                    scopusList = tempScopus
+                    # tempScopus = mergeDBs.removeDuplicatesDB(tempScopus)
+                    scopusList = copy.deepcopy(tempScopus)
                     for index in range(len(tempScopus)):
                         new_scopus = models.ScopusDB(
                             title=tempScopus[index]['title'],
@@ -47,7 +50,8 @@ def create(request: schemas.User, db: Session):
                 tempOrcid = externalAPIS.get_user_data_ORCID(request.orc_id)
 
                 if tempOrcid:
-                    orcidList = tempOrcid
+                    # tempOrcid = mergeDBs.removeDuplicatesDB(tempOrcid)
+                    orcidList = copy.deepcopy(tempOrcid)
                     for index in range(len(tempOrcid)):
                         new_orcid = models.OrcidDB(
                             title=tempOrcid[index]['title'],

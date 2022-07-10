@@ -300,18 +300,6 @@
         "publishedDate": "2013-01-01"
     },
     {
-        "title": "Adaptive k-nearest-neighbor classification using a dynamic number of nearest neighbors",
-        "publicationName": "Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)",
-        "description": "Book",
-        "publicationType": "Book",
-        "authors": "Ougiaroglou S.,Nanopoulos A.,Papadopoulos A.N.,Manolopoulos Y.,Welzer-Druzovec T.",
-        "link": "http://www.scopus.com/inward/record.url?eid=2-s2.0-38049045180&partnerID=MN8TOARS",
-        "doi": null,
-        "volume": "4690 LNCS",
-        "pageRange": "66-82",
-        "publishedDate": "2007-01-01"
-    },
-    {
         "title": "FHC: An adaptive fast hybrid method for k-NN classification",
         "publicationName": "Logic Journal of the IGPL",
         "description": "Journal Article",

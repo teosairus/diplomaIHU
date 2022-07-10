@@ -50,17 +50,12 @@ const Publications = (props) => {
                 </Grid>
                 <Grid
                   item
-                  xs={5}
+                  xs={11}
                   className="publications-itemMainInfoContainer"
                 >
                   <div className="publications-itemTitle">{item.title}</div>
                   <div className="publications-itemAuthors">{item.authors}</div>
-                </Grid>
-                <Grid
-                  item
-                  xs={6}
-                  className="publications-itemPublicationContainer"
-                >
+
                   <div className="publications-itemPubDate">
                     {item.publishedDate
                       ? `${

@@ -40,8 +40,7 @@
 
 .publications-itemMainInfoContainer {
   display: flex;
-  flex-direction: row;
-  align-items: flex-end;
+  flex-direction: column !important;
 }
 
 .publications-itemTitle {
@@ -56,8 +55,12 @@
 
 .publications-itemPublicationContainer {
   display: flex;
+  flex-direction: column !important;
+}
+
+.publications-itemPubContainer {
+  display: flex;
   flex-direction: row;
-  align-items: center;
 }
 
 .publications-itemPubName {
@@ -78,10 +81,14 @@
 
 .publications-itemPubRange {
   margin: 0 0.25rem;
+  color: $fontColorGrey;
+  font-size: 13px;
 }
 
 .publications-itemPubVolume {
   margin: 0 0.25rem;
+  color: $fontColorGrey;
+  font-size: 13px;
 }
 
 .publications-deleteContainer {

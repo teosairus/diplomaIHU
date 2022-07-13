@@ -26,7 +26,7 @@ const Publications = (props) => {
                 key={item.title}
                 className="publications-itemContainer"
               >
-                <Grid item xs={0.5} className="publications-itemLinkContainer">
+                <Grid item xs={1} className="publications-itemLinkContainer">
                   {item.link && (
                     <a
                       href={item.link}
@@ -50,7 +50,7 @@ const Publications = (props) => {
                 </Grid>
                 <Grid
                   item
-                  xs={5}
+                  xs={4}
                   className="publications-itemMainInfoContainer"
                 >
                   <div className="publications-itemTitle">{item.title}</div>
@@ -58,30 +58,33 @@ const Publications = (props) => {
                 </Grid>
                 <Grid
                   item
-                  xs={6}
+                  xs={6.5}
                   className="publications-itemPublicationContainer"
                 >
-                  <div className="publications-itemPubDate">
-                    {item.publishedDate
-                      ? `${
-                          item.publishedDate &&
-                          item.publishedDate.substring(0, 4)
-                        },`
-                      : ""}
+                  <div className="publications-itemPubContainer">
+                    <div className="publications-itemPubDate">
+                      {item.publishedDate
+                        ? `${
+                            item.publishedDate &&
+                            item.publishedDate.substring(0, 4)
+                          },`
+                        : ""}
+                    </div>
+                    <div className="publications-itemPubName">
+                      {`${item.publicationName},`}
+                    </div>
                   </div>
-                  <div className="publications-itemPubName">
-                    {`${item.publicationName},`}
-                  </div>
-                  <div className="publications-itemPubType">
-                    {`${item.publicationType},`}
-                  </div>
-
-                  <div className="publications-itemPubRange">
-                    {item.pageRange &&
-                      `Page Range: ${item.pageRange.replaceAll("--", "-")}`}
-                  </div>
-                  <div className="publications-itemPubVolume">
-                    {item.volume && `, Volume: ${item.volume}`}
+                  <div className="publications-itemPubContainer">
+                    <div className="publications-itemPubType">
+                      {`${item.publicationType},`}
+                    </div>
+                    <div className="publications-itemPubRange">
+                      {item.pageRange &&
+                        `Page Range: ${item.pageRange.replaceAll("--", "-")}`}
+                    </div>
+                    <div className="publications-itemPubVolume">
+                      {item.volume && `Volume: ${item.volume}`}
+                    </div>
                   </div>
                 </Grid>
                 <Grid item xs={0.5} className="publications-deleteContainer">

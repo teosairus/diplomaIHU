@@ -11,10 +11,10 @@ files = os.listdir(cwd)
 
 # Load settings
 # for local run only
-# settings = open(
-#     "config/config.json")
 settings = open(
-    f"{cwd}/thesis/externalCalls/config/config.json")
+    "config/config.json")
+# settings = open(
+#     f"{cwd}/thesis/externalCalls/config/config.json")
 config = json.load(settings)
 settings.close()
 
@@ -91,7 +91,7 @@ def get_user_data_SCOPUS(userID):
     response = requests.get(scopus_url, params=parameters)
     if response.status_code == 200:
         response_JSON = response.json()
-        with open("Scopus.json", "w") as outfile:
+        with open("Scopus_Initial.json", "w") as outfile:
             json.dump(response_JSON, outfile)
         if (response_JSON['search-results']["opensearch:totalResults"] == "0"):
             return None
@@ -122,9 +122,11 @@ def get_user_data_SCOPUS(userID):
                 ) else None
 
                 docData.append(entr)
+
+            with open("Scopus_Edited.json", "w") as outfile:
+                json.dump(docData, outfile)
             return docData
-            # with open("ScopusSaved.json", "w") as outfile:
-            #     json.dump(docData, outfile)
+
             # with open(f"{cwd}/thesis/externalCalls/ScopusSaved.json", "w") as outfile:
             #     json.dump(docData, outfile)
     else:
@@ -136,13 +138,13 @@ def get_user_data_SCOPUS(userID):
 
 
 def get_user_data_detailed_ORCID(userID, workIDs):
-    print("ORCID API")
+    print("ORCID DETAILED API")
     # Call for detailed info for each work
     res = requests.get(f"{orcid_url}/{userID}/works/{workIDs}", headers={
         "Authorization": "Bearer {}".format(orcid_key), "Accept": "application/vnd.orcid+json"})
     if res.status_code == 200:
         res_JSON = res.json()
-        with open("ORCID.json", "w") as outfile:
+        with open("ORCID_Initial.json", "w") as outfile:
             json.dump(res_JSON, outfile)
         res = res_JSON['bulk']
         docData = []
@@ -187,6 +189,7 @@ def get_user_data_ORCID(userID):
     response = requests.get(f"{orcid_url}/{userID}/works", headers={
                             "Authorization": "Bearer {}".format(orcid_key), "Accept": "application/vnd.orcid+json"})
     if response.status_code == 200:
+        print("ORCID  API")
         response_JSON = response.json()
 
         tempWork = []
@@ -214,10 +217,10 @@ def get_user_data_ORCID(userID):
             else:
                 work = ",".join(map(str, tempWork))
 
-                ela = get_user_data_detailed_ORCID(userID, work)
-                with open("OrcidSaved.json", "w") as outfile:
-                    json.dump(ela, outfile)
-                return ela
+                tempOrcid = get_user_data_detailed_ORCID(userID, work)
+                with open("Orcid_Edited.json", "w") as outfile:
+                    json.dump(tempOrcid, outfile)
+                return tempOrcid
 
         else:
             return None
@@ -228,8 +231,8 @@ def get_user_data_ORCID(userID):
         return None
 
 
-# get_user_data_SCOPUS("55918072400") #sidirop
-# get_user_data_ORCID("0000-0002-3352-0868") #sidirop
+# get_user_data_SCOPUS("55918072400")  # sidirop
+# get_user_data_ORCID("0000-0002-3352-0868")  # sidirop
 # get_user_data_SCOPUS("23390597600")  # ougia
 # get_user_data_ORCID("0000-0003-1094-2520")  # ougia
 # get_user_data_SCOPUS("7003525351") #diamantaras

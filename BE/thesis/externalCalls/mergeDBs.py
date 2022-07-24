@@ -10,17 +10,17 @@ import copy
 
 
 # Load settings
-# scopus = open(
-#     "ScopusSaved.json")
+scopus = open(
+    "Scopus_Edited.json")
 
-# scopusDB = json.load(scopus)
-# scopus.close()
+scopusDB = json.load(scopus)
+scopus.close()
 
-# orcid = open(
-#     "OrcidSaved.json")
+orcid = open(
+    "Orcid_Edited.json")
 
-# orcidDB = json.load(orcid)
-# orcid.close()
+orcidDB = json.load(orcid)
+orcid.close()
 
 
 def textSimirality(title1, title2):
@@ -73,26 +73,49 @@ def checkDate(date1, date2):
 
 def mergeFunc(mergedDB, toBeMergedDB, source):
     newAdditionDB = []
+
     if len(mergedDB) == 0:
         newAdditionDB = toBeMergedDB
         for item in newAdditionDB:
             item['source'] = source
         return newAdditionDB
     else:
-        for publication in toBeMergedDB:
-            # Ean to DOI den einai null
+        for index, publication in enumerate(toBeMergedDB):
+            # Ean to DOI uparxei diladi diaforo tou null
             if (publication['doi'] != None):
 
                 # ean to DOI brethei idio me kapoio allo prospername
                 if any(pub['doi'] == publication['doi'] for pub in mergedDB):
-                    pass
+                    mergedIndex = next((i for i, item in enumerate(
+                        mergedDB) if item['doi'] == publication['doi']), -1)
+                    for key, value in mergedDB[mergedIndex].items():
+                        if key in publication:
+
+                            if ((value == None and publication[key] != None) or (value != None and publication[key] != None and len(value) < len(publication[key]))):
+                                print("value", value)
+                                print("publication",  publication[key])
+
+                                mergedDB[mergedIndex][key] = publication[key]
+                                mergedDB[mergedIndex]['source'] = 'Mixed'
+                                newAdditionDB.append(mergedDB[mergedIndex])
+
                 # allios tsekaroume me to onoma
                 else:
                     # Ean vrethei allo publication me idio onoma prospername kai +-2 publication year
                     if any((textSimirality(titleClean(pub['title']), titleClean(publication['title']))) and (checkDate(pub['publishedDate'], publication['publishedDate'])) for pub in mergedDB):
-                        # if any((titleClean(pub['title']) == titleClean(publication['title'])) or (textSimirality(titleClean(pub['title']), titleClean(publication['title']))) for pub in mergedDB):
-                        # if any(pub['title'] == publication['title'] for pub in mergedDB):
-                        pass
+
+                        mergedIndex = next((i for i, item in enumerate(
+                            mergedDB) if ((textSimirality(titleClean(item['title']), titleClean(publication['title']))) and (checkDate(item['publishedDate'], publication['publishedDate'])))), -1)
+                    for key, value in mergedDB[mergedIndex].items():
+                        if key in publication:
+
+                            if ((value == None and publication[key] != None) or (value != None and publication[key] != None and len(value) < len(publication[key]))):
+                                print("value", value)
+                                print("publication",  publication[key])
+
+                                mergedDB[mergedIndex][key] = publication[key]
+                                mergedDB[mergedIndex]['source'] = 'Mixed'
+                                newAdditionDB.append(mergedDB[mergedIndex])
                     else:
                         # Ean den vrethei allo publication me idio onoma
                         temp = publication
@@ -103,9 +126,19 @@ def mergeFunc(mergedDB, toBeMergedDB, source):
 
                 # Ean vrethei allo publication me idio onoma prospername kai +-2 publication year
                 if any((textSimirality(titleClean(pub['title']), titleClean(publication['title']))) and (checkDate(pub['publishedDate'], publication['publishedDate'])) for pub in mergedDB):
-                    # if any((titleClean(pub['title']) == titleClean(publication['title'])) or (textSimirality(titleClean(pub['title']), titleClean(publication['title']))) for pub in mergedDB):
-                    # if any(pub['title'] == publication['title'] for pub in mergedDB):
-                    pass
+
+                    mergedIndex = next((i for i, item in enumerate(
+                        mergedDB) if ((textSimirality(titleClean(item['title']), titleClean(publication['title']))) and (checkDate(item['publishedDate'], publication['publishedDate'])))), -1)
+                    for key, value in mergedDB[mergedIndex].items():
+                        if key in publication:
+
+                            if ((value == None and publication[key] != None) or (value != None and publication[key] != None and len(value) < len(publication[key]))):
+                                print("value", value)
+                                print("publication",  publication[key])
+
+                                mergedDB[mergedIndex][key] = publication[key]
+                                mergedDB[mergedIndex]['source'] = 'Mixed'
+                                newAdditionDB.append(mergedDB[mergedIndex])
                 else:
                     # Ean den vrethei allo publication me idio onoma
                     temp = publication
@@ -124,10 +157,12 @@ def removeDuplicatesDB(arr):
         for index2 in range(len(tempArr)):
             if (index != index2 and not(index in indecesToRemove)):
                 if ((tempArr[index2]['doi'] == arr[index]['doi']) and (arr[index]['doi'] != None)):
-                    indecesToRemove.append(index2)
+                    if (("source" not in tempArr[index2] and "source" not in arr[index]) or (tempArr[index2]['source'] == "Mixed" and arr[index]['source'] == "Mixed") or (tempArr[index2]['source'] != "Mixed" and arr[index]['source'] == "Mixed")):
+                        indecesToRemove.append(index2)
                 if ((textSimirality(titleClean(tempArr[index2]['title']), titleClean(
                         arr[index]['title']))) and (checkDate(tempArr[index2]['publishedDate'], arr[index]['publishedDate']))):
-                    indecesToRemove.append(index2)
+                    if (("source" not in tempArr[index2] and "source" not in arr[index]) or (tempArr[index2]['source'] == "Mixed" and arr[index]['source'] == "Mixed") or (tempArr[index2]['source'] != "Mixed" and arr[index]['source'] == "Mixed")):
+                        indecesToRemove.append(index2)
     print("indecesToRemove", indecesToRemove)
     for idx in range(len(arr)):
         if (not(idx in indecesToRemove)):
@@ -141,36 +176,43 @@ def itemsToAdd(papersList, scopusList, orcidList):
 
     if (len(scopusList) > 0):
         scopusRemovedDuplicates = removeDuplicatesDB(scopusList)
-        with open("ScDupli.json", "w") as outfile:
+        with open("ScopusDuplicates.json", "w") as outfile:
             json.dump(scopusRemovedDuplicates, outfile)
-        with open("ScNonDupli.json", "w") as outfile:
+        with open("ScopusNoDuplicates.json", "w") as outfile:
             json.dump(scopusList, outfile)
         # print("Test1", len(scopusRemovedDuplicates))
         # print("scopusList", len(scopusList))
-    merge1 = mergeFunc(papersList, scopusRemovedDuplicates, "Scopus")
+    merge1 = mergeFunc(
+        papersList, scopusRemovedDuplicates, "Scopus")
+
+    # with open("TEST.json", "w") as outfile:
+    #     json.dump(newa, outfile)
     if (len(merge1) > 0):
         papersList = papersList+merge1
         toAdd = toAdd+merge1
 
     if (len(orcidList) > 0):
         orcidRemoveDuplicates = removeDuplicatesDB(orcidList)
-        with open("OrDupli.json", "w") as outfile:
+        with open("OrcidDuplicates.json", "w") as outfile:
             json.dump(orcidRemoveDuplicates, outfile)
-        with open("OrNonDupli.json", "w") as outfile:
+        with open("OrcidNonDuplicates.json", "w") as outfile:
             json.dump(orcidList, outfile)
         # print("Test2", len(orcidRemoveDuplicates))
         # print("orcidList", len(orcidList))
         merge2 = mergeFunc(papersList, orcidRemoveDuplicates, "Orcid")
+
         if (len(merge2) > 0):
             toAdd = toAdd + merge2
+
+        toAdd = removeDuplicatesDB(toAdd)
 
     return toAdd
 
 
-# finalDB = itemsToAdd([], scopusDB, orcidDB)
-# print("Scopus Length:", len(scopusDB))
-# print("Orcid Length:", len(orcidDB))
-# print("Final Length:", len(finalDB))
+finalDB = itemsToAdd([], scopusDB, orcidDB)
+print("Scopus Length:", len(scopusDB))
+print("Orcid Length:", len(orcidDB))
+print("Final Length:", len(finalDB))
 
-# with open("Final.json", "w") as outfile:
-#     json.dump(finalDB, outfile)
+with open("Final.json", "w") as outfile:
+    json.dump(finalDB, outfile)

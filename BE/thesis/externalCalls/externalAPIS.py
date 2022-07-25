@@ -61,12 +61,18 @@ def dateHelper(dateFetched):
 
 
 def authorsList(contributors):
-    creators = []
+    creators = ''
     if len(contributors) > 0:
         for idx in range(len(contributors)):
-            creators.append(contributors[idx]["credit-name"]["value"])
+            if idx == 0:
+                creators = contributors[idx]["credit-name"]["value"].replace(
+                    ",", "")
+            else:
+                creators = creators + ', ' + \
+                    contributors[idx]["credit-name"]["value"].replace(
+                        ",", "")
 
-        return ";".join(creators).replace(",", "").replace(";", ",")
+        return creators
     else:
         return None
 
@@ -80,59 +86,70 @@ def removeDashAndCapitalize(text):
 def get_user_data_SCOPUS(userID):
     print("SCOPUS API")
     currentCursor = '*'
+    previousCursor = 1
+    docData = []
+    docDataInitial = []
+    while (previousCursor != currentCursor):
 
-    parameters = {"apikey": scopus_key,
-                  "query": "au-id({})".format(userID),
-                  #   "view": "COMPLETE",
-                  #   "cursor": currentCursor,
-                  #   "count": 15,
+        parameters = {"apikey": scopus_key,
+                      "query": "au-id({})".format(userID),
+                      "view": "COMPLETE",
+                      "cursor": currentCursor,
+                      "count": 25,
+                      }
+        response = requests.get(scopus_url, params=parameters)
+        if response.status_code == 200:
+            response_JSON = response.json()
+        # cursor for json pagination
+            currentCursor = response_JSON["search-results"]["cursor"]["@next"]
+            previousCursor = response_JSON["search-results"]["cursor"]["@current"]
+            if currentCursor != previousCursor:
 
-                  }
-    response = requests.get(scopus_url, params=parameters)
-    if response.status_code == 200:
-        response_JSON = response.json()
-        with open("Scopus_Initial.json", "w") as outfile:
-            json.dump(response_JSON, outfile)
-        if (response_JSON['search-results']["opensearch:totalResults"] == "0"):
-            return None
+                res = response_JSON['search-results']['entry']
+                authors = ''
+                for index in range(len(res)):
+                    entr = {}
+                    docDataInitial.append(res[index])
+
+                    if "author" in res[index].keys():
+                        for idx in range(len(res[index]['author'])):
+                            if idx == 0:
+                                authors = res[index]['author'][idx]['authname']
+                            else:
+                                authors = authors + ", " + \
+                                    res[index]['author'][idx]['authname']
+
+                    entr['title'] = res[index]["dc:title"] if "dc:title" in res[index].keys(
+                    ) else None
+                    entr['publicationName'] = res[index]["prism:publicationName"] if "prism:publicationName" in res[index].keys(
+                    ) else None
+                    entr['description'] = res[index]["subtypeDescription"] if "subtypeDescription" in res[index].keys(
+                    ) else None
+                    entr['publicationType'] = res[index]["prism:aggregationType"] if "prism:aggregationType" in res[index].keys(
+                    ) else None
+                    entr['authors'] = authors if "author" in res[index].keys(
+                    ) else None
+                    entr['link'] = res[index]["link"][2]['@href'] if res[index]["link"][2] else None
+                    entr['doi'] = res[index]["prism:doi"] if "prism:doi" in res[index].keys(
+                    ) else None
+                    entr['volume'] = res[index]["prism:volume"] if "prism:volume" in res[index].keys(
+                    ) else None
+                    entr['pageRange'] = res[index]["prism:pageRange"] if "prism:pageRange" in res[index].keys(
+                    ) else None
+                    entr['publishedDate'] = res[index]["prism:coverDate"] if "prism:coverDate" in res[index].keys(
+                    ) else None
+
+                    docData.append(entr)
+
         else:
-            res = response_JSON['search-results']['entry']
-            docData = []
-            for index in range(len(res)):
-                entr = {}
-
-                entr['title'] = res[index]["dc:title"] if "dc:title" in res[index].keys(
-                ) else None
-                entr['publicationName'] = res[index]["prism:publicationName"] if "prism:publicationName" in res[index].keys(
-                ) else None
-                entr['description'] = res[index]["subtypeDescription"] if "subtypeDescription" in res[index].keys(
-                ) else None
-                entr['publicationType'] = res[index]["prism:aggregationType"] if "prism:aggregationType" in res[index].keys(
-                ) else None
-                entr['authors'] = res[index]["dc:creator"] if "dc:creator" in res[index].keys(
-                ) else None
-                entr['link'] = res[index]["link"][2]['@href'] if res[index]["link"][2] else None
-                entr['doi'] = res[index]["prism:doi"] if "prism:doi" in res[index].keys(
-                ) else None
-                entr['volume'] = res[index]["prism:volume"] if "prism:volume" in res[index].keys(
-                ) else None
-                entr['pageRange'] = res[index]["prism:pageRange"] if "prism:pageRange" in res[index].keys(
-                ) else None
-                entr['publishedDate'] = res[index]["prism:coverDate"] if "prism:coverDate" in res[index].keys(
-                ) else None
-
-                docData.append(entr)
-
-            with open("Scopus_Edited.json", "w") as outfile:
-                json.dump(docData, outfile)
-            return docData
-
-            # with open(f"{cwd}/thesis/externalCalls/ScopusSaved.json", "w") as outfile:
-            #     json.dump(docData, outfile)
-    else:
-        print(
-            f"There's a {response.status_code} error with your request")
-        return None
+            print(
+                f"There's a {response.status_code} error with your request")
+            return None
+    with open("Scopus_Initial.json", "w") as outfile:
+        json.dump(docDataInitial, outfile)
+    with open("Scopus_Edited.json", "w") as outfile:
+        json.dump(docData, outfile)
+    return docData
 
 # -----------------\ ORCID /---------------------------
 
@@ -144,7 +161,7 @@ def get_user_data_detailed_ORCID(userID, workIDs):
         "Authorization": "Bearer {}".format(orcid_key), "Accept": "application/vnd.orcid+json"})
     if res.status_code == 200:
         res_JSON = res.json()
-        with open("ORCID_Initial.json", "w") as outfile:
+        with open("Orcid_Initial.json", "w") as outfile:
             json.dump(res_JSON, outfile)
         res = res_JSON['bulk']
         docData = []
@@ -232,8 +249,8 @@ def get_user_data_ORCID(userID):
 
 
 # get_user_data_SCOPUS("55918072400")  # sidirop
-# get_user_data_ORCID("0000-0002-3352-0868")  # sidirop
+get_user_data_ORCID("0000-0002-3352-0868")  # sidirop
 # get_user_data_SCOPUS("23390597600")  # ougia
 # get_user_data_ORCID("0000-0003-1094-2520")  # ougia
-# get_user_data_SCOPUS("7003525351") #diamantaras
+# get_user_data_SCOPUS("7003525351")  # diamantaras
 # get_user_data_ORCID("0000-0003-1373-4022")  # diamantaras

@@ -11,10 +11,10 @@ files = os.listdir(cwd)
 
 # Load settings
 # for local run only
-settings = open(
-    "config/config.json")
 # settings = open(
-#     f"{cwd}/thesis/externalCalls/config/config.json")
+#     "config/config.json")
+settings = open(
+    f"{cwd}/thesis/externalCalls/config/config.json")
 config = json.load(settings)
 settings.close()
 
@@ -145,10 +145,11 @@ def get_user_data_SCOPUS(userID):
             print(
                 f"There's a {response.status_code} error with your request")
             return None
-    with open("Scopus_Initial.json", "w") as outfile:
-        json.dump(docDataInitial, outfile)
-    with open("Scopus_Edited.json", "w") as outfile:
-        json.dump(docData, outfile)
+    # Create files for testing
+    # with open("Scopus_Initial.json", "w") as outfile:
+    #     json.dump(docDataInitial, outfile)
+    # with open("Scopus_Edited.json", "w") as outfile:
+    #     json.dump(docData, outfile)
     return docData
 
 # -----------------\ ORCID /---------------------------
@@ -161,8 +162,9 @@ def get_user_data_detailed_ORCID(userID, workIDs):
         "Authorization": "Bearer {}".format(orcid_key), "Accept": "application/vnd.orcid+json"})
     if res.status_code == 200:
         res_JSON = res.json()
-        with open("Orcid_Initial.json", "w") as outfile:
-            json.dump(res_JSON, outfile)
+        # Create files for testing
+        # with open("Orcid_Initial.json", "w") as outfile:
+        #     json.dump(res_JSON, outfile)
         res = res_JSON['bulk']
         docData = []
 
@@ -235,8 +237,9 @@ def get_user_data_ORCID(userID):
                 work = ",".join(map(str, tempWork))
 
                 tempOrcid = get_user_data_detailed_ORCID(userID, work)
-                with open("Orcid_Edited.json", "w") as outfile:
-                    json.dump(tempOrcid, outfile)
+                # Create files for testing
+                # with open("Orcid_Edited.json", "w") as outfile:
+                #     json.dump(tempOrcid, outfile)
                 return tempOrcid
 
         else:
@@ -249,7 +252,7 @@ def get_user_data_ORCID(userID):
 
 
 # get_user_data_SCOPUS("55918072400")  # sidirop
-get_user_data_ORCID("0000-0002-3352-0868")  # sidirop
+# get_user_data_ORCID("0000-0002-3352-0868")  # sidirop
 # get_user_data_SCOPUS("23390597600")  # ougia
 # get_user_data_ORCID("0000-0003-1094-2520")  # ougia
 # get_user_data_SCOPUS("7003525351")  # diamantaras

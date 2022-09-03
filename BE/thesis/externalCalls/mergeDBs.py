@@ -9,18 +9,18 @@ import textdistance
 import copy
 
 
-# Load settings
-scopus = open(
-    "Scopus_Edited.json")
+# Load settings for local testing
+# scopus = open(
+#     "Scopus_Edited.json")
 
-scopusDB = json.load(scopus)
-scopus.close()
+# scopusDB = json.load(scopus)
+# scopus.close()
 
-orcid = open(
-    "Orcid_Edited.json")
+# orcid = open(
+#     "Orcid_Edited.json")
 
-orcidDB = json.load(orcid)
-orcid.close()
+# orcidDB = json.load(orcid)
+# orcid.close()
 
 
 def textSimirality(title1, title2):
@@ -208,11 +208,12 @@ def itemsToAdd(papersList, scopusList, orcidList):
 
     return toAdd
 
+# local testing
 
-finalDB = itemsToAdd([], scopusDB, orcidDB)
-print("Scopus Length:", len(scopusDB))
-print("Orcid Length:", len(orcidDB))
-print("Final Length:", len(finalDB))
+# finalDB = itemsToAdd([], scopusDB, orcidDB)
+# print("Scopus Length:", len(scopusDB))
+# print("Orcid Length:", len(orcidDB))
+# print("Final Length:", len(finalDB))
 
-with open("Final.json", "w") as outfile:
-    json.dump(finalDB, outfile)
+# with open("Final.json", "w") as outfile:
+#     json.dump(finalDB, outfile)

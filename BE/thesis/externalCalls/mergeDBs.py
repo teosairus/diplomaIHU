@@ -182,14 +182,14 @@ def itemsToAdd(papersList, scopusList, orcidList):
             json.dump(scopusList, outfile)
         # print("Test1", len(scopusRemovedDuplicates))
         # print("scopusList", len(scopusList))
-    merge1 = mergeFunc(
-        papersList, scopusRemovedDuplicates, "Scopus")
+        merge1 = mergeFunc(
+            papersList, scopusRemovedDuplicates, "Scopus")
 
     # with open("TEST.json", "w") as outfile:
     #     json.dump(newa, outfile)
-    if (len(merge1) > 0):
-        papersList = papersList+merge1
-        toAdd = toAdd+merge1
+        if (len(merge1) > 0):
+            papersList = papersList+merge1
+            toAdd = toAdd+merge1
 
     if (len(orcidList) > 0):
         orcidRemoveDuplicates = removeDuplicatesDB(orcidList)

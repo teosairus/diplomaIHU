@@ -8,4 +8,5 @@ python-jose
 python-multipart
 requests
 sentence-transformers
-copy
+distance
+textdistance

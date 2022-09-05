@@ -4,7 +4,16 @@ from .database import engine
 from .routers import paper, user, authentication
 
 
-app = FastAPI()
+app = FastAPI(
+    title="My App",
+    description="Description of my app.",
+    root_path="/api/v1",
+    version="1.0",
+    # docs_url='/docs',
+    # # This line solved my issue, in my case it was a lambda function
+    # openapi_url='/openapi.json',
+    redoc_url=None
+)
 
 
 # Connects our model to the DB

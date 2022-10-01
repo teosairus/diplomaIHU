@@ -8,16 +8,16 @@ from pydantic import BaseModel
 
 class Paper(BaseModel):
     title: str
-    publicationName: str
-    description: str
-    publicationType: str
-    authors: str
-    link: str
-    doi: str
-    volume: str
-    pageRange: str
-    source: str
-    publishedDate: str
+    publicationName: Optional[str]
+    description: Optional[str]
+    publicationType: Optional[str]
+    authors: Optional[str]
+    link: Optional[str]
+    doi: Optional[str]
+    volume: Optional[str]
+    pageRange: Optional[str]
+    source: Optional[str]
+    publishedDate: Optional[str]
 
     class Config():
         orm_mode = True

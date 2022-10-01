@@ -80,12 +80,15 @@ def mergeFunc(mergedDB, toBeMergedDB, source):
             item['source'] = source
         return newAdditionDB
     else:
+
         for index, publication in enumerate(toBeMergedDB):
             # Ean to DOI uparxei diladi diaforo tou null
+
             if (publication['doi'] != None):
 
                 # ean to DOI brethei idio me kapoio allo prospername
                 if any(pub['doi'] == publication['doi'] for pub in mergedDB):
+
                     mergedIndex = next((i for i, item in enumerate(
                         mergedDB) if item['doi'] == publication['doi']), -1)
                     for key, value in mergedDB[mergedIndex].items():
@@ -101,21 +104,22 @@ def mergeFunc(mergedDB, toBeMergedDB, source):
 
                 # allios tsekaroume me to onoma
                 else:
+
                     # Ean vrethei allo publication me idio onoma prospername kai +-2 publication year
                     if any((textSimirality(titleClean(pub['title']), titleClean(publication['title']))) and (checkDate(pub['publishedDate'], publication['publishedDate'])) for pub in mergedDB):
 
                         mergedIndex = next((i for i, item in enumerate(
                             mergedDB) if ((textSimirality(titleClean(item['title']), titleClean(publication['title']))) and (checkDate(item['publishedDate'], publication['publishedDate'])))), -1)
-                    for key, value in mergedDB[mergedIndex].items():
-                        if key in publication:
+                        for key, value in mergedDB[mergedIndex].items():
+                            if key in publication:
 
-                            if ((value == None and publication[key] != None) or (value != None and publication[key] != None and len(value) < len(publication[key]))):
-                                print("value", value)
-                                print("publication",  publication[key])
+                                if ((value == None and publication[key] != None) or (value != None and publication[key] != None and len(value) < len(publication[key]))):
+                                    print("value", value)
+                                    print("publication",  publication[key])
 
-                                mergedDB[mergedIndex][key] = publication[key]
-                                mergedDB[mergedIndex]['source'] = 'Mixed'
-                                newAdditionDB.append(mergedDB[mergedIndex])
+                                    mergedDB[mergedIndex][key] = publication[key]
+                                    mergedDB[mergedIndex]['source'] = 'Mixed'
+                                    newAdditionDB.append(mergedDB[mergedIndex])
                     else:
                         # Ean den vrethei allo publication me idio onoma
                         temp = publication
@@ -192,6 +196,7 @@ def itemsToAdd(papersList, scopusList, orcidList):
             toAdd = toAdd+merge1
 
     if (len(orcidList) > 0):
+
         orcidRemoveDuplicates = removeDuplicatesDB(orcidList)
         with open("OrcidDuplicates.json", "w") as outfile:
             json.dump(orcidRemoveDuplicates, outfile)
@@ -199,6 +204,7 @@ def itemsToAdd(papersList, scopusList, orcidList):
             json.dump(orcidList, outfile)
         # print("Test2", len(orcidRemoveDuplicates))
         # print("orcidList", len(orcidList))
+
         merge2 = mergeFunc(papersList, orcidRemoveDuplicates, "Orcid")
 
         if (len(merge2) > 0):

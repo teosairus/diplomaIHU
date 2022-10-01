@@ -18,4 +18,5 @@ def login(request: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(
                             detail=f"Incorrect password")
 
     access_token = token.create_access_token(data={"sub": user.email})
-    return {"access_token": access_token, "token_type": "bearer", "id": user.id}
+    return {"access_token": access_token, "token_type": "bearer"}
+    # return {"access_token": access_token, "token_type": "bearer", "id": user.id}

@@ -3,6 +3,7 @@ from sqlalchemy.orm import Session
 import copy
 from .. import models, schemas, helpers
 from fastapi import HTTPException, status
+from fastapi.encoders import jsonable_encoder
 from ..hashing import Hash
 from ..externalCalls import externalAPIS, mergeDBs
 
@@ -69,13 +70,13 @@ def create(request: schemas.User, db: Session):
                         db.commit()
                         db.refresh(new_orcid)
 
-            papersList = db.query(models.Papers).all()
+            papersList = jsonable_encoder(db.query(models.Papers).all())
 
             papersToAdd = mergeDBs.itemsToAdd(
                 papersList, scopusList, orcidList)
 
             if papersToAdd:
-
+                tempPapers = []
                 for index in range(len(papersToAdd)):
                     new_paper = models.Papers(
                         title=papersToAdd[index]['title'],
@@ -90,10 +91,12 @@ def create(request: schemas.User, db: Session):
                         publishedDate=papersToAdd[index]['publishedDate'],
                         source=papersToAdd[index]['source'],
                     )
+
+                    tempPapers.append(new_paper)
                     db.add(new_paper)
                     db.commit()
                     db.refresh(new_paper)
-
+            new_user.userPapers = tempPapers
             db.add(new_user)
             db.commit()
             db.refresh(new_user)

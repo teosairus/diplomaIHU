@@ -13,7 +13,6 @@ from sqlalchemy.orm import relationship
 #     papers_id = Column(ForeignKey('papers.id'), primary_key=True)
 #     pp = relationship("User", back_populates="userPapers")
 #     creator = relationship("Papers", back_populates="creators")
-
 association_table = Table('association', Base.metadata,
                           Column('users_id', ForeignKey(
                               'users.id'), primary_key=True),

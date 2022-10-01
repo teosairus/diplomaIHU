@@ -5,6 +5,7 @@ from .. import models, schemas
 
 def get_all(db: Session):
     papers = db.query(models.Papers).all()
+    # print("papers", jsonable_encoder(papers))
     return papers
 
 

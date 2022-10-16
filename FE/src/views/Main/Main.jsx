@@ -6,7 +6,14 @@ import login from "../../httpRequests/login";
 import TextField from "@mui/material/TextField";
 
 const Main = (props) => {
-  const { isUserCreated, setIsUserCreated, token, setToken, clientID } = props;
+  const {
+    isUserCreated,
+    setIsUserCreated,
+    token,
+    setToken,
+    clientID,
+    redirectURI,
+  } = props;
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   return (
@@ -88,7 +95,7 @@ const Main = (props) => {
       )}
 
       <a
-        href={`https://login.it.teithe.gr/authorization/?client_id=${clientID}&response_type=code&scope=profile&redirect_uri=http://localhost:3000/home`}
+        href={`https://login.it.teithe.gr/authorization/?client_id=${clientID}&response_type=code&scope=profile&redirect_uri=${redirectURI}`}
       >
         Login Server Side
       </a>

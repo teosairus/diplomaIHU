@@ -30,14 +30,17 @@ const App = () => {
 
   const localClientID = "634c1573cde1bd030ac707fb";
   const localSecret = "5dy480der1p0fxouhy3xdgrzmeprgnfa3fb1rt3cegq6mirt4u";
+  const localURI = "http://localhost:3000/home";
 
-  const devClientID = "634c11d26039ab03189c8b59";
-  const devSecret = "3uj7cr6iol1z2jpk433fa3dcx2del67m1i8ma6x5uzirjsf9rd";
+  const devClientID = "634c269a6039ab03189c8bd5";
+  const devSecret = "37q1gdg5kp97ngdf51edks72076qj4dhw98u2dijx22psu3vg8";
+  const devURI = "https://mypubs.iee.ihu.gr/home";
 
   const env = "dev";
 
   const clientID = env === "dev" ? devClientID : localClientID;
   const secretID = env === "dev" ? devSecret : localSecret;
+  const redirectURI = env === "dev" ? devURI : localURI;
 
   useEffect(() => {
     if (location.search.includes("code")) {
@@ -72,6 +75,7 @@ const App = () => {
               token={token}
               setToken={setToken}
               clientID={clientID}
+              redirectURI={redirectURI}
             />
           }
         ></Route>

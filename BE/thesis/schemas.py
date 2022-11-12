@@ -82,5 +82,4 @@ class TokenData(BaseModel):
 
 class LoginSSO(BaseModel):
     client_id: str
-    grant_type: str
     code: str

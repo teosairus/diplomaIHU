@@ -29,8 +29,8 @@ router = APIRouter(tags=['Authentication'])
 @router.post('/login', status_code=status.HTTP_200_OK)
 def loginSSO(request: schemas.LoginSSO, db: Session = Depends(database.get_db)):
 
-    localSecret = "5dy480der1p0fxouhy3xdgrzmeprgnfa3fb1rt3cegq6mirt4u"
-    devSecret = "37q1gdg5kp97ngdf51edks72076qj4dhw98u2dijx22psu3vg8"
+    localSecret = "5ptw794qxu5h4xhv63hzx2d3pz1wsufzwbfv80pgmyqk1x8e0d"
+    devSecret = "4xoe8gmcuvoyncs2kgg15a86ddo38ozi6ehrqh9c747fkh0bvf"
 
     # Call for getting the access token from IHU for next calls in IHU APIs
 
@@ -75,12 +75,12 @@ def loginSSO(request: schemas.LoginSSO, db: Session = Depends(database.get_db)):
                 access_token = token.create_access_token(
                     data={"sub": temp_user['email']})
 
-                return {"access_token": access_token, "token_type": "bearer"}
+                return {"access_token": access_token, "token_type": "bearer", "user_info": temp_user}
          # If the logged in user is in our DB, return our access token to FE to be able to call our API
             else:
                 access_token = token.create_access_token(
                     data={"sub": temp_user['email']})
-                return {"access_token": access_token, "token_type": "bearer"}
+                return {"access_token": access_token, "token_type": "bearer", "user_info": temp_user}
 
  # if we don't get the profile info throw an error
         else:

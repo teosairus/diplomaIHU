@@ -40,3 +40,16 @@
 .header-navLink-loginText {
   margin: 0 0.25rem;
 }
+
+.header-userButton {
+  background-color: unset;
+  border: unset;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header-logout {
+  margin: 0 1rem;
+}

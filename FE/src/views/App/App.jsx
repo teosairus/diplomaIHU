@@ -4,8 +4,6 @@ import ProtectedRoute from "../ProtectedRoute";
 import Grid from "@mui/material/Grid";
 import Header from "../Header";
 import Main from "../Main";
-// import Footer from "../Footer";
-// import mockData from "../../utils/mockData.json";
 import Publications from "../Publications";
 import UserProfile from "../UserProfile/UserProfile";
 import DeletePubDialog from "../../widgets/DeletePubDialog";
@@ -16,8 +14,7 @@ import "./app-styles.scss";
 const App = () => {
   const [isLogged, setIsLogged] = useState(false);
   const [userInfo, setUserInfo] = useState(null);
-  const [publications, setPublications] = useState([]);
-  // const [publications, setPublications] = useState([...mockData]);
+  const [publications, setPublications] = useState(null);
   const [openDeleteDialog, setOpenDeleteDialog] = useState([false, null]);
   const [token, setToken] = useState(null);
 
@@ -37,7 +34,13 @@ const App = () => {
 
   return (
     <Grid container className="app-container">
-      {isLogged && <Header userInfo={userInfo} />}
+      {isLogged && (
+        <Header
+          userInfo={userInfo}
+          setToken={setToken}
+          setIsLogged={setIsLogged}
+        />
+      )}
       <Routes>
         <Route
           path="/publications"
@@ -56,7 +59,7 @@ const App = () => {
           path="/account"
           element={
             <ProtectedRoute token={token}>
-              <UserProfile />
+              <UserProfile userInfo={userInfo} />
             </ProtectedRoute>
           }
         ></Route>

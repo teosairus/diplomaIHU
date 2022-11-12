@@ -51,7 +51,7 @@ class User(Base):
     orc_id = Column(String(255))
     scopus_id = Column(String(255))
     email = Column(String(255))
-    password = Column(String(255))
+    # password = Column(String(255))
     location = Column(String(255), nullable=True)
     userPapers = relationship(
         "Papers",

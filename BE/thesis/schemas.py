@@ -29,7 +29,7 @@ class User(BaseModel):
     orc_id: str
     scopus_id: str
     email: str
-    password: str
+    # password: str
     location: Optional[str] = None
 
     class Config():
@@ -78,3 +78,9 @@ class Token(BaseModel):
 
 class TokenData(BaseModel):
     email: Optional[str] = None
+
+
+class LoginSSO(BaseModel):
+    client_id: str
+    grant_type: str
+    code: str

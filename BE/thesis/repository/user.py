@@ -10,21 +10,21 @@ from ..externalCalls import externalAPIS, mergeDBs
 
 def create(request: schemas.User, db: Session):
     # Checks if the used email is a valid email address
-    if (helpers.checkEmail(request.email)):
+    if (helpers.checkEmail(request['email'])):
         exists = db.query(models.User).filter(
-            models.User.email == request.email).first()
+            models.User.email == request['email']).first()
 
         # If the user is not in DB then we can create the user and populate the SCOPUS DB and the ORCID DB
         if not exists:
             new_user = models.User(
-                firstname=request.firstname, lastname=request.lastname, orc_id=request.orc_id, scopus_id=request.scopus_id, email=request.email, password=Hash.bcrypt(request.password), location=None if not request.location else request.location)
+                firstname=request['firstname'], lastname=request['lastname'], orc_id=request['orc_id'], scopus_id=request['scopus_id'], email=request['email'], location=None if not request['location'] else request['location'])
             scopusList = []
             orcidList = []
 
             # SCOPUS DB population
-            if (request.scopus_id):
+            if (request['scopus_id']):
                 tempScopus = externalAPIS.get_user_data_SCOPUS(
-                    request.scopus_id)
+                    request['scopus_id'])
 
                 if tempScopus:
                     # tempScopus = mergeDBs.removeDuplicatesDB(tempScopus)
@@ -47,8 +47,8 @@ def create(request: schemas.User, db: Session):
                         db.commit()
                         db.refresh(new_scopus)
             # ORCID DB population
-            if (request.orc_id):
-                tempOrcid = externalAPIS.get_user_data_ORCID(request.orc_id)
+            if (request['orc_id']):
+                tempOrcid = externalAPIS.get_user_data_ORCID(request['orc_id'])
 
                 if tempOrcid:
                     # tempOrcid = mergeDBs.removeDuplicatesDB(tempOrcid)

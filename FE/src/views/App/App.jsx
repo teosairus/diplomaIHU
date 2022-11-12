@@ -36,7 +36,7 @@ const App = () => {
   const devSecret = "37q1gdg5kp97ngdf51edks72076qj4dhw98u2dijx22psu3vg8";
   const devURI = "https://mypubs.iee.ihu.gr/home";
 
-  const env = "dev";
+  const env = "deva";
 
   const clientID = env === "dev" ? devClientID : localClientID;
   const secretID = env === "dev" ? devSecret : localSecret;
@@ -91,6 +91,7 @@ const App = () => {
           }
         ></Route>
         <Route path="/account" element={<UserProfile />}></Route>
+        <Route path="/home" element={<div>HOME</div>}></Route>
       </Routes>
 
       {/* <Footer /> */}

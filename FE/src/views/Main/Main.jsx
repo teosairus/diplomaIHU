@@ -99,11 +99,6 @@ const Main = (props) => {
       >
         Login Server Side
       </a>
-      <a
-        href={`https://login.it.teithe.gr/authorization/?client_id=${clientID}&response_type=code&scope=profile`}
-      >
-        Login Client Side
-      </a>
     </main>
   );
 };

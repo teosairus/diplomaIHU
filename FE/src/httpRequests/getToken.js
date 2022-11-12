@@ -1,16 +1,13 @@
 import axios from "axios";
+import baseURL from "../utils/baseURL";
 
-const getToken = (code, clientID, secretID) => {
+const getToken = (code, clientID) => {
   const config = {
     client_id: clientID,
-    client_secret: secretID,
-    grant_type: "authorization_code",
-    code: code[0],
+    code: code,
   };
 
-  const baseURL = "http://127.0.0.1:8000/";
-
-  return axios.post(`${baseURL}sso`, config);
+  return axios.post(`${baseURL()}login`, config);
 };
 
 export default getToken;

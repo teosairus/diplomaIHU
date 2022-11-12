@@ -1,13 +1,48 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Divider from "@mui/material/Divider";
 import LinkIcon from "@mui/icons-material/Link";
 import DeleteIcon from "@mui/icons-material/Delete";
 import Grid from "@mui/material/Grid";
+import ReactLoading from "react-loading";
+import showUser from "../../httpRequests/showUser";
 
 import "./publications-styles.scss";
 
 const Publications = (props) => {
-  const { publications, setOpenDeleteDialog } = props;
+  const { token, setOpenDeleteDialog } = props;
+  const [publications, setPublications] = useState(null);
+
+  useEffect(() => {
+    if (token !== null) {
+      showUser(token).then((res) => {
+        console.log("userInfo", res);
+        if (res.status === 200) {
+          setPublications(res.data.userPapers);
+        }
+      });
+    }
+  }, []);
+
+  if (publications === null) {
+    return (
+      <div className="publications-loading">
+        <ReactLoading
+          type="bubbles"
+          color={"#009688"}
+          height={"200px"}
+          width={"200px"}
+        />
+      </div>
+    );
+  }
+
+  if (publications !== null && publications && publications.length > 0) {
+    return (
+      <div className="publications-error">
+        There are no publications added for you, at the moment.
+      </div>
+    );
+  }
 
   return (
     <div className="publications-container">

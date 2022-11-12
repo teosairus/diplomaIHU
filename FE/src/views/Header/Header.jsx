@@ -6,13 +6,12 @@ import Grid from "@mui/material/Grid";
 
 import "./header-styles.scss";
 
-const Header = () => {
-  // const { isLogged, setLoginOpen } = props;
+const Header = (props) => {
+  const { userInfo } = props;
   return (
     <header className="header-container">
-      {/* <Grid container> */}
       <Grid item xs={6}>
-        <Link className="header-navLink" to="/">
+        <Link className="header-navLink" to="/home">
           Τμήμα Μηχανικών Πληροφορικής και Ηλεκτρονικών Συστημάτων
         </Link>
       </Grid>
@@ -24,30 +23,7 @@ const Header = () => {
         <Link className="header-navLink header-navItem " to="account">
           Λογαριασμός
         </Link>
-
-        {/* <button
-          type="button"
-          className="header-navLink-login header-navItem "
-          onClick={() => {
-            setLoginOpen(true);
-          }}
-        >
-          {isLogged ? (
-            <>
-              <LogoutIcon />
-              <span className="header-navLink-loginText">Έξοδος</span>
-            </>
-          ) : (
-            <>
-              <LoginIcon />
-              <span className="header-navLink-loginText">
-                Είσοδος / Εγγραφή
-              </span>
-            </>
-          )}
-        </button> */}
       </Grid>
-      {/* </Grid> */}
     </header>
   );
 };

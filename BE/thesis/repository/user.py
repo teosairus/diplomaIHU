@@ -16,8 +16,8 @@ def create(request: schemas.User, db: Session):
 
         # If the user is not in DB then we can create the user and populate the SCOPUS DB and the ORCID DB
         if not exists:
-            new_user = models.User(
-                firstname=request['firstname'], lastname=request['lastname'], orc_id=request['orc_id'], scopus_id=request['scopus_id'], email=request['email'], location=None if not request['location'] else request['location'])
+            new_user = models.User(firstname=request['firstname'], lastname=request['lastname'],
+                                   orc_id=request['orc_id'], scopus_id=request['scopus_id'], email=request['email'], uid=request['uid'])
             scopusList = []
             orcidList = []
 
@@ -96,7 +96,7 @@ def create(request: schemas.User, db: Session):
                     db.add(new_paper)
                     db.commit()
                     db.refresh(new_paper)
-            new_user.userPapers = tempPapers
+                    new_user['userPapers'] = tempPapers
             db.add(new_user)
             db.commit()
             db.refresh(new_user)

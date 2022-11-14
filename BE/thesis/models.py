@@ -46,32 +46,16 @@ class User(Base):
     __tablename__ = 'users'
 
     id = Column(Integer, primary_key=True, index=True)
+    uid = Column(String(50))
     firstname = Column(String(255))
     lastname = Column(String(255))
-    orc_id = Column(String(255))
-    scopus_id = Column(String(255))
+    orc_id = Column(String(255), nullable=True)
+    scopus_id = Column(String(255), nullable=True)
     email = Column(String(255))
-    # password = Column(String(255))
-    location = Column(String(255), nullable=True)
     userPapers = relationship(
         "Papers",
         secondary=association_table,
         back_populates="creators")
-
-    # university_id = Column(Integer, ForeignKey(
-    #     'universities.id'), nullable=True)
-
-    # university = relationship(
-    #     'University', back_populates="people", uselist=False)
-
-
-# class University(Base):
-#     __tablename__ = 'universities'
-
-#     id = Column(Integer, primary_key=True, index=True)
-#     name = Column(String(255))
-
-#     people = relationship("User", back_populates="university")
 
 
 class ScopusDB(Base):

@@ -24,13 +24,14 @@ class Paper(BaseModel):
 
 
 class User(BaseModel):
+    uid: str
     firstname: str
     lastname: str
     orc_id: str
     scopus_id: str
     email: str
     # password: str
-    location: Optional[str] = None
+    # location: Optional[str] = None
 
     class Config():
         orm_mode = True
@@ -47,12 +48,13 @@ class User(BaseModel):
 # -----------------------\ SHOW /------------------------------------
 class ShowUser(BaseModel):
     id: int
+    uid: str
     firstname: str
     lastname: str
-    orc_id: str
-    scopus_id: str
+    orc_id: Optional[str] = None
+    scopus_id: Optional[str] = None
     email: str
-    location: Optional[str] = None
+    # location: Optional[str] = None
     userPapers: List[Paper]
 
     class Config():

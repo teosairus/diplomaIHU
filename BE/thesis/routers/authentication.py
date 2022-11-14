@@ -55,13 +55,14 @@ def loginSSO(request: schemas.LoginSSO, db: Session = Depends(database.get_db)):
     # if we get the profile info successfully
         if res.status_code == 200:
             res_JSON = res.json()
+
             temp_user = {
-                "firstname": res_JSON['givenName;lang-el'],
-                "lastname": res_JSON['sn;lang-el'],
-                "orc_id": "0000-0002-3352-0868",
-                "scopus_id": "55918072400",
+                "uid": res_JSON['uid'],
+                "firstname": res_JSON['givenName'],
+                "lastname": res_JSON['sn'],
+                "orc_id": res_JSON['orcid'] if "orcid" in res_JSON.keys() else None,
+                "scopus_id": res_JSON['scopusID'] if "scopusID" in res_JSON.keys() else None,
                 "email": res_JSON['mail'],
-                "location": "Thessaloniki",
             }
 
             user_db = db.query(models.User).filter(

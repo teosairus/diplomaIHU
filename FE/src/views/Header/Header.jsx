@@ -18,16 +18,17 @@ const Header = (props) => {
     <header className="header-container">
       <Grid item xs={6}>
         <Link className="header-navLink" to="/home">
-          Τμήμα Μηχανικών Πληροφορικής και Ηλεκτρονικών Συστημάτων
+          Department of Information Technology and Electronic Systems
+          Engineering
         </Link>
       </Grid>
       <Grid className="header-nav" item xs={6}>
         <Link className="header-navLink header-navItem " to="publications">
-          Οι Δημοσιεύσεις μου
+          My Publications
         </Link>
 
         <Link className="header-navLink header-navItem " to="account">
-          Λογαριασμός
+          My Account
         </Link>
 
         <div className="header-navLink header-navItem ">

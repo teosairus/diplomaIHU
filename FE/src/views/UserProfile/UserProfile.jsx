@@ -35,15 +35,13 @@ const UserProfile = (props) => {
         </div>
         <div className="userProfile-account">
           <span className="userProfile-userAttribute">Scopus ID:</span>
-          <span className="userProfile-userInfo">{userInfo.scopus_id}</span>
+          <span className="userProfile-userInfo">
+            {userInfo.scopus_id || "-"}
+          </span>
         </div>
         <div className="userProfile-account">
           <span className="userProfile-userAttribute">ORCID:</span>
-          <span className="userProfile-userInfo">{userInfo.orc_id}</span>
-        </div>
-        <div className="userProfile-account">
-          <span className="userProfile-userAttribute">Location:</span>
-          <span className="userProfile-userInfo">{userInfo.location}</span>
+          <span className="userProfile-userInfo">{userInfo.orc_id || "-"}</span>
         </div>
       </div>
     </div>

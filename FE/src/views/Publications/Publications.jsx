@@ -50,7 +50,7 @@ const Publications = (props) => {
   return (
     <div className="publications-container">
       <div className="publications-pageTitle">
-        <span>Οι Δημοσιεύσεις μου</span>
+        <span>My publications</span>
       </div>
       <Divider />
       <div className="publications-listContainer">

@@ -96,7 +96,8 @@ def create(request: schemas.User, db: Session):
                     db.add(new_paper)
                     db.commit()
                     db.refresh(new_paper)
-                    new_user['userPapers'] = tempPapers
+
+                new_user.__setattr__('userPapers', tempPapers)
             db.add(new_user)
             db.commit()
             db.refresh(new_user)

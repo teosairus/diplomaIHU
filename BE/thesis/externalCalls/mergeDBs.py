@@ -58,8 +58,27 @@ def titleClean(text):
 #                titleClean("I   love @!-.  BananaS  "))
 
 def checkDate(date1, date2):
+    print("data1", date1)
+    print("data2", date2)
+    print("data1", date1)
+    print("data2", date2)
     if (date1 == None or date2 == None):
         return True
+    elif (isinstance(date1, int) == True and isinstance(date2, int) == True):
+        if ((date1 <= date2+2) and (date1 >= date2-2)):
+            return True
+        else:
+            return False
+    elif (isinstance(date1, int) == True and isinstance(date2, int) == False):
+        if ((date1 <= int(date2[0: 4])+2) and (date1 >= int(date2[0: 4])-2)):
+            return True
+        else:
+            return False
+    elif (isinstance(date1, int) == False and isinstance(date2, int) == True):
+        if ((int(date1[0: 4]) <= date2+2) and (date1 >= date2-2)):
+            return True
+        else:
+            return False
     else:
         # tsekaroume an diaferoun gia panw apo 2 xronia ta publications
         if ((int(date1[0: 4]) <= int(date2[0: 4])+2) and (int(date1[0: 4]) >= int(date2[0: 4])-2)):
@@ -93,7 +112,6 @@ def mergeFunc(mergedDB, toBeMergedDB, source):
                         mergedDB) if item['doi'] == publication['doi']), -1)
                     for key, value in mergedDB[mergedIndex].items():
                         if key in publication:
-
                             if ((value == None and publication[key] != None) or (value != None and publication[key] != None and len(value) < len(publication[key]))):
                                 print("value", value)
                                 print("publication",  publication[key])

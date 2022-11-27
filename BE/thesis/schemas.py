@@ -54,7 +54,6 @@ class ShowUser(BaseModel):
     orc_id: Optional[str] = None
     scopus_id: Optional[str] = None
     email: str
-    # location: Optional[str] = None
     userPapers: List[Paper]
 
     class Config():

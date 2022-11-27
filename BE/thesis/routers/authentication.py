@@ -56,12 +56,21 @@ def loginSSO(request: schemas.LoginSSO, db: Session = Depends(database.get_db)):
         if res.status_code == 200:
             res_JSON = res.json()
 
+            # temp_user = {
+            #     "uid": res_JSON['uid'],
+            #     "firstname": res_JSON['givenName'],
+            #     "lastname": res_JSON['sn'],
+            #     "orc_id": res_JSON['orcid'] if "orcid" in res_JSON.keys() else None,
+            #     "scopus_id": res_JSON['scopusID'] if "scopusID" in res_JSON.keys() else None,
+            #     "email": res_JSON['mail'],
+            # }
+
             temp_user = {
                 "uid": res_JSON['uid'],
                 "firstname": res_JSON['givenName'],
                 "lastname": res_JSON['sn'],
-                "orc_id": res_JSON['orcid'] if "orcid" in res_JSON.keys() else None,
-                "scopus_id": res_JSON['scopusID'] if "scopusID" in res_JSON.keys() else None,
+                "orc_id": "0000-0002-3352-0868",
+                "scopus_id": "55918072400",
                 "email": res_JSON['mail'],
             }
 

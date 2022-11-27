@@ -10,3 +10,5 @@ requests
 sentence-transformers
 distance
 textdistance
+datetime
+python-dateutil

@@ -58,10 +58,10 @@ def titleClean(text):
 #                titleClean("I   love @!-.  BananaS  "))
 
 def checkDate(date1, date2):
-    print("data1", date1)
-    print("data2", date2)
-    print("data1", date1)
-    print("data2", date2)
+    # print("data1", date1)
+    # print("data2", date2)
+    # print("data1", date1)
+    # print("data2", date2)
     if (date1 == None or date2 == None):
         return True
     elif (isinstance(date1, int) == True and isinstance(date2, int) == True):
@@ -112,9 +112,9 @@ def mergeFunc(mergedDB, toBeMergedDB, source):
                         mergedDB) if item['doi'] == publication['doi']), -1)
                     for key, value in mergedDB[mergedIndex].items():
                         if key in publication:
-                            if ((value == None and publication[key] != None) or (value != None and publication[key] != None and len(value) < len(publication[key]))):
-                                print("value", value)
-                                print("publication",  publication[key])
+                            if ((value == None and publication[key] != None) or (value != None and publication[key] != None and (isinstance(value, int) == False and isinstance(publication[key], int) == False) and len(value) < len(publication[key]))):
+                                # print("value", value)
+                                # print("publication",  publication[key])
 
                                 mergedDB[mergedIndex][key] = publication[key]
                                 mergedDB[mergedIndex]['source'] = 'Mixed'
@@ -131,9 +131,9 @@ def mergeFunc(mergedDB, toBeMergedDB, source):
                         for key, value in mergedDB[mergedIndex].items():
                             if key in publication:
 
-                                if ((value == None and publication[key] != None) or (value != None and publication[key] != None and len(value) < len(publication[key]))):
-                                    print("value", value)
-                                    print("publication",  publication[key])
+                                if ((value == None and publication[key] != None) or (value != None and publication[key] != None and (isinstance(value, int) == False and isinstance(publication[key], int) == False) and len(value) < len(publication[key]))):
+                                    # print("value", value)
+                                    # print("publication",  publication[key])
 
                                     mergedDB[mergedIndex][key] = publication[key]
                                     mergedDB[mergedIndex]['source'] = 'Mixed'
@@ -154,9 +154,9 @@ def mergeFunc(mergedDB, toBeMergedDB, source):
                     for key, value in mergedDB[mergedIndex].items():
                         if key in publication:
 
-                            if ((value == None and publication[key] != None) or (value != None and publication[key] != None and len(value) < len(publication[key]))):
-                                print("value", value)
-                                print("publication",  publication[key])
+                            if ((value == None and publication[key] != None) or (value != None and publication[key] != None and (isinstance(value, int) == False and isinstance(publication[key], int) == False) and len(value) < len(publication[key]))):
+                                # print("value", value)
+                                # print("publication",  publication[key])
 
                                 mergedDB[mergedIndex][key] = publication[key]
                                 mergedDB[mergedIndex]['source'] = 'Mixed'
@@ -185,7 +185,7 @@ def removeDuplicatesDB(arr):
                         arr[index]['title']))) and (checkDate(tempArr[index2]['publishedDate'], arr[index]['publishedDate']))):
                     if (("source" not in tempArr[index2] and "source" not in arr[index]) or (tempArr[index2]['source'] == "Mixed" and arr[index]['source'] == "Mixed") or (tempArr[index2]['source'] != "Mixed" and arr[index]['source'] == "Mixed")):
                         indecesToRemove.append(index2)
-    print("indecesToRemove", indecesToRemove)
+    # print("indecesToRemove", indecesToRemove)
     for idx in range(len(arr)):
         if (not(idx in indecesToRemove)):
 
@@ -198,10 +198,10 @@ def itemsToAdd(papersList, scopusList, orcidList):
 
     if (len(scopusList) > 0):
         scopusRemovedDuplicates = removeDuplicatesDB(scopusList)
-        with open("ScopusDuplicates.json", "w") as outfile:
-            json.dump(scopusRemovedDuplicates, outfile)
-        with open("ScopusNoDuplicates.json", "w") as outfile:
-            json.dump(scopusList, outfile)
+        # with open("ScopusDuplicates.json", "w") as outfile:
+        #     json.dump(scopusRemovedDuplicates, outfile)
+        # with open("ScopusNoDuplicates.json", "w") as outfile:
+        #     json.dump(scopusList, outfile)
         # print("Test1", len(scopusRemovedDuplicates))
         # print("scopusList", len(scopusList))
         merge1 = mergeFunc(
@@ -216,10 +216,10 @@ def itemsToAdd(papersList, scopusList, orcidList):
     if (len(orcidList) > 0):
 
         orcidRemoveDuplicates = removeDuplicatesDB(orcidList)
-        with open("OrcidDuplicates.json", "w") as outfile:
-            json.dump(orcidRemoveDuplicates, outfile)
-        with open("OrcidNonDuplicates.json", "w") as outfile:
-            json.dump(orcidList, outfile)
+        # with open("OrcidDuplicates.json", "w") as outfile:
+        #     json.dump(orcidRemoveDuplicates, outfile)
+        # with open("OrcidNonDuplicates.json", "w") as outfile:
+        #     json.dump(orcidList, outfile)
         # print("Test2", len(orcidRemoveDuplicates))
         # print("orcidList", len(orcidList))
 

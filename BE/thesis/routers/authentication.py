@@ -76,6 +76,7 @@ def loginSSO(request: schemas.LoginSSO, db: Session = Depends(database.get_db)):
 
             user_db = db.query(models.User).filter(
                 models.User.email == temp_user["email"]).first()
+
         # If the logged in user is not in our DB then add him/her and return our access token to FE to be able to call our API
             if not user_db:
                 # Add logged in user in our DB
@@ -88,6 +89,9 @@ def loginSSO(request: schemas.LoginSSO, db: Session = Depends(database.get_db)):
                 return {"access_token": access_token, "token_type": "bearer", "user_info": temp_user}
          # If the logged in user is in our DB, return our access token to FE to be able to call our API
             else:
+
+                user.update(temp_user, db)
+
                 access_token = token.create_access_token(
                     data={"sub": temp_user['email']})
                 return {"access_token": access_token, "token_type": "bearer", "user_info": temp_user}

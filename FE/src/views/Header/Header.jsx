@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Grid from "@mui/material/Grid";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
@@ -9,10 +9,10 @@ import LogoutIcon from "@mui/icons-material/Logout";
 
 import "./header-styles.scss";
 
-const Header = (props) => {
-  const { userInfo, setToken, setIsLogged } = props;
+const Header = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
+  const navigate = useNavigate();
 
   return (
     <header className="header-container">
@@ -43,7 +43,7 @@ const Header = (props) => {
               setAnchorEl(e.currentTarget);
             }}
           >
-            <UserAvatar userInfo={userInfo} />
+            <UserAvatar />
             <ArrowDropDownIcon />
           </button>
           <Menu
@@ -60,8 +60,9 @@ const Header = (props) => {
             <MenuItem
               onClick={() => {
                 setAnchorEl(null);
-                setToken(null);
-                setIsLogged(null);
+                sessionStorage.setItem("tkn", "");
+                sessionStorage.setItem("user_info", JSON.stringify({}));
+                navigate("/");
               }}
             >
               <LogoutIcon />

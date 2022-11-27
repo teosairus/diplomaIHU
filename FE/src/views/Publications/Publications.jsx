@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { decode } from "string-encode-decode";
 import Divider from "@mui/material/Divider";
 import LinkIcon from "@mui/icons-material/Link";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -9,11 +10,12 @@ import showUser from "../../httpRequests/showUser";
 import "./publications-styles.scss";
 
 const Publications = (props) => {
-  const { token, setOpenDeleteDialog, publications, setPublications } = props;
+  const { setOpenDeleteDialog, publications, setPublications } = props;
+  const token = decode(sessionStorage.getItem("tkn"));
 
   useEffect(() => {
     if (
-      token !== null &&
+      token.length > 0 &&
       (publications === null || (publications && publications.length === 0))
     ) {
       showUser(token).then((res) => {

@@ -1,15 +1,21 @@
 import React from "react";
+import { decode } from "string-encode-decode";
 // import React, { useState } from "react";
 
 import "./main-styles.scss";
 
-const Main = (props) => {
-  const { userInfo } = props;
+const Main = () => {
+  const firstname = decode(
+    JSON.parse(sessionStorage.getItem("user_info")).firstname
+  );
+  const lastname = decode(
+    JSON.parse(sessionStorage.getItem("user_info")).lastname
+  );
 
   return (
     <main className="main-container">
       <div className="main-welcome">
-        <span>{`Welcome ${userInfo.firstname} ${userInfo.lastname}!`}</span>
+        <span>{`Welcome ${firstname} ${lastname}!`}</span>
       </div>
     </main>
   );

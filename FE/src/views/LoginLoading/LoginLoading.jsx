@@ -1,37 +1,46 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { encode, decode } from "string-encode-decode";
 import ReactLoading from "react-loading";
 import getToken from "../../httpRequests/getToken";
 
 import "./loginLoading-styles.scss";
 
 const LoginLoading = (props) => {
-  const { clientID, token, setToken, setIsLogged, setUserInfo } = props;
+  const { clientID } = props;
   const [isError, setIsError] = useState(false);
 
   const location = useLocation();
   const navigate = useNavigate();
+  const token = decode(sessionStorage.getItem("tkn"));
 
   useEffect(() => {
-    if (token === null) {
+    if (token.length === 0) {
       if (location.search.includes("code")) {
         const tempCode = location.search.match(/([\d]+)/g);
 
         getToken(tempCode[0], clientID).then((res) => {
           console.log("TOKEN RES", res);
           if (res.status === 200) {
-            setToken(res.data.access_token);
+            sessionStorage.setItem("tkn", encode(res.data.access_token));
             const tempUserInfo = {
-              ...res.data.user_info,
-              firstname:
+              firstname: encode(
                 res.data.user_info.firstname.charAt(0).toUpperCase() +
-                res.data.user_info.firstname.slice(1).toLowerCase(),
-              lastname:
+                  res.data.user_info.firstname.slice(1).toLowerCase()
+              ),
+              lastname: encode(
                 res.data.user_info.lastname.charAt(0).toUpperCase() +
-                res.data.user_info.lastname.slice(1).toLowerCase(),
+                  res.data.user_info.lastname.slice(1).toLowerCase()
+              ),
+              uid: encode(res.data.user_info.uid),
+              email: encode(res.data.user_info.email),
+              orc_id: encode(res.data.user_info.orc_id),
+              scopus_id: encode(res.data.user_info.scopus_id),
             };
-            setUserInfo({ ...tempUserInfo });
-            setIsLogged(true);
+            sessionStorage.setItem(
+              "user_info",
+              JSON.stringify({ ...tempUserInfo })
+            );
             navigate("/home");
           } else {
             setIsError(true);

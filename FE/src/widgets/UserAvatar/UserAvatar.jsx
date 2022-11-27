@@ -1,11 +1,17 @@
 import React from "react";
 // import React, { useState } from "react";
+import { decode } from "string-encode-decode";
 import Avatar from "@mui/material/Avatar";
 
 import "./userAvatar-styles.scss";
 
-const UserAvatar = (props) => {
-  const { userInfo } = props;
+const UserAvatar = () => {
+  const firstname = decode(
+    JSON.parse(sessionStorage.getItem("user_info")).firstname
+  );
+  const lastname = decode(
+    JSON.parse(sessionStorage.getItem("user_info")).lastname
+  );
 
   function stringToColor(string) {
     let hash = 0;
@@ -38,9 +44,7 @@ const UserAvatar = (props) => {
 
   return (
     <Avatar
-      {...stringAvatar(
-        `${userInfo.firstname || "Unknown"} ${userInfo.lastname || "Unknown"}`
-      )}
+      {...stringAvatar(`${firstname || "Unknown"} ${lastname || "Unknown"}`)}
     />
   );
 };

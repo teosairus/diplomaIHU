@@ -72,6 +72,13 @@ const HidePubDialog = (props) => {
             updatePublication(token, tempPub[idx])
               .then((res) => {
                 if (res.status === 202) {
+                  setOpenSnackBar(true);
+                  setSnackBarMessage({
+                    type: "success",
+                    message: `The selected publication has been ${
+                      openHiddenDialog[2] === "hide" ? "hidden" : "unhidden"
+                    } successfully!`,
+                  });
                   setPublications([...tempPub]);
                 } else {
                   setOpenSnackBar(true);

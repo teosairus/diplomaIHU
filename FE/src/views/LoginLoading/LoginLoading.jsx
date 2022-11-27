@@ -19,33 +19,38 @@ const LoginLoading = (props) => {
       if (location.search.includes("code")) {
         const tempCode = location.search.match(/([\d]+)/g);
 
-        getToken(tempCode[0], clientID).then((res) => {
-          console.log("TOKEN RES", res);
-          if (res.status === 200) {
-            sessionStorage.setItem("tkn", encode(res.data.access_token));
-            const tempUserInfo = {
-              firstname: encode(
-                res.data.user_info.firstname.charAt(0).toUpperCase() +
-                  res.data.user_info.firstname.slice(1).toLowerCase()
-              ),
-              lastname: encode(
-                res.data.user_info.lastname.charAt(0).toUpperCase() +
-                  res.data.user_info.lastname.slice(1).toLowerCase()
-              ),
-              uid: encode(res.data.user_info.uid),
-              email: encode(res.data.user_info.email),
-              orc_id: encode(res.data.user_info.orc_id),
-              scopus_id: encode(res.data.user_info.scopus_id),
-            };
-            sessionStorage.setItem(
-              "user_info",
-              JSON.stringify({ ...tempUserInfo })
-            );
-            navigate("/home");
-          } else {
+        getToken(tempCode[0], clientID)
+          .then((res) => {
+            console.log("TOKEN RES", res);
+            if (res.status === 200) {
+              sessionStorage.setItem("tkn", encode(res.data.access_token));
+              const tempUserInfo = {
+                firstname: encode(
+                  res.data.user_info.firstname.charAt(0).toUpperCase() +
+                    res.data.user_info.firstname.slice(1).toLowerCase()
+                ),
+                lastname: encode(
+                  res.data.user_info.lastname.charAt(0).toUpperCase() +
+                    res.data.user_info.lastname.slice(1).toLowerCase()
+                ),
+                uid: encode(res.data.user_info.uid),
+                email: encode(res.data.user_info.email),
+                orc_id: encode(res.data.user_info.orc_id),
+                scopus_id: encode(res.data.user_info.scopus_id),
+              };
+              sessionStorage.setItem(
+                "user_info",
+                JSON.stringify({ ...tempUserInfo })
+              );
+              navigate("/home");
+            } else {
+              setIsError(true);
+            }
+          })
+          .catch((error) => {
+            console.log("error", error);
             setIsError(true);
-          }
-        });
+          });
       } else {
         setIsError(true);
       }

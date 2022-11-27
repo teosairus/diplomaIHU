@@ -10,10 +10,16 @@ import HidePubDialog from "../../widgets/HidePubDialog";
 import Login from "../Login";
 import LoginLoading from "../LoginLoading/LoginLoading";
 import "./app-styles.scss";
+import SnackBar from "../../widgets/SnackBar";
 
 const App = () => {
   const [publications, setPublications] = useState(null);
   const [openHiddenDialog, setOpenHiddenDialog] = useState([false, null, null]);
+  const [openSnackBar, setOpenSnackBar] = useState(false);
+  const [snackBarMessage, setSnackBarMessage] = useState({
+    type: "",
+    message: "",
+  });
   const location = useLocation();
 
   const localClientID = "636f85fdff6709336ef378df";
@@ -41,6 +47,8 @@ const App = () => {
                 setOpenHiddenDialog={setOpenHiddenDialog}
                 publications={publications}
                 setPublications={setPublications}
+                setOpenSnackBar={setOpenSnackBar}
+                setSnackBarMessage={setSnackBarMessage}
               />
             </ProtectedRoute>
           }
@@ -78,6 +86,14 @@ const App = () => {
         setOpenHiddenDialog={setOpenHiddenDialog}
         publications={publications}
         setPublications={setPublications}
+        setOpenSnackBar={setOpenSnackBar}
+        setSnackBarMessage={setSnackBarMessage}
+      />
+      <SnackBar
+        openSnackBar={openSnackBar}
+        setOpenSnackBar={setOpenSnackBar}
+        snackBarMessage={snackBarMessage}
+        setSnackBarMessage={setSnackBarMessage}
       />
     </Grid>
   );

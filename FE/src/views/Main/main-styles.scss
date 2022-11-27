@@ -15,3 +15,86 @@
   font-weight: bold;
   margin: 1rem 0;
 }
+
+.main-welcome-message-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 5%;
+}
+
+.main-welcome-message {
+  margin: 0.5rem 0;
+}
+
+.main-actionTiles {
+  padding: 0 5%;
+}
+
+.main-actionTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 2rem 0 0.5rem 0;
+}
+
+.main-tiles-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.main-tile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  border-radius: 5px;
+  margin: 1rem;
+  background-color: #ffffff;
+  border-left: 5px solid $listItemBorder;
+  // padding: 1rem;
+  box-shadow: $shadow;
+  padding: 2% 5% 1% 5%;
+  height: 150px;
+}
+
+.main-tile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-tile-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.main-tile-description {
+  font-size: 0.9rem;
+  color: $borderGrey;
+}
+
+.main-tile-button-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-tile-button {
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background-color: $buttonBackground;
+  color: $buttonFont;
+  width: 30%;
+  max-width: 150px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 0.25rem 0.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.main-tile-button:hover {
+  background-color: $buttonBackgroundHover;
+  color: $buttonFontHover;
+  border: 2px solid $buttonFontHover;
+}

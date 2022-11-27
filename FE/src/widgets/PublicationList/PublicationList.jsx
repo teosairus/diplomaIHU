@@ -1,4 +1,5 @@
 import React from "react";
+import { CSVLink } from "react-csv";
 import LinkIcon from "@mui/icons-material/Link";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -21,6 +22,14 @@ const Publications = (props) => {
 
   return (
     <div className="publicationList-container">
+      <CSVLink
+        data={publications}
+        filename={pubVisible ? "publications.csv" : "hidden-publications.csv"}
+        className="publicationList-download"
+        target="_blank"
+      >
+        Export as CSV
+      </CSVLink>
       {publications &&
         publications.length > 0 &&
         publications.map((item, index) => {

@@ -21,6 +21,8 @@ const HidePubDialog = (props) => {
     setOpenHiddenDialog,
     publications,
     setPublications,
+    setOpenSnackBar,
+    setSnackBarMessage,
   } = props;
 
   const token = decode(sessionStorage.getItem("tkn"));
@@ -67,11 +69,28 @@ const HidePubDialog = (props) => {
               };
             }
 
-            updatePublication(token, tempPub[idx]).then((res) => {
-              if (res.status === 202) {
-                setPublications([...tempPub]);
-              }
-            });
+            updatePublication(token, tempPub[idx])
+              .then((res) => {
+                if (res.status === 202) {
+                  setPublications([...tempPub]);
+                } else {
+                  setOpenSnackBar(true);
+                  setSnackBarMessage({
+                    type: "error",
+                    message:
+                      "There was an error while updating your publications. Please try again in a while...",
+                  });
+                }
+              })
+              .catch((error) => {
+                console.log("error", error);
+                setOpenSnackBar(true);
+                setSnackBarMessage({
+                  type: "error",
+                  message:
+                    "There was an error while updating your publications. Please try again in a while...",
+                });
+              });
 
             setOpenHiddenDialog([false, null, null]);
           }}

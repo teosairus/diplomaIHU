@@ -34,7 +34,13 @@ function TabPanel(props) {
 }
 
 const Publications = (props) => {
-  const { setOpenHiddenDialog, publications, setPublications } = props;
+  const {
+    setOpenHiddenDialog,
+    publications,
+    setPublications,
+    setOpenSnackBar,
+    setSnackBarMessage,
+  } = props;
   const [tab, setTab] = useState(0);
   const [visiblePub, setVisiblePub] = useState(
     publications && publications.length > 0
@@ -54,12 +60,29 @@ const Publications = (props) => {
       token.length > 0 &&
       (publications === null || (publications && publications.length === 0))
     ) {
-      showUser(token, uid).then((res) => {
-        console.log("userInfo", res);
-        if (res.status === 200) {
-          setPublications(res.data.userPapers);
-        }
-      });
+      showUser(token, uid)
+        .then((res) => {
+          console.log("userInfo", res);
+          if (res.status === 200) {
+            setPublications(res.data.userPapers);
+          } else {
+            setOpenSnackBar(true);
+            setSnackBarMessage({
+              type: "error",
+              message:
+                "There was an error while fetching your publications. Please try again in a while...",
+            });
+          }
+        })
+        .catch((error) => {
+          console.log("error", error);
+          setOpenSnackBar(true);
+          setSnackBarMessage({
+            type: "error",
+            message:
+              "There was an error while fetching your publications. Please try again in a while...",
+          });
+        });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);

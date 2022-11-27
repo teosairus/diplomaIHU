@@ -1,5 +1,10 @@
 @import "../../utils/colorCodes.scss";
 
+.publicationList-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .publicationList-itemContainer {
   margin: 0.5rem 0;
   background-color: #ffffff;
@@ -96,4 +101,30 @@
   align-items: center;
   font-size: 2rem;
   font-weight: bold;
+}
+
+.publicationList-download {
+  border: 1px solid transparent;
+  border: 2px solid $buttonBackground;
+  border-radius: 5px;
+  background-color: $buttonBackground;
+  color: $buttonFont;
+  width: 30%;
+  max-width: 150px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0.5rem 0;
+  align-self: end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.publicationList-download:hover {
+  background-color: $buttonBackgroundHover;
+  color: $buttonFontHover;
+  border: 2px solid $buttonFontHover;
 }

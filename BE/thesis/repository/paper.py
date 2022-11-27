@@ -54,7 +54,7 @@ def update(id: int, request: schemas.Paper, db: Session):
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
                             detail=f"Paper with id {id} not found")
 
-    paper.update(request)
+    paper.update(request.dict())
     db.commit()
     return 'updated'
 

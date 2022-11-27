@@ -90,6 +90,7 @@ def create(request: schemas.User, db: Session):
                         pageRange=papersToAdd[index]['pageRange'],
                         publishedDate=papersToAdd[index]['publishedDate'],
                         source=papersToAdd[index]['source'],
+                        hidden=False,
                     )
 
                     tempPapers.append(new_paper)
@@ -110,9 +111,9 @@ def create(request: schemas.User, db: Session):
             status_code=status.HTTP_400_BAD_REQUEST, detail="Please use a valid email address.")
 
 
-def show(id: int, db: Session):
-    user = db.query(models.User).filter(models.User.id == id).first()
+def show(uid: str, db: Session):
+    user = db.query(models.User).filter(models.User.uid == uid).first()
     if not user:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
-                            detail=f"User with the id {id} is not available")
+                            detail=f"User with the uid {uid} is not available")
     return user

@@ -7,6 +7,7 @@ from pydantic import BaseModel
 
 
 class Paper(BaseModel):
+    id: int
     title: str
     publicationName: Optional[str]
     description: Optional[str]
@@ -18,12 +19,14 @@ class Paper(BaseModel):
     pageRange: Optional[str]
     source: Optional[str]
     publishedDate: Optional[str]
+    hidden: bool
 
     class Config():
         orm_mode = True
 
 
 class User(BaseModel):
+    id: int
     uid: str
     firstname: str
     lastname: str

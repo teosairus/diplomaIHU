@@ -1,5 +1,5 @@
 
-from sqlalchemy import Column, Integer, String, ForeignKey, Table
+from sqlalchemy import Column, Integer, String, ForeignKey, Table, Boolean
 from .database import Base
 from sqlalchemy.orm import relationship
 
@@ -36,6 +36,7 @@ class Papers(Base):
     pageRange = Column(String(255))
     source = Column(String(255))
     publishedDate = Column(Integer)
+    hidden = Column(Boolean, unique=False, default=True)
     creators = relationship(
         "User",
         secondary=association_table,

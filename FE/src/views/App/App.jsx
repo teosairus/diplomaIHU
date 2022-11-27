@@ -6,14 +6,14 @@ import Header from "../Header";
 import Main from "../Main";
 import Publications from "../Publications";
 import UserProfile from "../UserProfile/UserProfile";
-import DeletePubDialog from "../../widgets/DeletePubDialog";
+import HidePubDialog from "../../widgets/HidePubDialog";
 import Login from "../Login";
 import LoginLoading from "../LoginLoading/LoginLoading";
 import "./app-styles.scss";
 
 const App = () => {
   const [publications, setPublications] = useState(null);
-  const [openDeleteDialog, setOpenDeleteDialog] = useState([false, null]);
+  const [openHiddenDialog, setOpenHiddenDialog] = useState([false, null, null]);
   const location = useLocation();
 
   const localClientID = "636f85fdff6709336ef378df";
@@ -38,7 +38,7 @@ const App = () => {
           element={
             <ProtectedRoute>
               <Publications
-                setOpenDeleteDialog={setOpenDeleteDialog}
+                setOpenHiddenDialog={setOpenHiddenDialog}
                 publications={publications}
                 setPublications={setPublications}
               />
@@ -73,9 +73,9 @@ const App = () => {
 
       {/* <Footer /> */}
 
-      <DeletePubDialog
-        openDeleteDialog={openDeleteDialog}
-        setOpenDeleteDialog={setOpenDeleteDialog}
+      <HidePubDialog
+        openHiddenDialog={openHiddenDialog}
+        setOpenHiddenDialog={setOpenHiddenDialog}
         publications={publications}
         setPublications={setPublications}
       />

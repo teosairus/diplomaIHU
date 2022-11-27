@@ -1,0 +1,99 @@
+@import "../../utils/colorCodes.scss";
+
+.publicationList-itemContainer {
+  margin: 0.5rem 0;
+  background-color: #ffffff;
+  border-left: 5px solid $listItemBorder;
+  // padding: 1rem;
+  box-shadow: $shadow;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.publicationList-itemLinkContainer {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.publicationList-itemLink {
+  color: #000000 !important;
+  margin: 0 0.25rem;
+  display: flex;
+}
+
+.publicationList-itemMainInfoContainer {
+  display: flex;
+  flex-direction: column !important;
+}
+
+.publicationList-itemTitle {
+  margin: 0 0.25rem;
+}
+
+.publicationList-itemAuthors {
+  color: $fontColorGrey;
+  font-size: 13px;
+  margin: 0 0.25rem;
+}
+
+.publicationList-itemPublicationContainer {
+  display: flex;
+  flex-direction: column !important;
+}
+
+.publicationList-itemPubContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.publicationList-itemPubName {
+  margin: 0 0.25rem;
+}
+
+.publicationList-itemPubType {
+  margin: 0 0.25rem;
+  color: $fontColorGrey;
+  font-size: 13px;
+  display: flex;
+  align-self: end;
+}
+
+.publicationList-itemPubDate {
+  margin: 0 0.25rem;
+}
+
+.publicationList-itemPubRange {
+  margin: 0 0.25rem;
+  color: $fontColorGrey;
+  font-size: 13px;
+}
+
+.publicationList-itemPubVolume {
+  margin: 0 0.25rem;
+  color: $fontColorGrey;
+  font-size: 13px;
+}
+
+.publicationList-deleteContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.publicationList-deleteButton {
+  background-color: unset;
+  border: none;
+  color: $fontColorGrey;
+  cursor: pointer;
+}
+
+.publicationList-error {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+}

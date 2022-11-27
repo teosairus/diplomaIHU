@@ -1,12 +1,12 @@
 import axios from "axios";
 import baseURL from "../utils/baseURL";
 
-const showUser = (token) => {
+const showUser = (token, uid) => {
   const config = {
     headers: { Authorization: `Bearer ${token}` },
   };
-  console.log("config", config);
-  return axios.get(`${baseURL()}user/1`, config);
+
+  return axios.get(`${baseURL()}user/${uid}`, config);
 };
 
 export default showUser;
